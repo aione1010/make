@@ -121,7 +121,7 @@
 				border-top-left-radius: 10px;
 			}
 			.div31{
-				margin-right: 20%;
+				margin-right: 30%;
 				
 			}
 			.p7,.p8{
@@ -154,24 +154,43 @@
 			}
 			.image1,.image2{
 				overflow: auto;
-				width:1200px;
-				
+				width:80%;
 				margin:20px auto 20px auto;	
 				display:flex;
 				align-items: center;
 				
+				
 			}
 			.image1 img,.image2 img{
-				width:700px;
-				margin:30px;
+				display:block;
+				width:55%;
+				margin-top:2%;
+				margin-bottom: 2%;
 				padding:0px;
 				
 			}
+			.image1 img{
+				margin-left:3%;
+				margin-right:7%
+			}
+			.image2 img{
+				margin-right: 3%;
+				margin-left:7%;
+			}
+			.image1 div,.image2 div{
+				width:25%;
+				
+			}
+			.image1 div{
+				margin-right:3%;
+				margin-left:7%;
+			}
+			.image2 div{
+				margin-left:3%;
+				margin-right:7%
+			}
 			.image1 div p,.image2 div p{
-				margin:30px;
-				text-align:left;
-				width:300px;
-				padding:0px;
+				text-align: left;
 				font-size: 20px;
 			}
 			.imagep{
@@ -196,7 +215,39 @@
 				align-items: center;
 				padding:0px;
 			}
-			
+			.p61{
+				font-size: 48px;
+			}
+			.p62{
+				font-size: 18px;
+				width:600px;
+				margin:20px auto;
+			}
+			td{
+				padding:0px;
+			}
+			table{
+				margin:30px auto;
+				border-spacing: 10px;
+			}
+			.td1{
+				background-image:url(images/teacher1.jpg);
+			}
+			.td2{
+				background-image:url(images/teacher2.jpg);
+			}
+			.td3{
+				background-image:url(images/teacher3.jpg);
+			}
+			.td4{
+				background-image:url(images/teacher4.jpg);
+			}
+			td img{
+				visibility:hidden;
+			}
+			td:hover img{
+				visibility: visible;
+			}
 			.section7 div{
 				width:25%;
 				margin:5% 20% 5% 5%;
@@ -210,15 +261,20 @@
 				display:flex;
 				align-items: flex-start;
 				width:400px;
-				padding:0px;
+				padding:10px 5px 10px 0px;
+				
 			}
 			.section7 div div p img{
 				margin:0px;
 				padding: 0px;
+				
+				
 			}
 			.section7 div div p span{
 				text-align: left;
-				margin:0px 0px 0px 5px;
+				margin:0px 0px 0px 10px;
+				
+				padding:0px;
 			}
 			.section7 fieldset{
 				margin:5% 5% 5% 20%;
@@ -263,14 +319,25 @@
 			.section8 ul{
 				list-style: none;
 				float:left;
-				margin:0% 5% 0% 5%;
+				width:15%;
 			}
-			.section8 ul .list1{
-				color:white;
+			.u1{
+				margin:2% 4% 2% 8%;
+			}
+			.u2,.u3{
+				margin:2% 4%;
+			}
+			.u4{
+				margin:2% 8% 2% 4%;
 			}
 			.section8 ul li{
 				text-align: left;
 				padding:10px 0px;
+				font-size: 18px;
+			}
+			.section8 ul .list1{
+				color:white;
+				font-size:20px;
 			}
 			
 		</style>
@@ -373,18 +440,21 @@
 			</div>
 		</div>
 		<div class="section6">
-			<h1>Our Awesome Crew</h1>
-			<p class="p61">
+			<p class="p61">Our Awesome Crew</p>
+			<p class="p62">
 				Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills.
 			</p>
 			
-			<img src="images/teacher1.jpg">
-			
-			<img src="images/teacher2.jpg"><br>
-			
-			<img src="images/teacher3.jpg">
-		
-			<img src="images/teacher4.jpg">
+			<table>
+			<tr>
+				<td class="td1"><img src="images/Text.png"></td>
+				<td class="td2"><img src="images/Text.png"></td>
+			</tr>
+			<tr>
+				<td class="td3"><img src="images/Text.png"></td>
+				<td class="td4"><img src="images/Text.png"></td>
+			</tr>
+		</table>
 			
 		</div>
 		<div class="section7">
@@ -412,21 +482,21 @@
 			</div>
 		</div>
 		<div class="section8">
-			<ul>
+			<ul class="u1">
 				<li class="list1">LEARN MORE</li>
 				<li>How it works</li>
 				<li>Meeting tools</li>
 				<li>Live streaming</li>
 				<li>Contact method</li>
 			</ul>
-			<ul>
+			<ul class="u2">
 				<li class="list1">ABOUT US</li>
 				<li>About us</li>
 				<li>Features</li>
 				<li>Privacy police</li>
 				<li>Terms&amp;Conditions</li>
 			</ul>
-			<ul>
+			<ul class="u3">
 				<li class="list1">SUPPORT</li>
 				<li>FAQ</li>
 				<li>Contact us</li>
@@ -434,7 +504,7 @@
 				<li>Phone call</li>
 			</ul>
 			
-			<ul>
+			<ul class="u4">
 				<li class="list1">ENJOY YOUR LIFE</li>
 				<li>Creat web UI kit for designers,<br>freelances or business</li>
 				<li><img src="images/捕获.JPG"></li>
