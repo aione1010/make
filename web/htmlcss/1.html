@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+	<head>
+		<title>html</title>
+		<style type="text/css">
+			*{
+				text-align: center;
+				font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+				font-size:24px;
+				
+			}
+			
+			.section1,.section2,.section3,.section4,.section5,.section6,.section7,.section8{
+				border-bottom:1px solid #E7E4E4;
+				padding:50px;
+			}
+			.section1{
+				background-image: url(images/header-image.gif);
+				background-repeat: no-repeat;
+				background-size:cover; 
+				color:white;
+			}
+			.head1{
+				margin:100px auto 50px auto;
+				font-size:48px;
+			}
+			.p1{
+				width:850px;
+				
+				margin:50px auto 30px auto;
+				
+			}
+			.f1{
+				margin:50px auto 30px auto;
+				height:250px;
+				width:1000px;
+			}
+			.ff1 input{
+				font-size: 15px;
+				width:200px;
+				height:30px;
+				padding:5px;
+				text-align: left;
+				background-color: transparent;
+				color:white;
+				border:1px solid gray;
+			}
+			.ff1 button{
+				text-transform: uppercase;
+				height:40px;
+				width:100px;
+				padding:5px;
+				font-size: 15px;
+			}
+			.fp1{
+				text-transform: uppercase;
+				margin:60px auto 30px auto;
+			}
+			.fp2{
+				text-transform: uppercase;
+				font-size:20px;
+				margin:30px;
+			}
+			.p2{
+				font-size:16px;
+				text-transform: uppercase;
+				
+			}
+			.p3{
+				font-size: 30px;
+				width:500px;
+				margin:30px auto 30px auto;
+			}
+			.content1 div{
+				display:block;
+				width:500px;
+				float: left;
+				
+				margin:20px 50px 20px 250px;
+			}
+			.content1{
+				
+				overflow: auto;
+				width:100%;
+			}
+			.clear{
+				clear:left;
+			}
+			.p5,.p6{
+				text-align:left;
+				margin-top: 0px;
+				margin-bottom:20px;
+				margin-left: 30px;
+			}
+			.p5{
+				font-weight: bold;
+			}
+			.p6{
+				font-size: 18px;
+			}
+			.content1 div{
+				display:flex;
+				align-items: flex-start;
+			}
+			.section3{
+				background-image: url(images/前端学院设计图_19.png);
+				background-repeat: no-repeat;
+				background-size: cover;	
+				display: flex;
+				justify-content: flex-end;
+				padding:0px;
+				padding:5% 0 5% 10%;
+			}
+			
+			.section3 img{
+				padding:20px 0 20px 50px;
+				border:1px solid gray;
+				border-right: none;
+				border-bottom-left-radius: 10px;
+				border-top-left-radius: 10px;
+			}
+			.div31{
+				margin-right: 20%;
+				
+			}
+			.p7,.p8{
+				
+				text-align: left;
+				width:400px;
+				
+			}
+			.p7{
+				font-size: 48px;
+				color:white;
+			}
+			.p8{
+				font-size:20px;
+				color:white;
+			}
+			.div31 form input{
+				font-size:16px;
+				padding:10px;
+				margin:5px 10px 5px 0px;
+				
+			}
+			.div31 form input:last-child{
+				background-color: transparent;
+				color:white;
+			}
+			.div31 form{
+				padding:0px;
+				margin:30px 0px 0px 0;
+			}
+			.image1,.image2{
+				overflow: auto;
+				width:1200px;
+				
+				margin:20px auto 20px auto;	
+				display:flex;
+				align-items: center;
+				
+			}
+			.image1 img,.image2 img{
+				width:700px;
+				margin:30px;
+				padding:0px;
+				
+			}
+			.image1 div p,.image2 div p{
+				margin:30px;
+				text-align:left;
+				width:300px;
+				padding:0px;
+				font-size: 20px;
+			}
+			.imagep{
+				font-weight: bold;
+			}
+			.section4{
+				overflow: auto;
+				padding:30px 0px;
+			}
+			.section4 div{
+				float:left;
+				width:25%;
+				margin:4%;
+				
+			}
+			.section4 h1{
+				font-size: 48;
+				font-family:arimo;
+			}
+			.section7{
+				display: flex;
+				align-items: center;
+				padding:0px;
+			}
+			
+			.section7 div{
+				width:25%;
+				margin:5% 20% 5% 5%;
+				padding:0px;
+			}
+			.section7 div p{
+				text-align:left;
+				padding:5px;
+			}
+			.section7 div div p{
+				display:flex;
+				align-items: flex-start;
+				width:400px;
+				padding:0px;
+			}
+			.section7 div div p img{
+				margin:0px;
+				padding: 0px;
+			}
+			.section7 div div p span{
+				text-align: left;
+				margin:0px 0px 0px 5px;
+			}
+			.section7 fieldset{
+				margin:5% 5% 5% 20%;
+				width:25%;
+				padding:10px 10px 90px 10px;
+				border:1px solid gray;
+				border-radius: 10px;
+			}
+			.section7 fieldset input{
+				color:gray;
+				width:80%;
+				padding:5px;
+				margin:10px;
+				text-align: left;
+				font-size: 16px;
+				border:1px solid gray;
+			}
+			.section7 fieldset textarea{
+				color:gray;
+				border:1px solid gray;
+				text-align: left;
+				margin:10px;
+				width:80%;
+				font-size: 16px;
+				padding:5px;
+			
+			}
+			.section7 fieldset button{
+				background-color: black;
+				border:1px solid black;
+				margin:10px;
+				width:80%;
+				font-size: 16px;
+				padding:5px;
+				color:white;
+			}
+			.section8 {
+				overflow:auto;
+				background-color: black;
+				color:gray;
+			}
+			.section8 ul{
+				list-style: none;
+				float:left;
+				margin:0% 5% 0% 5%;
+			}
+			.section8 ul .list1{
+				color:white;
+			}
+			.section8 ul li{
+				text-align: left;
+				padding:10px 0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="section1">
+			
+			<p class="head1">Hello world</p>
+			<p class="p1">China is speeding up strategic plan,standards,traffic rules ,
+				laws and regulations on accident-incurred liabilities for its smart car industry. 
+				Economic Information Daily reported Thursday. </p>
+			<fieldset class="f1">
+				<p class="fp1">create your account</p>
+				<p class="fp2">it is absolutely free</p>
+				<form action="" method="post" class="ff1">
+					<input type="email" name="email" id="email" value="denis@getcraftwork.com" size="20px"/>
+					<input type="password" id="password" size="20px">
+					<button type="submit">sign up</button>
+				</form>
+			</fieldset>
+		</div>
+		<div class="section2">
+            <div class="biaoti">
+                <p class="p2">BOATLOADS OF AWESOME</p>
+                <p class="p3">Ready-made,customizable,HTML<br>landing page section</p>
+                <div class="content1">
+                    <div>
+                        <img src="images/Iphone Icon.png" alt="电话图标">
+                        <section>
+                            <p class="p5">Mobile First</p>
+                            <p class="p6">All modulz are built mobile-first for maxim device compatibility</p>
+                        </section>
+                    </div>
+                    <div>
+                        <img src="images/Check Icon.png" alt="复选框图标">
+                        <section>
+                                <p class="p5">Accessibility</p>
+                                <p class="p6">Support for IE8,mobile and tablet devices,screenreders and color blind.</p>
+                            </section>
+                    </div>
+                    <div class="clear">
+                        <img src="images/Pencil Icon.png" alt="铅笔图标">
+                        <section>
+                                <p class="p5">Fluid Typography</p>
+                                <p class="p6">On different screen sizes,fonts automagically scale with the viewport.</p>
+                             </section>
+                    </div>
+                    <div>
+                        <img src="images/Settings Icon.png" alt="设置图标">
+                        <section>
+                                <p class="p5">Customization</p>
+                                <p class="p6">Make any design your own using the Style Editor.Personalize fonts,colors,and layouts to create the custorm look you want.</p>
+                                </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="section3">
+			<div class="div31">
+				<p class="p7">Supportive policies for China's smart car</p>
+				<p class="p8">China will come up with its own smarter car stands,traffic rules,laws and regulations relating to safty,
+					according to the China industry innovation Alliance for the Intelligent and Connected Vehicles.</p>
+				<form action="">
+					<input type="submit" value="CHECK OUT FEATURES">
+					<input type="submit" value="TRY PRODUCT FOR FREE">
+				</form>
+			</div>
+			<img src="images/Screen.png">
+		</div>
+		<div class="section4">
+			<h1>Try Our Awesome Products</h1>
+			<div>
+				<h2>Singletan</h2>
+				<p>Li Jun,a China Academy of Engi-neering academician and also director of the alliance's experts'committee,said that China willalso launch design duidance forsmart cars,smart map architec-ture and standards for the testgrounds.
+				</p>
+			</div>
+			<div>
+				<h2> HERO </h2>
+				<p>Li said the smart car industry is ablee to enlarge the current car industry by 1 trillion yuan(＄158.15 billion)and also able to boost fast development in 5G,internet of  cars,big data,artificial intelligence and new-energy vehicles.
+				</p>
+			</div>
+			<div>
+				<h2>Pontland</h2>
+				<p>Zhang Junyi,a partner with NIO Capital,said that the smart car is the trend for the car industry and China's auto sector will usher in a new key development stage with the improvement of infrastructure. technology,polices and laws.
+				</p>
+			</div>
+		</div>
+		<div class="section5">
+			<div class="image1">
+				<img src="images/leaf.png">
+				<div><p class="imagep"> Learn How to Improve Your Personal Business</p>
+				<p> Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds.</p></div>
+			</div>
+			<div class="image2">
+				
+				<div>
+				<p class="imagep">Choose Between Two Beautifully Designed Color Schemes.</p>
+				<p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p></div>
+				<img src="images/bird.png">
+			</div>
+		</div>
+		<div class="section6">
+			<h1>Our Awesome Crew</h1>
+			<p class="p61">
+				Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills.
+			</p>
+			
+			<img src="images/teacher1.jpg">
+			
+			<img src="images/teacher2.jpg"><br>
+			
+			<img src="images/teacher3.jpg">
+		
+			<img src="images/teacher4.jpg">
+			
+		</div>
+		<div class="section7">
+			<fieldset>
+				<p>FELL FREE TO WRITE US</p>
+				<input type="text" id="mail" value="E-mails" ><br>
+				<input type="text" id="text" value="Subject"><br>
+				<textarea cols="20" rows="10" >Message</textarea><br>
+				<button type="submit" value="SEND">SEND</button>
+			</fieldset>
+			
+			<div>
+				<p style="font-size: 48px">Contacts</p>
+				<p>
+					Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.
+				</p>
+				<div>
+				<p>
+					<img src="images/Map Icon.png">
+					<span>360 King Street<br> Feastrvale Trevose,PA 19057</span>
+				</p>
+				<p><img src="images/Phone Icon.png"><span>(755) 564-84-12</span></p>
+				<p><img src="images/Mail Icon.png"><span>noe@163.com</span></p>  
+				</div>
+			</div>
+		</div>
+		<div class="section8">
+			<ul>
+				<li class="list1">LEARN MORE</li>
+				<li>How it works</li>
+				<li>Meeting tools</li>
+				<li>Live streaming</li>
+				<li>Contact method</li>
+			</ul>
+			<ul>
+				<li class="list1">ABOUT US</li>
+				<li>About us</li>
+				<li>Features</li>
+				<li>Privacy police</li>
+				<li>Terms&amp;Conditions</li>
+			</ul>
+			<ul>
+				<li class="list1">SUPPORT</li>
+				<li>FAQ</li>
+				<li>Contact us</li>
+				<li>Live chat</li>
+				<li>Phone call</li>
+			</ul>
+			
+			<ul>
+				<li class="list1">ENJOY YOUR LIFE</li>
+				<li>Creat web UI kit for designers,<br>freelances or business</li>
+				<li><img src="images/捕获.JPG"></li>
+			</ul>
+		</div>
+	</body>
+</html>
