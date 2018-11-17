@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 17 15:01:05 2018
-
-@author: make
-"""
+#10进制数用26个大写字母表示，其中：1=A，2=B，26=Z，27=AA，28=AB
+#用递归进行转换
 
 def convert(n):
     convertString=[chr(i) for i in range(65,91)]
