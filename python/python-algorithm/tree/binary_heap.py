@@ -19,7 +19,7 @@ class BinHeap():
 
     def insert(self,key):
 
-        self.heapList.append(k)
+        self.heapList.append(key)
         self.currentSize = self.currentSize + 1
         self.percUp(self.currentSize)
 
