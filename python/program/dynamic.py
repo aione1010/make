@@ -27,7 +27,7 @@ for i in range(n):
     
 for i in range(n):
     for j in range(1,k):
-        for m in range(i-1,max(i-d,0)-1,-1):
+        for m in range(i-1,max(i-d,0)-1,-1):   #确定第i个处的最值
             fm[j][i] = max(fm[j][i],fm[j-1][m]*arr[i],fn[j-1][m]*arr[i])
             fn[j][i] = min(fn[j][i],fm[j-1][m]*arr[i],fn[j-1][m]*arr[i])
     res= max(res,fm[k-1][i])
