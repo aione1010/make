@@ -17,3 +17,5 @@ def lengthOfLongestSubstring(s):
             return max(maxLen)
 s=" "
 print(lengthOfLongestSubstring(s))
+
+
