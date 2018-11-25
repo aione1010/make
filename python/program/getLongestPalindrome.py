@@ -20,7 +20,7 @@ def getLongestPalindrome(s):
                     maxLen += 2     #回文关于中间对称，例如“abcba”
                     continue
                 if i - maxLen >= 0 and s[i-maxLen:i + 1] == s[i-maxLen:i+1][::-1]:
-                    s_p = s[i-maxLen : i + 1]   #回文长度为偶数，例如“abba”
+                    s_p = s[i-maxLen : i + 1]   #回文长度为偶数，例如“abccba”
                     maxLen += 1
             return maxLen,s_p
     
