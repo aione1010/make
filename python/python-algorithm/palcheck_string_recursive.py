@@ -1,3 +1,5 @@
+#回文
+
 import re
 def palcheck(arr):
         if len(arr) <= 1:
