@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ife12_15</title>
+		<style type="text/css">
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			body{
+				width:100%;
+			}
+			.left{
+				width:90px;
+				min-height: 100%;
+				background-color: #1d2531;
+				height:auto;
+				position: fixed;
+			}
+			.icon{
+				padding:5%;
+				width:90%;
+			}
+			.icon a{
+				display:block;
+				width:90%;
+				margin:5% auto;
+			}
+			.icon a img{
+				display:block;
+				width:80%;
+				height:80%;
+				margin:30% auto;
+			}
+			.bottom{
+				display:inline-block;
+				position:fixed;
+				bottom:0;
+				left:0px;
+				margin:20px 20px;
+			}
+			.bottom a{
+				margin-left:5px;
+			}
+			.middle{
+				background-color: #222c3c;
+				width:250px;
+				min-height: 100%;
+				left:90px;
+				position: absolute;
+				font-size: 14px;
+			}
+			.middle ul{
+				list-style: none;
+				width:90%;
+				margin:10% auto;
+				border-bottom: 1px solid #393838;
+			}
+			
+			.middle .three{
+				border:none;
+			}
+			.middle ul li {
+				padding-bottom: 8%;
+			}
+			.middle ul li a{
+				text-decoration: none;
+				color:azure;
+			}
+			.middle ul li a:hover{
+				color:aqua;
+			}
+			.middle .title{
+				color:darkgrey;
+			}
+			.middle ul li img{
+				position:absolute;
+				right:40px;
+			}
+			.bottom_2{
+				position: fixed;
+				bottom:0px;
+				left:100px;
+				margin:20px 20px 20px 0;
+				color:azure;
+			}
+			.bottom_2 progress{
+				margin:0 auto;
+				border:none;
+				height:2px;
+				width:100%;
+				color:blueviolet;
+				background-color: blueviolet;
+			}
+			.num{
+				position:absolute;
+				right:40px;
+				border:1px solid dodgerblue;
+				border-radius: 50%;
+				background-color: dodgerblue;
+				padding:1px 3px;
+				
+			}
+			.books{
+				list-style: url("images/BookofWisdom.png") inside;
+			}
+			.Tutorials{
+				list-style: url("images/VideoCamera.png") inside;
+			}
+			.Stocks{
+				list-style: url("images/Painting.png") inside;
+			}
+			.Info{
+				list-style: url("images/Chart.png") inside;
+			}
+			.right{
+				position:absolute;
+				top:0px;
+				left:340px;
+				height:100%;
+				width:calc(100%-340px);
+			}
+			.right-top{
+				position:fixed;
+				height:80px;
+				
+				width:100%;
+				border-bottom: 1px solid #e6e9ec;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="left">
+			<div class="icon">
+				<a href="#"><img src="images/Item-1.png" alt="item-1"></a>
+				<a href="#"><img src="images/Item-2.png" alt="item-2"></a>
+				<a href="#"><img src="images/Item-3.png" alt="item-3"></a>
+				<a href="#"><img src="images/Item-4.png" alt="item-4"></a>
+			</div>
+			<div class="bottom">
+				<a href="#"><img src="images/Grid-Icon.png" alt="grid-icon"></a>
+				<a href="#"><img src="images/Settings-Icon.png" alt="setting-icon"></a>
+			</div>
+		</div>
+		<div class="middle">
+			<ul>
+				<li class="title">MENU<img src="images/Settings-Icon.png" alt=" "></li>
+				<li><a href="#">Overviews</a></li>
+				<li><a href="#">Sales<span class="num">54</span></a></li>
+				<li><a href="#">Your Staff</a></li>
+				<li><a href="#">Analytic &amp; Targeting</a></li>
+				<li><a href="#">What's New</a></li>
+			</ul>
+			<ul>
+				<li class="title">YOUR PRODUCTS<img src="images/Settings-Icon.png" alt=" "></li>
+				<li class="books"><a href="#">Books</a></li>
+				<li class="Tutorials"><a href="#">Tutorials</a></li>
+				<li class="Stocks"><a href="#">Stocks</a></li>
+				<li class="Info"><a href="#">Infographics</a></li>
+			</ul>
+			<ul class="three">
+				<li class="title">DASHBOARD<img src="images/Settings-Icon.png" alt=" "></li>
+				<li><a href="#">Messages<span class="num">21</span></a></li>
+				<li><a href="#">Connections</a></li>
+				<li><a href="#">Integrations<img src="images/Alert-icon.png" alt=" "></a></li>
+				<li><a href="#">Account Settings</a></li>
+				<li><a href="#">App Settings</a></li>
+			</ul>
+			<div class="bottom_2">
+				<p><span>Monthly Goals</span> <span>&#36;580/&#36;3200</span></p>
+				<progress max="100" value="30" ></progress>
+			</div>
+			
+		</div>
+		<div class="right">
+			<div class="right-top">
+				<h1 class="right__top__message">Messages</h1> 
+				<div class="right__top__head">
+					<img src="images/profile.png" class="right__top__head__pic">
+					<div class="right__top__head__fon">
+						<p class="right__top__head__fon__name">Jordan J.</p>
+						<p>Administrator</p>
+					</div>
+				</div>
+			</div>
+			<div class="right-left"></div>
+			<div class="right-right"></div>
+		</div>
+	</body>
+</html>
