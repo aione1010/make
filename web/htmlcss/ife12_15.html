@@ -9,7 +9,11 @@
 			}
 			body{
 				width:100%;
+				height:100%;
+				font-family: "Microsoft Yahei";
+				font-weight: 550;
 			}
+			
 			.left{
 				width:90px;
 				min-height: 100%;
@@ -43,63 +47,88 @@
 				margin-left:5px;
 			}
 			.middle{
+				position:fixed;
 				background-color: #222c3c;
 				width:250px;
-				min-height: 100%;
+				height:100%;
 				left:90px;
-				position: absolute;
 				font-size: 14px;
+				top:0;
+				
 			}
-			.middle ul{
+			.middle-all{
+				position: absolute;
+				top:30px;
+				bottom:0px;
+				width:90%;
+			}
+			.menu{
+				overflow:auto;
+				height:100%;
+			}
+			.menu ul{
+				position:relative;
 				list-style: none;
 				width:90%;
-				margin:10% auto;
+				margin:5% auto;
 				border-bottom: 1px solid #393838;
 			}
 			
-			.middle .three{
-				border:none;
-			}
-			.middle ul li {
+			
+			.menu ul li {
 				padding-bottom: 8%;
+				
 			}
-			.middle ul li a{
+			.menu ul li a{
 				text-decoration: none;
 				color:azure;
+				width:200px;
 			}
-			.middle ul li a:hover{
+			.menu ul li a:hover{
 				color:aqua;
 			}
-			.middle .title{
+			li.title{
 				color:darkgrey;
 			}
-			.middle ul li img{
-				position:absolute;
-				right:40px;
-			}
+			
 			.bottom_2{
 				position: fixed;
 				bottom:0px;
-				left:100px;
-				margin:20px 20px 20px 0;
+				left:90px;
+				width:190px;
+				padding:20px 20px 20px;
 				color:azure;
+				background-color:#222c3c;
 			}
+			
 			.bottom_2 progress{
+				position:absolute;
 				margin:0 auto;
 				border:none;
 				height:2px;
-				width:100%;
+				width:90%;
 				color:blueviolet;
 				background-color: blueviolet;
 			}
+			.title:after{
+				content:" ";
+				width:16px;
+				height:16px;
+				position:absolute;
+				display:inline-block;
+				background: url("images/Settings-Icon.png");
+				right:20px;	
+			}
+			.three img{
+				position:absolute;
+				right:20px;
+			}
 			.num{
 				position:absolute;
-				right:40px;
-				border:1px solid dodgerblue;
-				border-radius: 50%;
+				right:20px;
 				background-color: dodgerblue;
-				padding:1px 3px;
-				
+				padding:2px 6px;
+				border-radius: 50%;
 			}
 			.books{
 				list-style: url("images/BookofWisdom.png") inside;
@@ -125,6 +154,9 @@
 				height:80px;
 				width:calc(100% - 340px);
 				border-bottom: 1px solid #e6e9ec;
+				z-index: 10;
+				background-color:#fff;
+				
 			}
 			.right__top__message{
 				margin:13px 20px;
@@ -165,64 +197,285 @@
 				display:block;
 				cursor: pointer;
 			}
+			.right-middle{
+				position:fixed;
+				top:81px;
+				height:70px;
+				
+				background-color:#fff;
+				border-bottom: 1px solid #e6e9ec;
+				z-index:10;
+			}
+			.right-middle form{
+				display:inline-block;
+				padding:5px;
+				width:400px;
+				height:60px;
+				border-right: 1px solid #e6e9ec;
+			}
+			.right-middle form input{
+				margin:5px auto;
+				display: block;
+				height:35px;
+				width:300px;
+				border:1px solid #e6e9ec;
+				border-radius: 5px;
+				padding:0px 5px;
+			}
+			.right-middle form img{
+				position:fixed;
+				top:100px;
+				left:660px;
+			}
+			.bottom-left{
+				z-index:1;
+				
+				width:410px;
+				position:absolute;
+				top:152px;
+				border-right:1px solid #e6e9ec;
+				overflow:hidden;
+				
+			}
+			.outline{
+				position:relative;
+				width:100%;
+				padding:15px;
+				border-bottom: 1px solid #e6e9ec;
+				font-size: 12px;
+				color:#585d68;
+			}
+			
+			.bottom_3 .message img{
+				height:48px;
+				width:48px;
+				border-radius: 50%;
+			}
+			.pictInfo{
+				position: absolute;
+				top:5px;
+				left:80px;
+			}
+			.message-from{
+				font-size: 12px;
+				color:#b5b5b5;
+			}
+			.time{
+				position:absolute;
+				top:5px;
+				right:50px;
+				font-size: 12px;
+				color:#7f8fa4;	
+			}
+			.right_left_first_name:before{
+				display: inline-block;
+				content: " ";
+				width:5px;
+				height:5px;
+				border-radius: 100%;
+				background-color: dodgerblue;
+				position: relative;
+				right:5px;
+				top:-2px;
+			}
+			.right_left_first_name{
+				color:dodgerblue;
+			}
+			.the-message1:after{
+				display: inline-block;
+				content:"4";
+				width: 20px;
+				height:20px;
+				background-color: dodgerblue;
+				position: relative;
+				top:-45px;
+				left:300px;
+				padding:0px 0px 0px 6px;
+				border-radius: 50%;
+				margin:5px;
+			}
+			.the-message1,.the-message{
+				width:90%;
+			}
+			.outline1{
+				border-left: 3px solid dodgerblue;
+			}
+			
 		</style>
 	</head>
 	<body>
-		<div class="left">
-			<div class="icon">
-				<a href="#"><img src="images/Item-1.png" alt="item-1"></a>
-				<a href="#"><img src="images/Item-2.png" alt="item-2"></a>
-				<a href="#"><img src="images/Item-3.png" alt="item-3"></a>
-				<a href="#"><img src="images/Item-4.png" alt="item-4"></a>
+		<div class="all">
+			<div class="left">
+				<div class="icon">
+					<a href="#"><img src="images/Item-1.png" alt="item-1"></a>
+					<a href="#"><img src="images/Item-2.png" alt="item-2"></a>
+					<a href="#"><img src="images/Item-3.png" alt="item-3"></a>
+					<a href="#"><img src="images/Item-4.png" alt="item-4"></a>
+				</div>
+				<div class="bottom">
+					<a href="#"><img src="images/Grid-Icon.png" alt="grid-icon"></a>
+					<a href="#"><img src="images/Settings-Icon.png" alt="setting-icon"></a>
+				</div>
 			</div>
-			<div class="bottom">
-				<a href="#"><img src="images/Grid-Icon.png" alt="grid-icon"></a>
-				<a href="#"><img src="images/Settings-Icon.png" alt="setting-icon"></a>
-			</div>
-		</div>
-		<div class="middle">
-			<ul>
-				<li class="title">MENU<img src="images/Settings-Icon.png" alt=" "></li>
-				<li><a href="#">Overviews</a></li>
-				<li><a href="#">Sales<span class="num">54</span></a></li>
-				<li><a href="#">Your Staff</a></li>
-				<li><a href="#">Analytic &amp; Targeting</a></li>
-				<li><a href="#">What's New</a></li>
-			</ul>
-			<ul>
-				<li class="title">YOUR PRODUCTS<img src="images/Settings-Icon.png" alt=" "></li>
-				<li class="books"><a href="#">Books</a></li>
-				<li class="Tutorials"><a href="#">Tutorials</a></li>
-				<li class="Stocks"><a href="#">Stocks</a></li>
-				<li class="Info"><a href="#">Infographics</a></li>
-			</ul>
-			<ul class="three">
-				<li class="title">DASHBOARD<img src="images/Settings-Icon.png" alt=" "></li>
-				<li><a href="#">Messages<span class="num">21</span></a></li>
-				<li><a href="#">Connections</a></li>
-				<li><a href="#">Integrations<img src="images/Alert-icon.png" alt=" "></a></li>
-				<li><a href="#">Account Settings</a></li>
-				<li><a href="#">App Settings</a></li>
-			</ul>
-			<div class="bottom_2">
-				<p><span>Monthly Goals</span> <span>&#36;580/&#36;3200</span></p>
-				<progress max="100" value="30" ></progress>
-			</div>
-			
-		</div>
-		<div class="right">
-			<div class="right-top">
-				<h1 class="right__top__message">Messages</h1> 
-				<div class="right__top__head">
-					<img src="images/profile.png" class="right__top__head__pic">
-					<div class="right__top__head__fon">
-						<p class="right__top__head__fon__name">Jordan J.</p>
-						<p>Administrator</p>
+			<div class="middle">
+				<div class="middle-all">
+					<div class="menu">
+						<ul>
+							<li class="title">MENU</li>
+							<li><a href="#">Overviews</a></li>
+							<li><a href="#" class="num1">Sales<span class="num">54</span></a></li>
+							<li><a href="#">Your Staff</a></li>
+							<li><a href="#">Analytic &amp; Targeting</a></li>
+							<li><a href="#">What's New</a></li>
+						</ul>
+						<ul>
+							<li class="title">YOUR PRODUCTS</li>
+							<li class="books"><a href="#">Books</a></li>
+							<li class="Tutorials"><a href="#">Tutorials</a></li>
+							<li class="Stocks"><a href="#">Stocks</a></li>
+							<li class="Info"><a href="#">Infographics</a></li>
+						</ul>
+						<ul class="three" style="border:none">
+							<li class="title">DASHBOARD</li>
+							<li><a href="#">Messages<span class="num">21</span></a></li>
+							<li><a href="#">Connections</a></li>
+							<li><a href="#">Integrations<img src="images/Alert-icon.png" alt=" "></a></li>
+							<li><a href="#">Account Settings</a></li>
+							<li><a href="#">App Settings</a></li>
+						</ul>
+					</div>
+					<div class="bottom_2">
+						<p><span>Monthly Goals</span> <span>&#36;580/&#36;3200</span></p>
+						<progress max="100" value="30" ></progress>
 					</div>
 				</div>
 			</div>
-			<div class="right-left"></div>
-			<div class="right-right"></div>
+			<div class="right">
+				<div class="right-top">
+					<h1 class="right__top__message">Messages</h1> 
+					<div class="right__top__head">
+						<img src="images/profile.png" class="right__top__head__pic">
+						<div class="right__top__head__fon" alt="adminstrator">
+							<p class="right__top__head__fon__name">Jordan J.</p>
+							<p>Administrator</p>
+						</div>
+					</div>
+				</div>
+				<div class="right-middle">
+					<form action="#" method="get">
+						<input type="text" value="search" id="search" />
+						<img src="images/Searchicon.png" alt=" ">
+					</form>
+					
+				</div>
+				<div class="bottom-left">
+					<div class="bottom_3">
+						<div class="outline outline1">
+						<div class="message right_left_first">
+							<img src="images/Face_1.png">
+							<div class="pictInfo">
+							
+								<div class="name right_left_first_name">Bessie Berry</div>
+								<div class="message-from">Twitter</div>
+							</div>
+							<div class="time">3m</div>
+							
+							<div class="the-message1">
+								I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable
+							</div>
+							</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_2.png">
+							<div class="pictInfo">
+							<div class="name">Victor Weber</div>
+							<div class="message-from">Adobe</div></div>
+							<div class="time">8m</div>
+							<div class="the-message">
+								I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...
+							</div>
+						</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_3.png">
+							<div class="pictInfo">
+							<div class="name">Dustin Benson</div>
+							<div class="message-from">Facebook</div></div>
+							<div class="time">Yesterday</div>
+							<div class="the-message">
+								If there is anyone who needs an invitation please add yourself in the comments of this post!
+							</div>
+						</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_4.png">
+							<div class="pictInfo">
+							<div class="name">Jack Mason</div>
+							<div class="message-from">Yahoo</div></div>
+							<div class="time">Yesterday</div>
+							<div class="the-message">
+								 BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...		
+							</div>
+						</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_5.png">
+							<div class="pictInfo">
+							<div class="name">Sally Willis</div>
+							<div class="message-from">Twitter</div></div>
+							<div class="time">13 Jun</div>
+							<div class="the-message">
+								Yes, it's O2: 'internet extreme', which is no longer offered.
+							</div>
+						</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_6.png">
+							<div class="pictInfo">
+							<div class="name">Robert Patton</div>
+							<div class="message-from">A Team</div></div>
+							<div class="time">12 Jun</div>
+							<div class="the-message">
+								I change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.
+							</div>
+						</div>
+						</div>
+						<div class="outline">
+						<div class="message">
+							<img src="images/Face_7.png">
+							<div class="pictInfo">
+							<div class="name">Stephen Shelton</div>
+							<div class="message-from">Snapchat</div>
+							</div>
+							<div class="time">9 Jun</div>
+							<div class="the-message">
+								Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...
+							</div>
+						</div>
+						</div>
+				    </div>
+				</div>
+				<div class="right-right">
+					<div class="rrt">
+						<div class="rr1">
+						    <span>Bessie Berry</span>
+							<div>
+								<a href="#"><img src="images/Usericon.png"></a>
+								<a href="#"><img src="images/Uploadicon.png"></a>
+								<a href="#"><img src="images/Trashicon.png"></a>
+								<span>1 of 28</span>
+								<a href="#"><img src="images/Arrowleft.png"></a>
+								<a href="#"><img src="images/Arrowright.png"></a>
+							</div>
+					    </div>
+					</div>
+						</div>
+					</div>
 		</div>
 	</body>
 </html>
