@@ -11,7 +11,7 @@ def partition(alist,first,last):
             leftmark += 1
 
         while rightmark >= leftmark and alist[rightmark] >= pivot:      #右标移动的条件
-            rightmark -= 1
+            rightmark -= 1   #依次递减
 
 
         if leftmark > rightmark :
