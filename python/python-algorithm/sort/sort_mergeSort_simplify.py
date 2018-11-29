@@ -7,7 +7,7 @@ Created on Sun Nov 18 02:27:37 2018
 """
 
 """
-这种写法会出错！
+这种写法会出错！因为这里返还的是merged
 mid = len(alist)//2
 lefthalf = alist[:mid]        
 righthalf=alist[mid:] 
