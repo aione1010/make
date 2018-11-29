@@ -1,34 +1,33 @@
 def partition(alist,first,last):
 
-    pivot = alist[first]
+    pivot = alist[first]                                                      #选定中值
+    leftmark = first + 1     #选定左标，
+    rightmark = last         #选定右标
+    done = False             #没有完成
 
-    leftmark = first + 1
-    rightmark = last
-    done = False
+    while not done:          #循环条件
 
-    while not done:
-
-        while leftmark <= rightmark and alist[leftmark] <= pivot:
+        while leftmark <= rightmark and alist[leftmark] <= pivot:        #左标移动的条件
             leftmark += 1
 
-        while rightmark >= leftmark and alist[rightmark] >= pivot:
+        while rightmark >= leftmark and alist[rightmark] >= pivot:      #右标移动的条件
             rightmark -= 1
 
 
         if leftmark > rightmark :
-            done =True
+            done =True                        #中止条件
         else:
-            alist[leftmark],alist[rightmark] = alist[rightmark],alist[leftmark]
+            alist[leftmark],alist[rightmark] = alist[rightmark],alist[leftmark]   #互换，
 
     alist[first],alist[rightmark] = alist[rightmark],alist[first]
 
     return rightmark
 
 def quicksortHelper(alist,first,last):
-    if first < last:
-        splitpoint = partition(alist,first,last)
+    if first < last:                                     #基本结束条件
+        splitpoint = partition(alist,first,last)         #分裂为两部分
 
-        quicksortHelper(alist,first,splitpoint-1)
+        quicksortHelper(alist,first,splitpoint-1)        #递归调用
         quicksortHelper(alist,splitpoint+1,last)
     return alist
     
