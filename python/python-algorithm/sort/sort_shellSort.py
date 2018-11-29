@@ -1,6 +1,7 @@
 #shell sort 以插入排序为基础
+#最后一趟为标准的插入排序，子列表的间隔一般从n/2开始，n/4 ，n/8一直到1；
 
-def gapInsertionSort(alist,start,gap):
+def gapInsertionSort(alist,start,gap):                 #间隔的插入排序；
     for i in range(start + gap , len(alist) , gap):
         currentValue = alist[i]
         position = i
