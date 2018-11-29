@@ -4,16 +4,19 @@ Spyder Editor
 
 This is a temporary script file.
 """
+"""
+归并排序是将数列持续分成连部分，然后对两部分分别进行归并排序；
+"""
 def mergeSort(alist):
     
-    if len(alist) > 1:
+    if len(alist) > 1:                       #基本结束条件
         
         mid = len(alist)//2
         
-        lefthalf = alist[:mid]
+        lefthalf = alist[:mid]        
         righthalf=alist[mid:]
         
-        mergeSort(lefthalf)
+        mergeSort(lefthalf)             #左右零部分分别调用自身；
         mergeSort(righthalf)
         
         i=j=k=0
