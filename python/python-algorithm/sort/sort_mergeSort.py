@@ -20,7 +20,7 @@ def mergeSort(alist):
         mergeSort(righthalf)
         
         i=j=k=0
-        while i < len(lefthalf) and j<len(righthalf):
+        while i < len(lefthalf) and j<len(righthalf):     #交错把左右两部分进行归并到结果列表中；
             if lefthalf[i] < righthalf[j]:
                 alist[k] = lefthalf[i]
                 i += 1
