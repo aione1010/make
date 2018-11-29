@@ -1,7 +1,7 @@
 def selectionSort(alist):
     for i in range(len(alist)-1,0,-1):
         maxpos=0                         #假定0处值最大
-        for j in range(1,i+1):
+        for j in range(1,i+1):           #范围为1到i+1,因为需要和i处的数比较
             if alist[maxpos] < alist[j]:
                 maxpos = j              #把比0处大的值的索引赋值给maxos
 
