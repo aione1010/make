@@ -6,6 +6,15 @@ Created on Sun Nov 18 02:27:37 2018
 @author: make
 """
 
+"""
+这种写法会出错！
+mid = len(alist)//2
+lefthalf = alist[:mid]        
+righthalf=alist[mid:] 
+mergeSort(lefthalf)            
+mergeSort(righthalf)
+"""
+
 def mergeSort(alist):
     if len(alist)<=1:
         return alist
