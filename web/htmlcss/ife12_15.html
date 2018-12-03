@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>ife12_15</title>
+		<title></title>
 		<style type="text/css">
 			*{
 				padding:0px;
@@ -13,240 +13,259 @@
 				font-family: "Microsoft Yahei";
 				font-weight: 550;
 			}
-			
-			.left{
-				width:90px;
-				min-height: 100%;
-				background-color: #1d2531;
-				height:auto;
-				position: fixed;
-			}
-			.icon{
-				padding:5%;
-				width:90%;
-			}
-			.icon a{
-				display:block;
-				width:90%;
-				margin:5% auto;
-			}
-			.icon a img{
-				display:block;
-				width:80%;
-				height:80%;
-				margin:30% auto;
-			}
-			.bottom{
-				display:inline-block;
+
+			.leftside{
 				position:fixed;
-				bottom:0;
-				left:0px;
-				margin:20px 20px;
-			}
-			.bottom a{
-				margin-left:5px;
-			}
-			.middle{
-				position:fixed;
-				background-color: #222c3c;
-				width:250px;
 				height:100%;
-				left:90px;
-				font-size: 14px;
-				top:0;
-				
+				width:100px;
+				background:#1d2531;
 			}
-			.middle-all{
-				position: absolute;
-				top:30px;
-				bottom:0px;
-				width:90%;
+			.left_top{
+				list-style:none;
+				width:100%;
 			}
-			.menu{
-				overflow:auto;
-				height:100%;
+			.left_top li{
+				width:100px;
+				margin-top:20px;
 			}
-			.menu ul{
+			.left_top img{
+				display: block;
+				margin:0px auto;
+			}
+			.leftside span{
+				display: inline-block;
 				position:relative;
-				list-style: none;
-				width:90%;
-				margin:5% auto;
-				border-bottom: 1px solid #393838;
+				width:2.5px;
+				height:5px;
+				border-top-right-radius: 2.5px;
+				border-bottom-right-radius: 2.5px;
+				background-color:aqua;
+				top:30px;
 			}
 			
-			
-			.menu ul li {
-				padding-bottom: 8%;
+			.left_bottom{
+				position:absolute;
+				bottom:10px;
+				left:20px;
+			}
+			.left_bottom li{
+				display:inline;
+				padding:5px;
+			}
+			.middleside{
+				background: #222c3c;
+				width:250px;
+				padding:20px;
+				position:fixed;
+				left:100px;
+				bottom:0px;
+				top:0px;
+				overflow: auto;
+				color:azure;
+				font-size: 14px;
+			}
+			.middleside ul{
+				list-style: none;
+				border-bottom:1px solid #393838;
+				padding-bottom:30px;
+				padding-top:30px;
 				
 			}
-			.menu ul li a{
-				text-decoration: none;
-				color:azure;
-				width:200px;
+			.middleside ul li{
+				margin-bottom:10px;
+				text-transform: capitalize;
 			}
-			.menu ul li a:hover{
+			.middleside ul li:hover{
 				color:aqua;
 			}
-			li.title{
-				color:darkgrey;
-			}
-			
-			.bottom_2{
-				position: fixed;
-				bottom:0px;
-				left:90px;
-				width:190px;
-				padding:20px 20px 20px;
-				color:azure;
-				background-color:#222c3c;
-			}
-			
-			.bottom_2 progress{
-				position:absolute;
-				margin:0 auto;
-				border:none;
-				height:2px;
-				width:90%;
-				color:blueviolet;
-				background-color: blueviolet;
-			}
-			.title:after{
-				content:" ";
-				width:16px;
-				height:16px;
-				position:absolute;
-				display:inline-block;
-				background: url("images/Settings-Icon.png");
-				right:20px;	
-			}
-			.three img{
-				position:absolute;
-				right:20px;
-			}
-			.num{
-				position:absolute;
-				right:20px;
-				background-color: dodgerblue;
-				padding:2px 6px;
-				border-radius: 50%;
-			}
-			.books{
+			 .book{
 				list-style: url("images/BookofWisdom.png") inside;
+				
 			}
-			.Tutorials{
+			.tuto{
 				list-style: url("images/VideoCamera.png") inside;
+				
 			}
-			.Stocks{
+			.stocks{
 				list-style: url("images/Painting.png") inside;
+				
 			}
-			.Info{
+			.info{
 				list-style: url("images/Chart.png") inside;
+				
 			}
-			.right{
+			.middleside ul .middle-title{
+				text-transform: uppercase;
+				color:antiquewhite;
+			}
+			.middleside ul .middle-title:hover{
+				color:antiquewhite;
+			}
+			.middleside img{
 				position:absolute;
-				top:0px;
-				left:340px;
-				height:100%;
-				width:calc(100%-340px);
+				right:30px;
 			}
-			.right-top{
+			.middleside ul li span{
+				display: inline-block;
+				position:absolute;
+				right:30px;
+				width:30px;
+				height:20px;
+				background-color:dodgerblue;
+				text-align: center;
+				border:1px solid dodgerblue;
+				border-radius: 10px;
+			}
+			.middleside div{
+				width:250px;
+				left:100px;
+				position:fixed;
+				bottom:0px;
+				padding:20px 0px 20px 20px;
+				background-color: #222c3c;
+			}
+			progress{
+				width:190px;
+				background-color: aqua;
+				height:5px;
+				border:1px solid #393838;
+			}
+			.right-top-top{
 				position:fixed;
 				height:80px;
-				width:calc(100% - 340px);
-				border-bottom: 1px solid #e6e9ec;
-				z-index: 10;
-				background-color:#fff;
-				
+				left:390px;
+				width:calc(100% - 390px);
+				border-bottom: 1px solid #393838;
+				background:#fff;
+				z-index: 2;
 			}
-			.right__top__message{
-				margin:13px 20px;
-				
-			}
-			.right__top__head{
-				position:absolute;
-				top:14px;
-				height:58px;
-				right:60px;
-				width: 204px;
-			}
-			.right__top__head__pic{
-				position:relative;
-				width:50px;
-				height:50px;
-				display:block;
-			}
-			.right__top__head__fon{
-				position:absolute;
-				top:10%;
-				left:66px;
-				font-size:14px;
-				color:#b5b5b5;
-			}
-			.right__top__head__fon__name{
-				font-size: 16px;
-				color:#2399F1;
-			}
-			.right__top__head:before{
-				background-image: url("images/dropdown.png");
-				width:11px;
-				height:7px;
-				position:absolute;
-				right:0;
-				top:40%;
-				content:" ";   #这个必须有
-				display:block;
-				cursor: pointer;
-			}
-			.right-middle{
-				position:fixed;
-				top:81px;
-				height:70px;
-				
-				background-color:#fff;
-				border-bottom: 1px solid #e6e9ec;
-				z-index:10;
-			}
-			.right-middle form{
-				display:inline-block;
-				padding:5px;
-				width:400px;
-				height:60px;
-				border-right: 1px solid #e6e9ec;
-			}
-			.right-middle form input{
-				margin:5px auto;
+			.right-top-top span{
 				display: block;
-				height:35px;
-				width:300px;
-				border:1px solid #e6e9ec;
-				border-radius: 5px;
-				padding:0px 5px;
-			}
-			.right-middle form img{
-				position:fixed;
-				top:100px;
-				left:660px;
-			}
-			.bottom-left{
-				z-index:1;
+				font-size: 24px;
+				margin:20px;
 				
-				width:410px;
+			}
+			.right-top-top .profile_img{
 				position:absolute;
-				top:152px;
-				border-right:1px solid #e6e9ec;
-				overflow:hidden;
-				
+				right:100px;
+				top:13px;
 			}
-			.outline{
+			.p1{
 				position:relative;
-				width:100%;
-				padding:15px;
-				border-bottom: 1px solid #e6e9ec;
-				font-size: 12px;
-				color:#585d68;
+				left:70px;
+				top:-55px;
+				color:deepskyblue;
+			}
+			.p2{
+				position:relative;
+				left:70px;
+				top:-45px;
 			}
 			
-			.bottom_3 .message img{
+			.right-top-bottom-left{
+				position:fixed;
+				left:390px;
+				top:81px;
+				width:300px;
+				height:70px;
+				border-right:1px solid #393838;
+				border-bottom:1px solid #393838;
+				z-index:2;
+				background:#fff;
+			}
+			.right-top-bottom-right{
+				position:fixed;
+				height:70px;
+				left:691px;
+				width:calc(100% - 691px);
+				top:81px;
+				border-bottom: 1px solid #393838;
+				z-index:2;
+				background:#fff;
+				
+			}
+			.right-top-bottom-left span{
+				display: block;
+				width:100%;
+				height:100%;
+				padding:14px;
+			}
+			.right-top-bottom-left span input{
+				display: inline-block;
+				width:260px;
+				height:40px;
+				margin:0px auto;
+				border:1px solid gray;
+				border-radius: 5px;
+				padding-left:5px;
+			}
+			.right-top-bottom-left span img{
+				display: inline-block;
+				position: relative;
+				left:-30px;
+			}
+			
+			.right-top-bottom-right span{
+				position:relative;
+				top:20px;
+				left:30px;
+				
+			}
+			.right-top-bottom-right span:after{
+				content:" ";
+				position:relative;
+				left:10px;
+				display: inline-block;
+				width:5px;
+				height:5px;
+				border:1px solid chartreuse;
+				border-radius: 100%;
+				background-color:chartreuse;
+			}
+			.right-top-bottom-right div{
+				position:absolute;
+				right:100px;
+				
+			}
+			.right-top-bottom-right ul{
+				list-style: none;
+				display: inline;
+				margin:0px;
+			}
+			.right-top-bottom-right ul li{
+				display: inline;
+			}
+			.right-top-bottom-right ul li a{
+				display: inline-block;
+				width:20px;
+				height:20px;
+				border:1px solid gray;
+				background-color: floralwhite;
+				margin:0px;
+				padding:0px;
+				text-align: center;
+			}
+			.right-left{
+				position:absolute;
+				left:390px;
+				top:152px;
+				width:300px;
+				border-right:1px solid #393838;
+			}
+			.right-left-out{
+				width:100%;
+				height:100%;
+			}
+			.outline{
+				width:100%;
+				border-bottom:1px solid gray;
+				position:relative;
+			}
+			.outline1{
+				border-left:3px solid dodgerblue;
+				border-bottom:1px solid gray;
+			}
+			.message img{
 				height:48px;
 				width:48px;
 				border-radius: 50%;
@@ -262,8 +281,8 @@
 			}
 			.time{
 				position:absolute;
-				top:5px;
-				right:50px;
+				right:30px;
+				top:10px;
 				font-size: 12px;
 				color:#7f8fa4;	
 			}
@@ -284,198 +303,191 @@
 			.the-message1:after{
 				display: inline-block;
 				content:"4";
-				width: 20px;
+				width: 30px;
 				height:20px;
 				background-color: dodgerblue;
-				position: relative;
-				top:-45px;
-				left:300px;
-				padding:0px 0px 0px 6px;
-				border-radius: 50%;
-				margin:5px;
+				position: absolute;
+				top:90px;
+				right:30px;
+				border-radius: 10px;
+				text-align: center;
 			}
 			.the-message1,.the-message{
 				width:90%;
 			}
-			.outline1{
-				border-left: 3px solid dodgerblue;
-			}
-			
+
 		</style>
 	</head>
 	<body>
-		<div class="all">
-			<div class="left">
-				<div class="icon">
-					<a href="#"><img src="images/Item-1.png" alt="item-1"></a>
-					<a href="#"><img src="images/Item-2.png" alt="item-2"></a>
-					<a href="#"><img src="images/Item-3.png" alt="item-3"></a>
-					<a href="#"><img src="images/Item-4.png" alt="item-4"></a>
+		<div class="leftside">
+			
+			<ul class="left_top">
+				<li><span></span><a href="#"><img src="images/Item-1.png" alt=" "></a></li>
+				<li><a href="#"><img src="images/Item-2.png" alt=" "></a></li>
+				<li><a href="#"><img src="images/Item-3.png" alt=" "></a></li>
+				<li><a href="#"><img src="images/Item-4.png" alt=" "></a></li>
+			</ul>
+			<ul class="left_bottom">
+				<li><a href="#"><img src="images/Grid-Icon.png" alt=" "></a></li>
+				<li><a href="#"><img src="images/Settings-Icon.png" alt=" "></a></li>
+			</ul>
+		</div>
+		<div class="middleside">
+			<ul>
+				<li class="middle-title">menu<img src="images/Settings-Icon.png" alt=" "></li>
+				<li>overviews</li>
+				<li>sales<span>54</span></li>
+				<li>your staff</li>
+				<li>analytic & targeting</li>
+				<li>what's new</li>
+			</ul>
+			<ul>
+				<li class="middle-title">your products<img src="images/Settings-Icon.png" alt=" "></li>
+				<li class="book">books</li>
+				<li class="tuto">tutorials</li>
+				<li class="stocks">stocks</li>
+				<li class="info">infographics</li>
+			</ul>
+			<ul style="border:none">
+				<li class="middle-title">dashboard<img src="images/Settings-Icon.png" alt=" "></li>
+				<li>message<span>21</span></li>
+				<li>connections</li>
+				<li>integrations<img src="images/Alert-icon.png" alt=" "></li>
+				<li>account settings</li>
+				<li>app settings</li>
+			</ul>
+			<div>
+				<p>Monthly Goals &#36;580/&#36;3200</p>
+				<progress max="100" value="30"></progress>
+			</div>
+		</div>
+		<div class="right">
+			<div class="right-top">
+				<div class="right-top-top">
+					<span>Messages</span>
+					<div class="profile_img">
+						<img src="images/profile.png" alt=" ">
+						<p class="p1">Jordan J.</p>
+						<p class="p2">Adminstrator</p>
+					</div>
 				</div>
-				<div class="bottom">
-					<a href="#"><img src="images/Grid-Icon.png" alt="grid-icon"></a>
-					<a href="#"><img src="images/Settings-Icon.png" alt="setting-icon"></a>
+				<div class="right-top-bottom">
+					<div class="right-top-bottom-left">
+						<span>
+							<input type="text" value="Search" />
+							<img src="images/Searchicon.png" alt=" ">
+						</span>
+					</div>
+					<div class="right-top-bottom-right">
+						<span>Bessie Berry</span>
+						<div>
+							<ul>
+								<li><a href="#"><img src="images/Usericon.png" alt=" "></a></li>
+								<li><a href="#"><img src="images/Uploadicon.png" alt=" "></a></li>
+								<li><a href="#"><img src="images/Trashicon.png" alt=" "></a></li>
+							</ul>
+							<ul>
+								<li>1 of 28</li>
+								<li><a href="#"><img src="images/Arrowleft.png" alt=" "></a></li>
+								<li><a href="#"><img src="images/Arrowright.png" alt=" "></a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="middle">
-				<div class="middle-all">
-					<div class="menu">
-						<ul>
-							<li class="title">MENU</li>
-							<li><a href="#">Overviews</a></li>
-							<li><a href="#" class="num1">Sales<span class="num">54</span></a></li>
-							<li><a href="#">Your Staff</a></li>
-							<li><a href="#">Analytic &amp; Targeting</a></li>
-							<li><a href="#">What's New</a></li>
-						</ul>
-						<ul>
-							<li class="title">YOUR PRODUCTS</li>
-							<li class="books"><a href="#">Books</a></li>
-							<li class="Tutorials"><a href="#">Tutorials</a></li>
-							<li class="Stocks"><a href="#">Stocks</a></li>
-							<li class="Info"><a href="#">Infographics</a></li>
-						</ul>
-						<ul class="three" style="border:none">
-							<li class="title">DASHBOARD</li>
-							<li><a href="#">Messages<span class="num">21</span></a></li>
-							<li><a href="#">Connections</a></li>
-							<li><a href="#">Integrations<img src="images/Alert-icon.png" alt=" "></a></li>
-							<li><a href="#">Account Settings</a></li>
-							<li><a href="#">App Settings</a></li>
-						</ul>
-					</div>
-					<div class="bottom_2">
-						<p><span>Monthly Goals</span> <span>&#36;580/&#36;3200</span></p>
-						<progress max="100" value="30" ></progress>
-					</div>
-				</div>
-			</div>
-			<div class="right">
-				<div class="right-top">
-					<h1 class="right__top__message">Messages</h1> 
-					<div class="right__top__head">
-						<img src="images/profile.png" class="right__top__head__pic">
-						<div class="right__top__head__fon" alt="adminstrator">
-							<p class="right__top__head__fon__name">Jordan J.</p>
-							<p>Administrator</p>
-						</div>
-					</div>
-				</div>
-				<div class="right-middle">
-					<form action="#" method="get">
-						<input type="text" value="search" id="search" />
-						<img src="images/Searchicon.png" alt=" ">
-					</form>
-					
-				</div>
-				<div class="bottom-left">
-					<div class="bottom_3">
-						<div class="outline outline1">
-						<div class="message right_left_first">
-							<img src="images/Face_1.png">
-							<div class="pictInfo">
-							
-								<div class="name right_left_first_name">Bessie Berry</div>
-								<div class="message-from">Twitter</div>
-							</div>
-							<div class="time">3m</div>
-							
-							<div class="the-message1">
-								I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable
-							</div>
+			<div class="right-left">
+				<div class="right-left-out">
+					  <div class="outline outline1">
+							<div class="message right_left_first">
+								<img src="images/Face_1.png">
+								<div class="pictInfo">
+
+									<div class="name right_left_first_name">Bessie Berry</div>
+									<div class="message-from">Twitter</div>
+								</div>
+								<div class="time">3m</div>
+
+								<div class="the-message1">
+									I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable
+								</div>
 							</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_2.png">
-							<div class="pictInfo">
-							<div class="name">Victor Weber</div>
-							<div class="message-from">Adobe</div></div>
-							<div class="time">8m</div>
-							<div class="the-message">
-								I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...
+							<div class="message">
+								<img src="images/Face_2.png">
+								<div class="pictInfo">
+								<div class="name">Victor Weber</div>
+								<div class="message-from">Adobe</div></div>
+								<div class="time">8m</div>
+								<div class="the-message">
+									I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...
+								</div>
 							</div>
-						</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_3.png">
-							<div class="pictInfo">
-							<div class="name">Dustin Benson</div>
-							<div class="message-from">Facebook</div></div>
-							<div class="time">Yesterday</div>
-							<div class="the-message">
-								If there is anyone who needs an invitation please add yourself in the comments of this post!
+							<div class="message">
+								<img src="images/Face_3.png">
+								<div class="pictInfo">
+								<div class="name">Dustin Benson</div>
+								<div class="message-from">Facebook</div></div>
+								<div class="time">Yesterday</div>
+								<div class="the-message">
+									If there is anyone who needs an invitation please add yourself in the comments of this post!
+								</div>
 							</div>
-						</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_4.png">
-							<div class="pictInfo">
-							<div class="name">Jack Mason</div>
-							<div class="message-from">Yahoo</div></div>
-							<div class="time">Yesterday</div>
-							<div class="the-message">
-								 BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...		
+							<div class="message">
+								<img src="images/Face_4.png">
+								<div class="pictInfo">
+								<div class="name">Jack Mason</div>
+								<div class="message-from">Yahoo</div></div>
+								<div class="time">Yesterday</div>
+								<div class="the-message">
+									 BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...		
+								</div>
 							</div>
-						</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_5.png">
-							<div class="pictInfo">
-							<div class="name">Sally Willis</div>
-							<div class="message-from">Twitter</div></div>
-							<div class="time">13 Jun</div>
-							<div class="the-message">
-								Yes, it's O2: 'internet extreme', which is no longer offered.
+							<div class="message">
+								<img src="images/Face_5.png">
+								<div class="pictInfo">
+								<div class="name">Sally Willis</div>
+								<div class="message-from">Twitter</div></div>
+								<div class="time">13 Jun</div>
+								<div class="the-message">
+									Yes, it's O2: 'internet extreme', which is no longer offered.
+								</div>
 							</div>
-						</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_6.png">
-							<div class="pictInfo">
-							<div class="name">Robert Patton</div>
-							<div class="message-from">A Team</div></div>
-							<div class="time">12 Jun</div>
-							<div class="the-message">
-								I change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.
+							<div class="message">
+								<img src="images/Face_6.png">
+								<div class="pictInfo">
+								<div class="name">Robert Patton</div>
+								<div class="message-from">A Team</div></div>
+								<div class="time">12 Jun</div>
+								<div class="the-message">
+									I change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.
+								</div>
 							</div>
-						</div>
 						</div>
 						<div class="outline">
-						<div class="message">
-							<img src="images/Face_7.png">
-							<div class="pictInfo">
-							<div class="name">Stephen Shelton</div>
-							<div class="message-from">Snapchat</div>
+							<div class="message">
+								<img src="images/Face_7.png">
+								<div class="pictInfo">
+								<div class="name">Stephen Shelton</div>
+								<div class="message-from">Snapchat</div>
+								</div>
+								<div class="time">9 Jun</div>
+								<div class="the-message">
+									Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...
+								</div>
 							</div>
-							<div class="time">9 Jun</div>
-							<div class="the-message">
-								Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...
-							</div>
-						</div>
 						</div>
 				    </div>
-				</div>
-				<div class="right-right">
-					<div class="rrt">
-						<div class="rr1">
-						    <span>Bessie Berry</span>
-							<div>
-								<a href="#"><img src="images/Usericon.png"></a>
-								<a href="#"><img src="images/Uploadicon.png"></a>
-								<a href="#"><img src="images/Trashicon.png"></a>
-								<span>1 of 28</span>
-								<a href="#"><img src="images/Arrowleft.png"></a>
-								<a href="#"><img src="images/Arrowright.png"></a>
-							</div>
-					    </div>
-					</div>
-						</div>
-					</div>
+			</div>
+			<div class="right-right"></div>
 		</div>
 	</body>
 </html>
