@@ -15,32 +15,78 @@
 			},function(){
 				$(this).removeClass('hover');
 			});
-		});
-		$(document).ready(function(event){
-			$('#switcher-default').addClass('selected');
-			$('#switcher').click(function(event){
-				if($(event.target).is('button')){
-					var bodyClass = event.target.id.split('-')[1];
-					$('body').removeClass().addClass(bodyClass);
-					$('#switcher button').removeClass('selected');
-					$(event.target).addClass('selected');
-				}
-			});
-		});
-		$(document).ready(function(){
-			var toggleSwitcher = function(event){
+			var toggleSwitcher=function(event){
 				if(!$(event.target).is('button')){
 					$('#switcher button').toggleClass('hidden');
 				}
 			};
 			$('#switcher').on('click',toggleSwitcher);
-			$('#switcher button').click(function(){
+			$('#switcher').click();
+			var setBodyClass=function(className){
+				$('body').removeClass().addClass(className);
+				$('#switcher button').removeClass('selected');
+				$('#switcher-'+className).addClass('selected');
 				$('#switcher').off('click',toggleSwitcher);
-				if(this.id=='switcher-default'){
+				if(className=='default'){
 					$('#switcher').on('click',toggleSwitcher);
 				}
+			};
+			$('#switcher-default').addClass('selected');
+			var triggers = {
+				N:'narrow',
+				L:'large',
+				D:'default'
+			};
+			$('#switcher').click(function(event){
+				if($(event.target).is('button')){
+					var bodyClass = event.target.id.split('-')[1];
+					setBodyClass(bodyClass);
+				}
 			});
-			$('#switcher').trigger('click');
+			$(document).keyup(function(event){
+				var key = String.fromCharCode(event.which);
+				if(key in triggers){
+					setBodyClass(triggers[key]);
+				}
+			});
+			$('.author').dblclick(function(){
+				$(this).toggleClass('selected');
+			});
+			$('.chapter-title').dblclick(function(){
+				$(".chapter-title").nextAll().toggleClass('hidden');
+			});
+			$(document).keyup(function(event){
+				//.index()，返回被选择项在父元素中的索引，
+				var num=$('#switcher button').filter('.selected').index()-1;
+				alert(num)
+				if(event.which==39){
+					num=(num+1)%3;
+				}
+				else if(event.which==37){
+					num=(num-1)%3;
+				}else{
+					return false;
+				}
+				
+				var btnClassName=$('#switcher button').eq(num).attr('id').split('-')[1];
+				setBodyClass(btnClassName);
+				
+			});
+			var posx_down,posx_up,posy_down,posy_up;
+			$(document).mousedown(function(event){
+				posx_down=event.clientX;
+				posy_down=event.clientY;
+			});
+			$(document).mouseup(function(event){
+				posx_up=event.clientX;
+				posy_up=event.clientY;
+				if(posx_down==posx_up && posy_down==posy_up){
+				$('p').addClass('hidden');
+			    }else if(posy_down<posy_up){
+				$('p').removeClass('hidden');
+			    }
+			});
+			
 		});
 		
 	  </script>
