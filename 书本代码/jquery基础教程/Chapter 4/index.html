@@ -24,13 +24,21 @@
 				queue:false
 				  })
 				.fadeTo('fast',1)
-				.slideUp('slow')
-				.queue(function(next){
-					$switcher.css({'backgroundColor':'#f00'});
-					next();
+				.slideUp('slow',function(){
+					$(this).css({backgroundColor:'red'});
 				})
 				.slideDown('fast')
 			});
+			$('p').eq(2).css({border:'1px solid #333'})
+			.click(function(){
+				var $clickedItem = $(this)
+				$clickedItem.next().slideDown('slow',function(){
+					$clickedItem.slideUp('slow');
+				});
+			});
+			$('p').eq(3).css({backgroundColor:'#ccc'}).hide();
+				
+			
 			var $firstPara=$('p').eq(1);
 			$firstPara.hide();
 			$('a.more').click(function(event){
