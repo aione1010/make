@@ -10,16 +10,36 @@
     <script src="jquery.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
-			var $firstPara=$('p').eq(1).slideUp('hide');
+			$('.label').click(function(){
+				var paraWidth=$('.speech p').outerWidth();
+				var $switcher = $('.label').parent();
+				var switcherWidth = $switcher.outerWidth();
+				$switcher.css({'position':'relative'})
+				.fadeTo('fast',0.5)
+				.animate({
+					'height':'+=20px',
+					'borderWidth':'5px',
+					left:paraWidth-switcherWidth
+				},{duration :'slow',
+				queue:false
+				  })
+				.fadeTo('fast',1)
+				.slideUp('slow')
+				.queue(function(next){
+					$switcher.css({'backgroundColor':'#f00'});
+					next();
+				})
+				.slideDown('fast')
+			});
+			var $firstPara=$('p').eq(1);
 			$firstPara.hide();
 			$('a.more').click(function(event){
 				event.preventDefault();
-				$firstPara.slideToggle('slow');
-				var $link = $('a.more');
-				if($link.text() == 'read more'){
-					$link.text('read less')
+				$firstPara.animate({'height':'toggle','opacity':'toggle'},'slow');
+				if($(this).text()=='read more'){
+					$(this).text('read less');
 				}else{
-					$link.text('read more');
+					$(this).text('read more');
 				}
 			});
 			var $speech = $('.speech');
@@ -36,7 +56,7 @@
 					default:
 						num = parseFloat(defaultSize);
 				}
-				$speech.css('fontSize',num+'px');
+				$speech.animate({'fontSize':num+'px'},'slow');
 			});
 		});
 	</script>

@@ -48,6 +48,7 @@ a {
   width: 300px;
   padding: .5em;
   border: 1px solid #777;
+  position: relative;
 }
 .label {
   width: 130px;
