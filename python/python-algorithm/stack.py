@@ -31,3 +31,20 @@ def rev(myStr):
 rev('hello')
 
 print(stack)
+
+
+#进制转换
+def sysConvert(x,base):
+    stack = Stack()
+    baseStr = ''
+    digits = '0123456789ABCDEF'
+    while x > 0:
+        rem = x % base
+        stack.push(rem)
+        x = x // base
+    while not stack.isEmpty():
+        baseStr += str(digits[stack.pop()])
+    return baseStr
+print(sysConvert(10027,2))
+print(sysConvert(10027,8))
+print(sysConvert(10027,16))
