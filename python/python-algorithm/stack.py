@@ -11,7 +11,23 @@ class Stack():
         return self.items[len(self.items)-1]
     def size(self):
         return len(self.items)
+    def __str__(self):
+        return str(self.items)
+
 
 stack = Stack()
-stack.push(1)
-print(stack.size())
+
+
+
+def rev(myStr):
+    str1=''
+    for i in myStr:
+        stack.push(i)
+    n=stack.size()
+    print(stack)
+    for i in range(n):
+        str1 += stack.pop()
+    print(str1)
+rev('hello')
+
+print(stack)
