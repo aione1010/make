@@ -48,3 +48,62 @@ def sysConvert(x,base):
 print(sysConvert(10027,2))
 print(sysConvert(10027,8))
 print(sysConvert(10027,16))
+
+
+#括号匹配
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+
+    while index < len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol == '(':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                s.pop()
+        index = index + 1
+    
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+
+print(parChecker('((()'))
+print(parChecker('((()()()))'))
+
+#(){}[]匹配
+def parChecker1(symbolString):
+    s = Stack()
+    index = 0
+    balanced = True
+    
+    while balanced and index < len(symbolString):
+        symbol = symbolString[index]
+
+        if symbol in '([{':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                top = s.pop()
+                if not matches(top,symbol):
+                    balanced = False
+        index = index + 1
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+def matches(a,b):
+    aa='({['
+    bb=')}]'
+    return aa.index(a) == bb.index(b)
+
+print(parChecker1("{{([][])}()}"))
+
+
+//打印机

@@ -75,3 +75,37 @@ console.log(devided(10027,16))
 
 
 
+//括号匹配 (){}[]
+
+function parChecker(symbolString){
+    let s = new Stack(),
+        indexi = 0,
+        opens='([{',
+        closers=')]}',
+        balanced = true;
+    while (balanced && indexi < symbolString.length){
+        let symbol = symbolString[indexi];
+        if (opens.indexOf(symbol) >= 0){
+            s.push(symbol);
+        }else{
+            if(s.isEmpty()){
+                balanced = false;
+            }else{
+                let top = s.pop();
+                if(!(opens.indexOf(top) == closers.indexOf(symbol))){
+                    balanced = false;
+                }
+            }
+        }
+        indexi ++ ;
+    }
+    if(s.isEmpty() && balanced){
+        return true;
+    }
+    return false;
+}
+
+console.log(parChecker('{{([][])}()}'));
+
+
+//打印机

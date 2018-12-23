@@ -42,3 +42,27 @@ queue.print();
 console.log(queue.size());
 queue.dequeue();
 queue.print();
+
+
+//击鼓传花
+
+function hotPotato(names,num){
+    let queue = new Queue();
+    
+    for(let i = 0; i < names.length; i++){
+        queue.enqueue(names[i]);
+    }
+    let eliminated = '';
+    while(queue.size() > 1){
+        for (let i = 0;i < num; i++){
+            queue.enqueue(queue.dequeue());
+        }
+        eliminated = queue.dequeue();
+        console.log(eliminated + '被淘汰');
+    }
+    return queue.dequeue();
+}
+
+let names = ['Jhon','Jack','Camila','Ingrid','Carl']
+let winner = hotPotato(names,5);
+console.log('The winner is ' + winner)
