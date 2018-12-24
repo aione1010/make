@@ -13,7 +13,6 @@ class linkedList():
         self.head = tmp
 
     def remove(self,item):
-        tmp = Node(item)
         found = False
         current = self.head
         previous = None
