@@ -9,6 +9,19 @@
 
     <script src="jquery.js"></script>
     <script src="05.js"></script>
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        $('div.chapter a[href*=wikipedia]').attr({
+          rel:'external',
+          title:function(){
+            return 'learn more about '+$(this).text()+' in wikipedia';
+          },
+          id:function(index,oldValue){
+            return 'wikilink-' + index;
+          }
+        })
+      });
+      </script>
     <script src="prep.js"></script>
   </head>
   <body>
