@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+	<title>IFE ECMAScript</title>
+	<script src='jquery.js'></script>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        $(document).ready(function(){
+			var $val1 = Number($('#first-number').val()),
+				$val2 = Number($('#second-number').val());
+			var result;
+			$('#add-btn').click(function(){
+				result = $val1 + $val2;
+				$('p').html('运算结果: '+result);
+			});
+			$('#minus-btn').click(function(){
+				result = $val1 - $val2;
+				$('p').html('运算结果: '+result); 
+			});
+			$('#times-btn').click(function(){
+				result = $val1 * $val2;
+				$('p').html('运算结果: '+result);
+			});
+			$('#divide-btn').click(function(){
+				result = $val1 / $val2;
+				$('p').html('运算结果: '+result);
+			});
+		})
+    </script>
+</body>
+</html>

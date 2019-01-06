@@ -24,8 +24,21 @@
         $('<a id="top"></a>').prependTo('body');
         var $notes = $('<ol id = "notes"></ol>').insertBefore('#footer');
         $('span.footnote').each(function(index){
-          $('<sup>' + (index+1) + '</sup>').insertBefore(this);
-          $(this).appendTo($notes).wrap('<li></li>')
+          $(this).before(['<a href = "#footnote-',index+1,'" id="context-',index+1,'" class="context"','<sup>',index+1,'</sup></a>'].join(""))
+          .appendTo($notes)
+          .append(['(<a href="#context-',index+1,'">context</a>)'].join(''))
+          .wrap('<li id="footnote-'+(index+1)+'"></li>');
+        });
+        $('span.pull-quote').each(function(index){
+          var $parentParag = $(this).parent('p');
+          $parentParag.css('position','relative');
+          var $cloneP = $(this).clone();
+          $cloneP.addClass('pulled')
+          .find('span.drop')
+          .html('&hellip;')
+          .end()
+          .text($cloneP.text())
+          .prependTo($parentParag);
         });
       });
       </script>
