@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <title>IFE ECMAScript</title>
+    <style type = 'text/css'>
+        .convert{
+            border-bottom: 1px solid gray;
+        }
+        td{
+            border:1px solid gray;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
-<body>        
-    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
-    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
-    <button id="trans-btn">转化为二进制</button>
-    <p id="result">运算结果</p>
+
+<body>
+    <div class='convert'>
+        <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+        <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+        <button id="trans-btn">转化为二进制</button>
+        <p id="result">运算结果</p>
+    </div>
+    <table>
+        <tbody id='mutiply'></tbody>
+    </table>
     <script>
 
-function dec2bin(decNumber) {
-    var arr = ['0','1'];
-    if(decNumber < 0){
-        console.log('请输入一个大于0的数');
-    }else{
-        if(decNumber < 2){
-            return arr[decNumber];
-        }else{
-            return dec2bin(Math.floor(decNumber / 2))+arr[decNumber%2];
+        function dec2bin(decNumber) {
+            var arr = ['0', '1'];
+            if (decNumber < 0) {
+                console.log('请输入一个大于0的数');
+            } else {
+                if (decNumber < 2) {
+                    return arr[decNumber];
+                } else {
+                    return dec2bin(Math.floor(decNumber / 2)) + arr[decNumber % 2];
+                }
+            }
         }
-    }
-}
 
-// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
-// 新的需求是，转化显示后的二进制数为bin-bit中输入的数字宽度，例如
-// dec-number为5，bin-bit为5，则转化后数字为00101
-// 如果bin-bit小于转化后的二进制本身位数，则使用原本的位数，如dec-number为5，bin-bit为2，依然输出101，但同时在console中报个错
-// Some coding
+        var bin_bit = document.getElementById('bin-bit');
+        var p = document.getElementById('result'),
+            trans = document.getElementById('trans-btn'),
+            dec_number = document.getElementById("dec-number");
 
-var bin_bit = Number(document.getElementById('bin-bit').value),
-dec_number = Number(document.getElementById('dec-number').value),
-trans = document.getElementById('trans-btn'),
-p = document.getElementById('result');
-var d2b = dec2bin(dec_number);
-trans.addEventListener('click',function(){
-    if(d2b.length >= bin_bit){
-    p.innerHTML = '运算结果：'+d2b;
-    console.log('超过bin-bit!');
-}else{
-    for(var i=0;i<bin_bit-d2b.length;i++){
-        d2b = '0'+d2b;
-    }
-    p.innerHTML = '运算结果：'+d2b;
-}
-},false)
-
-
+        trans.addEventListener("click", function () {
+            var d2b = dec2bin(dec_number.value);
+            if (!bin_bit.value || !dec_number.value) {
+                p.innerHTML = '输入不能为空！'
+            } else if (bin_bit.value < 0 || dec_number.value < 0) {
+                p.innerHTML = '输入不能为负！'
+            } else {
+                if (d2b.length >= bin_bit.value) {
+                    p.innerHTML = '运算结果：' + d2b;
+                    console.log('超出了范围')
+                } else {
+                    for (var i = 0; i < bin_bit.value - d2b.length; i++) {
+                        d2b = '0' + d2b;
+                    }
+                    p.innerHTML = '运算结果：' + d2b;
+                }
+            }
+        }, false);
+        var tbody = document.getElementById('mutiply');
+        for(var i=1;i<10;i++){
+            tbody.insertRow(i-1);
+            for(var j=1;j<=i;j++){
+                var res = i+'*'+j+'='+i*j;
+                tbody.rows[i-1].insertCell(j-1);
+                tbody.rows[i-1].cells[j-1].appendChild(document.createTextNode(res));
+            }
+        }
 
     </script>
 </body>
+
 </html>

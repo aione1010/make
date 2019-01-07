@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type='text/css'>
+            .f1{
+                padding:20px;
+                border-bottom: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='f1'>
+            <input id="name" type="text">
+            <button id="submit-btn">Submit</button>
+        </div>
+        <label>
+            <input id="school" name="status" type="radio">
+                School
+        </label>
+        <label>
+            <input id="company" name="status" type="radio">
+                Company
+        </label>
+        
+        <select id="school-select">        
+            <option>北京邮电大学</option>
+            <option>黑龙江大学</option>
+            <option>华中科技大学</option>
+        </select>
+        
+        <select id="company-select">        
+            <option>百度</option>
+            <option>爱奇艺</option>        
+        </select>
+        <script type='text/javascript'>
+            var btn1 = document.getElementById('submit-btn'),
+            inname = document.getElementById('name');
+            btn1.onclick = function(){
+                console.log(inname.value);
+            }
+            inname.addEventListener('keyup',function(event){
+                if(event.keyCode == 13){
+                    console.log(inname.value);
+                }else if(event.keyCode == 27){
+                    inname.value=null;
+                }
+            },false);
+        </script>
+    </body>
+</html>
