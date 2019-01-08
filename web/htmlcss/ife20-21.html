@@ -1,50 +1,117 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style type='text/css'>
-            .f1{
-                padding:20px;
-                border-bottom: 1px solid gray;
+
+<head>
+    <style type='text/css'>
+        *{
+            padding:5px 0px;
+            margin:0px;
+        }
+        .f1 {
+            padding: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .palette{
+            margin:3px;
+            padding:3px;
+            border-top:1px solid #000;
+            
+        }
+        li {
+            display:inline-block;
+            margin:3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='f1'>
+        <input id="name" type="text">
+        <button id="submit-btn">Submit</button>
+    </div>
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">
+        <option>百度</option>
+        <option>爱奇艺</option>
+    </select>
+
+    <ul class="palette">
+        <li style="background-color:crimson"></li>
+        <li style="background-color:bisque"></li>
+        <li style="background-color:blueviolet"></li>
+        <li style="background-color:coral"></li>
+        <li style="background-color:chartreuse"></li>
+        <li style="background-color:darkolivegreen"></li>
+        <li style="background-color:cyan"></li>
+        <li style="background-color:#194738"></li>
+    </ul>
+
+    <p class="color-picker"></p>
+
+    <script type='text/javascript'>
+        var inputname = document.getElementById('name');
+        var btn1 = document.getElementById('submit-btn');
+        btn1.addEventListener('click', function () {
+            console.log(inputname.value);
+        }, false);
+        inputname.addEventListener('keyup', function (event) {
+            if (event.keyCode == 13) {
+                console.log(inputname.value);
+            } else if (event.keyCode == 27) {
+                inputname.value = null;
             }
-        </style>
-    </head>
-    <body>
-        <div class='f1'>
-            <input id="name" type="text">
-            <button id="submit-btn">Submit</button>
-        </div>
-        <label>
-            <input id="school" name="status" type="radio">
-                School
-        </label>
-        <label>
-            <input id="company" name="status" type="radio">
-                Company
-        </label>
-        
-        <select id="school-select">        
-            <option>北京邮电大学</option>
-            <option>黑龙江大学</option>
-            <option>华中科技大学</option>
-        </select>
-        
-        <select id="company-select">        
-            <option>百度</option>
-            <option>爱奇艺</option>        
-        </select>
-        <script type='text/javascript'>
-            var btn1 = document.getElementById('submit-btn'),
-            inname = document.getElementById('name');
-            btn1.onclick = function(){
-                console.log(inname.value);
-            }
-            inname.addEventListener('keyup',function(event){
-                if(event.keyCode == 13){
-                    console.log(inname.value);
-                }else if(event.keyCode == 27){
-                    inname.value=null;
-                }
-            },false);
-        </script>
-    </body>
+        }, false);
+        var school = document.getElementById('school'),
+            school_select = document.getElementById('school-select'),
+            company = document.getElementById('company'),
+            company_select = document.getElementById('company-select');
+        school.addEventListener('click', function (event) {
+            school_select.style.display = 'inline';
+            company_select.style.display = 'none';
+        }, false);
+        company.addEventListener('click', function (event) {
+            company_select.style.display = 'inline';
+            school_select.style.display = 'none';
+        }, false);
+        var list = document.querySelectorAll('li'),
+            p = document.getElementsByClassName('color-picker')[0];
+
+        for (var i = 0, len = list.length; i < len; i++) {
+            list[i].addEventListener('click', function (event) {
+                var t = event.target,
+                    c = t.style.backgroundColor;
+                p.innerHTML = c;
+                p.style.color = c;
+            }, false);
+        }
+    </script>
+</body>
+
 </html>
