@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div>
+        <label class='l1'>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
+        <label class='l1'>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+    </div>
+    <div>
+        <button class='b1'>判断当前选中的输入框输入内容是否为数字</button>
+        <button class='b1'>把 A 四舍五入为 B 个小数位数的数字</button>
+        <button class='b1'>当前选中数字的绝对值</button>
+        <button class='b1'>对当前选中的数字进行上舍入</button>
+        <button class='b1'>对当前选中的数字进行下舍入</button>
+        <button class='b1'>把当前选中的数字四舍五入为最接近的整数</button>
+        <button class='b1'>返回 A 和 B 中的最高值</button>
+        <button class='b1'>返回 A 和 B 中的最低值</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        var ra=document.getElementById('radio-a'),
+            rb=document.getElementById('radio-b');
+        var numa = document.getElementById('num-a').value,
+            numb = Number(document.getElementById('num-b').value);
+        var b1 = document.getElementsByClassName('b1')[0],
+            b2=document.getElementsByClassName('b1')[1],
+            b3 = document.getElementsByClassName('b1')[2],
+            b4 = document.getElementsByClassName('b1')[3],
+            b5=document.getElementsByClassName('b1')[4],
+            b6 = document.getElementsByClassName('b1')[5],
+            b7=document.getElementsByClassName('b1')[6],
+            b8 = document.getElementsByClassName('b1')[7];
+        var p = document.getElementById('result');
+        document.onclick = function(event){
+            switch(event.target){
+                case b1:
+                    if(ra.checked){
+                        p.innerHTML =numa;
+                    }else if(rb.checked){
+                        p.innerHTML = (typeof numb);
+                    }
+                case b2:
+                    p.innerHTML = numa.toFixed(numb);
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
