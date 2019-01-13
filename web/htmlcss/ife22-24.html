@@ -1,49 +1,322 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        *{
+            padding: 5px;
+        }
+        body{
+            padding:0px;
+            margin:0px;
+        }
+        #num{
+            border-bottom:1px solid gray;
+            width:100%;
+        }
+    </style>
+</head>
+
 <body>
-    <div>
-        <label class='l1'>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
-        <label class='l1'>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+    <div id='num'>
+        <div>
+            <label class='l1'>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a"
+                type="text">
+            <label class='l1'>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b"
+                type="text">
+        </div>
+        <div>
+            <button class='b1'>判断当前选中的输入框输入内容是否为数字</button>
+            <button class='b1'>把 A 四舍五入为 B 个小数位数的数字</button>
+            <button class='b1'>当前选中数字的绝对值</button>
+            <button class='b1'>对当前选中的数字进行上舍入</button>
+            <button class='b1'>对当前选中的数字进行下舍入</button>
+            <button class='b1'>把当前选中的数字四舍五入为最接近的整数</button>
+            <button class='b1'>返回 A 和 B 中的最高值</button>
+            <button class='b1'>返回 A 和 B 中的最低值</button>
+        </div>
     </div>
-    <div>
-        <button class='b1'>判断当前选中的输入框输入内容是否为数字</button>
-        <button class='b1'>把 A 四舍五入为 B 个小数位数的数字</button>
-        <button class='b1'>当前选中数字的绝对值</button>
-        <button class='b1'>对当前选中的数字进行上舍入</button>
-        <button class='b1'>对当前选中的数字进行下舍入</button>
-        <button class='b1'>把当前选中的数字四舍五入为最接近的整数</button>
-        <button class='b1'>返回 A 和 B 中的最高值</button>
-        <button class='b1'>返回 A 和 B 中的最低值</button>
+    <div id='str'>
+        <div>
+            <label>String A:
+                <input id="radio-c" type="radio" checked="true" name="str-obj" value="a">
+            </label>
+            <textarea id="str-a"></textarea>
+            <label>String B:
+                <input id="radio-d" type="radio" name="str-obj" value="b">
+            </label>
+            <textarea id="str-b"></textarea>
+            <label>Num A：<input id="num-c" type="number" value="0"></label>
+            <label>Num B：<input id="num-d" type="number" value="1"></label>
+        </div>
+        <div>
+            <button class='s1'>获取当前选中输入的内容长度</button>
+            <button class='s1'>当前选中输入中的第3个字符</button>
+            <button class='s1'>把两个输入框的文字连接在一起输出（concat）</button>
+            <button class='s1'>输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+            <button class='s1'>输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+            <button class='s1'>使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+            <button class='s1'>当前选中输入框的行数</button>
+            <button class='s1'>使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+            <button class='s1'>把所选输入框中的内容全部转为大写</button>
+            <button class='s1'>把所选输入框中的内容全部转为小写</button>
+            <button class='s1'>把所选输入框中内容的半角空格全部去除</button>
+            <button class='s1'>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+        </div>
     </div>
     <p id="result"></p>
     <script>
-        var ra=document.getElementById('radio-a'),
-            rb=document.getElementById('radio-b');
-        var numa = document.getElementById('num-a').value,
-            numb = Number(document.getElementById('num-b').value);
+        var ra = document.getElementById('radio-a'),
+            rb = document.getElementById('radio-b');
+        var numA = document.getElementById('num-a'),                      //在此处  numA.value  总是为空，不论输入什么
+            numB = document.getElementById('num-b');
         var b1 = document.getElementsByClassName('b1')[0],
-            b2=document.getElementsByClassName('b1')[1],
+            b2 = document.getElementsByClassName('b1')[1],
             b3 = document.getElementsByClassName('b1')[2],
             b4 = document.getElementsByClassName('b1')[3],
-            b5=document.getElementsByClassName('b1')[4],
+            b5 = document.getElementsByClassName('b1')[4],
             b6 = document.getElementsByClassName('b1')[5],
-            b7=document.getElementsByClassName('b1')[6],
+            b7 = document.getElementsByClassName('b1')[6],
             b8 = document.getElementsByClassName('b1')[7];
+        var s1 = document.getElementsByClassName('s1')[0],
+            s2 = document.getElementsByClassName('s1')[1],
+            s3 = document.getElementsByClassName('s1')[2],
+            s4 = document.getElementsByClassName('s1')[3],
+            s5 = document.getElementsByClassName('s1')[4],
+            s6 = document.getElementsByClassName('s1')[5],
+            s7 = document.getElementsByClassName('s1')[6],
+            s8 = document.getElementsByClassName('s1')[7],
+            s9 = document.getElementsByClassName('s1')[8],
+            s10 = document.getElementsByClassName('s1')[9],
+            s11 = document.getElementsByClassName('s1')[10],
+            s12 = document.getElementsByClassName('s1')[11];
+        var rc = document.getElementById('radio-c'),
+            rd = document.getElementById('radio-d'),
+            txta = document.getElementById('str-a'),
+            txtb = document.getElementById('str-b'),
+            numC = document.getElementById('num-c'),
+            numD = document.getElementById('num-d');
         var p = document.getElementById('result');
-        document.onclick = function(event){
-            switch(event.target){
+        document.onclick = function (event) {
+            var numa = numA.value,
+                numb = numB.value,
+                numc = numC.value,
+                numd = numD.value,
+                ta = txta.value,
+                tb = txtb.value;
+            var nna = Number(numa),
+                nnb = Number(numb),
+                nnc = Number(numc),
+                nnd = Number(numd);
+            switch (event.target) {
                 case b1:
-                    if(ra.checked){
-                        p.innerHTML =numa;
-                    }else if(rb.checked){
-                        p.innerHTML = (typeof numb);
+                    if (ra.checked) {
+                        if (numa && !isNaN(numa)) {
+                            p.innerHTML = '输入的是数字';
+                        } else {
+                            p.innerHTML = '输入的不是数字';
+                        }
+                    } else if (rb.checked) {
+                        if (numb && !isNaN(numb)) {
+                            p.innerHTML = '输入的是数字';
+                        } else {
+                            p.innerHTML = '输入的不是数字';
+                        }
                     }
+                    break;          //不要忘了break；
                 case b2:
-                    p.innerHTML = numa.toFixed(numb);
+                    p.innerHTML = nna.toFixed(nnb);
+                    break;
+                case b3:
+                    if (ra.checked) {
+                        p.innerHTML = Math.abs(numa);
+                    } else if (rb.checked) {
+                        p.innerHTML = Math.abs(numb);
+                    }
+                    break;
+                case b4:
+                    if (ra.checked) {
+                        p.innerHTML = Math.ceil(numa);
+                    } else if (rb.checked) {
+                        p.innerHTML = Math.ceil(numb);
+                    }
+                    break;
+                case b5:
+                    if (ra.checked) {
+                        p.innerHTML = Math.floor(numa);
+                    } else if (rb.checked) {
+                        p.innerHTML = Math.floor(numb);
+                    }
+                    break;
+                case b6:
+                    if (ra.checked) {
+                        p.innerHTML = Math.round(numa);
+                    } else if (rb.checked) {
+                        p.innerHTML = Math.round(numb);
+                    }
+                    break;
+                case b7:
+                    p.innerHTML = Math.max(numa, numb);
+                    break;
+                case b8:
+                    p.innerHTML = Math.min(numa, numb);
+                    break;
+                case s1:
+                    if (rc.checked) {
+                        if (ta) {
+                            p.innerHTML = ta.length;
+                        } else {
+                            p.innerHTML = 'null';
+                        }
+                    } else if (rd.checked) {
+                        if (tb) {
+                            p.innerHTML = tb.length;
+                        } else {
+                            p.innerHTML = 'null';
+                        }
+                    }
+                    break;
+                case s2:
+                    if (rc.checked) {
+                        if (ta && ta.length >= 3) {
+                            p.innerHTML = ta[2];
+                        } else {
+                            p.innerHTML = '请输入一个长度大于等于3的字符';
+                        }
+                    } else if (rd.checked) {
+                        if (tb && tb.length >= 3) {
+                            p.innerHTML = tb[2];
+                        } else {
+                            p.innerHTML = '请输入一个长度大于等于3的字符';
+                        }
+                    }
+                    break;
+                case s3:
+                    p.innerHTML = ta + tb;
+                    break;
+                case s4:
+                    if (ta.indexOf(tb) >= 0) {
+                        p.innerHTML = ta.indexOf(tb);
+                    } else {
+                        p.innerHTML = 'B中内容不在A中';
+                    }
+                    break;
+                case s5:
+                    if (tb.lastIndexOf(ta) >= 0) {
+                        p.innerHTML = tb.lastIndexOf(ta);
+                    } else {
+                        p.innerHTML = 'A中内容不在B中';
+                    }
+                    break;
+                case s6:
+                    if (rc.checked) {
+                        if (Math.abs(nnc) > ta.length - 1 || Math.abs(nnd) > ta.length - 1) {
+                            p.innerHTML = '超出范围，请重新输入';
+                        } else {
+                            p.innerHTML = ta.slice(nnc, nnd);
+                        }
+                    } else if (rd.checked) {
+                        if (Math.abs(nnc) > tb.length - 1 || Math.abs(nnd) > tb.length - 1) {
+                            p.innerHTML = '超出范围，请重新输入';
+                        } else {
+                            p.innerHTML = tb.slice(nnc, nnd);
+                        }
+                    }
+                    break;
+                case s7:
+                    if (rc.checked) {
+                        if (ta) {
+                            p.innerHTML = Math.ceil(ta.length / txta.cols);
+                        } else {
+                            p.innerHTML = 0;
+                        }
+                    } else if (rd.checked) {
+                        if (tb) {
+                            p.innerHTML = Math.ceil(tb.length / txtb.cols);
+                        } else {
+                            p.innerHTML = 0;
+                        }
+                    }
+                    break;
+                case s8:
+                    if (rc.checked) {
+                        if (Math.abs(nnc) > ta.length - 1 || Math.abs(nnd) > ta.length - 1) {
+                            p.innerHTML = '超出范围，请重新输入';
+                        } else {
+                            p.innerHTML = ta.substr(nnc, nnd);
+                        }
+                    } else if (rd.checked) {
+                        if (Math.abs(nnc) > tb.length - 1 || Math.abs(nnd) > tb.length - 1) {
+                            p.innerHTML = '超出范围，请重新输入';
+                        } else {
+                            p.innerHTML = tb.substr(nnc, nnd);
+                        }
+                    }
+                    break;
+                case s9:
+                    if (rc.checked) {
+                        if (ta) {
+                            p.innerHTML = ta.toUpperCase();
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    } else if (rd.checked) {
+                        if (tb) {
+                            p.innerHTML = tb.toUpperCase();
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    }
+                    break;
+                case s10:
+                    if (rc.checked) {
+                        if (ta) {
+                            p.innerHTML = ta.toLowerCase();
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    } else if (rd.checked) {
+                        if (tb) {
+                            p.innerHTML = tb.toLowerCase();
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    }
+                    break;
+                case s11:
+                    if (rc.checked) {
+                        if (ta) {
+                            p.innerHTML = ta.replace(/\s/g, '');
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    } else if (rd.checked) {
+                        if (tb) {
+                            p.innerHTML = tb.replace(/\s/g, '');
+                        } else {
+                            p.innerHTML = '请输入内容';
+                        }
+                    }
+                    break;
+                case s12:
+                    if (rc.checked) {
+                        if (ta && ta.indexOf('a')>0) {
+                            p.innerHTML = ta.replace(/a/g, tb);
+                        } else {
+                            p.innerHTML = '请输入内容/a不存在';
+                        }
+                    } else if (rd.checked) {
+                        if (tb && tb.indexOf('a')>0) {
+                            p.innerHTML = tb.replace(/a/g, ta);
+                        } else {
+                            p.innerHTML = '请输入内容/a不存在';
+                        }
+                    }
+                    break;
             }
         }
-        
+
     </script>
 </body>
 
