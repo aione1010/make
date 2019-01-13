@@ -3,7 +3,7 @@ function selectionSort(arr){
         indexMin;
     for(var i = 0; i < len;i++){
         indexMin = i;
-        for(var j = i; j < len;j++){
+        for(var j = i + 1; j < len;j++){
             if(arr[indexMin] > arr[j]){
                 indexMin = j;
             }
