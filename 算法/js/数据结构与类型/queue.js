@@ -1,5 +1,5 @@
 //先进先出
-function Stack(){
+function Queue(){
     let items=[];
     this.enqueue = function(element){
         items.push(element)
