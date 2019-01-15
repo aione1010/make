@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type='text/css'>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #queue,
+        #stack,
+        #stack1 {
+            border-bottom: 1px solid gray;
+
+            padding: 10px 10px;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='queue'>
+        <input id="queue-input" type="text">
+        <p id="queue-cont">队列内容：apple&lt;-pear</p>
+        <button id="in-btn">入队</button>
+        <button id="out-btn">出队</button>
+        <button id="font-btn">打印队头元素内容</button>
+        <button id="empty-btn">判断队列是否为空</button>
+    </div>
+    <div id='stack'>
+        <input id="stack-input" type="text">
+        <p id="stack-cont">栈内容：apple-&gt;pear</p>
+        <button id="push-btn">进栈</button>
+        <button id="pop-btn">退栈</button>
+        <button id="fonts-btn">打印栈顶元素内容</button>
+        <button id="emptys-btn">判断栈是否为空</button>
+    </div>
+    <script>
+        var qin = document.getElementById('queue-input'),
+            inBtn = document.getElementById('in-btn'),
+            outBtn = document.getElementById('out-btn'),
+            fontBtn = document.getElementById('font-btn'),
+            emptyBtn = document.getElementById('empty-btn'),
+            pq = document.getElementById('queue-cont'),
+            sin = document.getElementById('stack-input'),
+            ps = document.getElementById('stack-cont'),
+            pb = document.getElementById('push-btn'),
+            popb = document.getElementById('pop-btn'),
+            fob = document.getElementById('fonts-btn'),
+            epb = document.getElementById('emptys-btn');
+        var item = ['apple', 'pear'], item1 = ['apple', 'pear'];
+        document.onclick = function (event) {
+            switch (event.target) {
+                case inBtn:
+                    if (qin.value) {
+                        item.push(qin.value);
+                        pq.innerHTML = '队列内容：' + item.join('&lt;-');
+                    } else {
+                        pq.innerHTML = '队列内容：' + item.join('&lt;-');
+                    }
+                    break;
+                case outBtn:
+                    item.shift();
+                    pq.innerHTML = '队列内容：' + item.join('&lt;-');
+                    break;
+                case fontBtn:
+                    pq.innerHTML = '队头元素：' + item[0];
+                    break;
+                case emptyBtn:
+                    if (item.length == 0) {
+                        pq.innerHTML = '队列是空的';
+                    } else {
+                        pq.innerHTML = '队列不是空的';
+                    }
+                    break;
+                case pb:
+                    if (sin.value) {
+                        item1.push(sin.value);
+                        ps.innerHTML = '栈内容：' + item1.join('-&gt;');
+                    } else {
+                        ps.innerHTML = '栈内容：' + item1.join('-&gt;');
+                    }
+                    break;
+                case popb:
+                    item1.pop();
+                    ps.innerHTML = '栈内容：' + item1.join('-&gt;');
+                    break;
+                case fob:
+                    ps.innerHTML = '栈顶元素：' + item1[item1.length - 1];
+                    break;
+                case epb:
+                    if (item1.length == 0) {
+                        ps.innerHTML = '栈是空的';
+                    } else {
+                        ps.innerHTML = '栈不是空的';
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
