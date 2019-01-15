@@ -28,4 +28,4 @@ var sum = 0;
 for(var k =0;k<n-1;k++){
   sum += count[k] * (k+1)*(n-k-1);
 }
-alert(sum)
+console.log(sum);

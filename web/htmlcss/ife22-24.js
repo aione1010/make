@@ -109,22 +109,23 @@ var menuObject = {};
 function findParent(obj, id) {
     var parent = null;
     for (var key in obj) {
-        if (key == id) { //找到父元素
-            parent = obj[key];
-            break;
-        }
-        else if (obj[key].subMenu) { //向子元素查找
-            parent = findParent(obj[key].subMenu, id);
-            if (parent)
+        if (obj.hasOwnProperty(key)) {
+            if (key == id) { //找到父元素
+                parent = obj[key];
                 break;
+            } else if (obj[key].subMenu) { //向子元素查找
+                parent = findParent(obj[key].subMenu, id);
+                if (parent)
+                    break;
+            }
         }
     }
     return parent;
 }
-for (var i in menuArr) {
-    var cKey = menuArr[i][0].toString(); //自己结点的key
+for (var i = 0; i < menuArr.length; i++) {
+    var cKey = menuArr[i][0]; //自己结点的key
     var nameVal = menuArr[i][1];
-    var pKey = menuArr[i][2].toString(); //父结点的key
+    var pKey = menuArr[i][2]; //父结点的key
     if (pKey == -1) {
         menuObject[cKey] = {}; //-1说明是根节点
         menuObject[cKey].name = nameVal;
