@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utc-8">
+</head>
+
+<body>
+    <div id='date1'>
+        <p id='date11'></p>
+    </div>
+    <div id='select'>
+        <select id="year-select">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+        </select>
+
+        <select id="month-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+
+        </select>
+
+        <select id="day-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+
+        </select>
+
+        <select id="hour-select">
+            <option value="0">00</option>
+            <option value="1">01</option>
+
+        </select>
+
+        <select id="minite-select">
+            <option value="0">0</option>
+            <option value="1">1</option>
+
+        </select>
+
+        <select id="second-select">
+            <option value="0">0</option>
+            <option value="1">1</option>
+
+        </select>
+
+        <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+    </div>
+    <script>
+        function getWeekday(w) {
+            var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            return week[w];
+        };
+        function convert(i) {
+            if (i < 10) {
+                i = '0' + i;
+            }
+            return i;
+        };
+        function getWeekEn(w) {
+            var week = ['Sunday', 'Monday', ' Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return week[w];
+        };
+        function hms(h1, m, s) {
+            if (h1 > 12) {
+                var time = (h1 - 12) + ':' + m + ':' + s + ' ' + 'PM';
+            } else {
+                var time = h1 + ':' + m + ':' + s + ' ' + 'AM';
+            }
+            return time;
+        };
+        function dateshow() {
+            var p = document.getElementById('date11');
+            var date = new Date();
+            var y = date.getFullYear();
+            var m1 = date.getMonth() + 1;
+            var min1 = date.getMinutes();
+            var s1 = date.getSeconds();
+            var d1 = date.getDate();
+            var h1 = date.getHours();
+            var w = date.getDay();
+            //转换成两位；
+            var wkd = getWeekday(w);
+            var wke = getWeekEn(w);
+            var mon = convert(m1);
+            var mins = convert(min1);
+            var senc = convert(s1);
+            var dt = convert(d1);
+            var h = convert(h1);
+            var hs = hms(h, mins, senc);
+            p.innerHTML = y + '年' + mon + '月' + dt + '日' + wkd + h + ':' + mins + ":" + senc + '<br />' + y + '-' + mon + '-' + dt + ' ' + wke + ' ' + hs;
+            t = setTimeout(dateshow, 1000);
+        };
+        dateshow();
+        var yearSelect = document.getElementById('year-select');
+        var monSelect = document.getElementById('month-select'),
+            daySelect = document.getElementById('day-select'),
+            hourSelect = document.getElementById('hour-select'),
+            minSelect = document.getElementById('minite-select'),
+            secondSelect = document.getElementById('second-select');
+        function addOption(t1, t2, selectbox) {
+            for (var i = t1; i < t2; i++) {
+                var newOption = new Option(i, i);
+                selectbox.add(newOption, undefined);
+            }
+        };
+        addOption(2003, 2033, yearSelect);
+        addOption(3, 13, monSelect);
+        addOption(3, 60, minSelect);
+        addOption(3, 24, hourSelect);
+        addOption(3, 60, secondSelect);
+        function getOptionValue(selectBox) {
+            for (var i = 0, len = selectBox.options.length; i < len; i++) {
+                var option = selectBox.options[i];
+                if (option.selected) {
+                    return option;
+                }
+            }
+        }
+        function addDayOption(yearSelect, monSelect, daySelect) {
+            var year = getOptionValue(yearSelect);
+            var month = getOptionValue(monSelect);
+            if (month == 2) {
+                if ((year % 100 != 0 && year % 4 == 0) || (year % 100 == 0 && year % 400 == 0)) {
+                    addOption(3, 30, daySelect);
+                } else {
+                    addOption(3, 29, daySelect);
+                }
+            } else if (month == 4 || 6 || 9 || 11) {
+                addOption(3, 31, daySelect);
+            } else {
+                addOption(3, 32, daySelect);
+            }
+        }
+        addDayOption(yearSelect, monSelect, daySelect);
+    </script>
+</body>
+
+</html>
