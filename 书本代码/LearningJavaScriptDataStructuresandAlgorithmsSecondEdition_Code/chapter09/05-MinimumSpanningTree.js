@@ -8,7 +8,7 @@ function MinimumSpanningTree(graph) {
         // Initialize min value
         var min = INF, minIndex;
 
-        for (var v = 0; v < this.graph.length; v++){
+        for (var v = 0; v < key.length; v++){
             if (visited[v] == false && key[v] < min) {
                 min = key[v];
                 minIndex = v;
@@ -63,15 +63,15 @@ function MinimumSpanningTree(graph) {
         return false;
     };
 
-    var initializeCost = function(){
-        var cost = [], length = this.graph.length;
+    var initializeCost = function(length,graph){
+        var cost = [];
         for (var i = 0; i < length; i++){
             cost[i] = [];
             for (var j = 0; j < length; j++){
-                if (this.graph[i][j] == 0){
+                if (graph[i][j] == 0){
                     cost[i][j] = INF;
                 } else {
-                    cost[i][j] = this.graph[i][j];
+                    cost[i][j] = graph[i][j];
                 }
             }
         }
@@ -84,7 +84,7 @@ function MinimumSpanningTree(graph) {
             parent = [], cost,
             ne = 0, a, b, u, v, i, j, min;
 
-        cost = initializeCost();
+        cost = initializeCost(length,this.graph);
 
         while(ne<length-1) {
 
@@ -110,4 +110,34 @@ function MinimumSpanningTree(graph) {
 
         return parent;
     }
+}
+
+var i;
+
+var graph = [[0, 2, 4, 0, 0, 0],
+             [2, 0, 2, 4, 2, 0],
+             [4, 2, 0, 0, 3, 0],
+             [0, 4, 0, 0, 3, 2],
+             [0, 2, 3, 3, 0, 2],
+             [0, 0, 0, 2, 2, 0]];
+
+var mst = new MinimumSpanningTree(graph);
+
+
+console.log("********* Prim's Algorithm - Minimum Spanning Tree ***********");
+
+var parent = mst.prim();
+
+console.log('Edge   Weight');
+for (i = 1; i < graph.length; i++){
+    console.log(parent[i] + ' - ' + i + '   ' +  graph[i][parent[i]]);
+}
+
+console.log("********* Kruskal Algorithm - Minimum Spanning Tree ***********");
+
+parent = mst.kruskal();
+
+console.log('Edge   Weight');
+for (i = 1; i < graph.length; i++){
+    console.log(parent[i] + ' - ' + i + '   ' +  graph[i][parent[i]]);
 }
