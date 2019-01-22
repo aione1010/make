@@ -49,6 +49,7 @@
         <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
     </div>
     <script>
+        //-----------------------------------------------------简单的即时时钟------------------------------------------------------------------
         function getWeekday(w) {
             var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
             return week[w];
@@ -94,47 +95,112 @@
             t = setTimeout(dateshow, 1000);
         };
         dateshow();
+
+        //-------------------------------------------------时间计算-----------------------------------------------------------------------
         var yearSelect = document.getElementById('year-select');
         var monSelect = document.getElementById('month-select'),
             daySelect = document.getElementById('day-select'),
             hourSelect = document.getElementById('hour-select'),
             minSelect = document.getElementById('minite-select'),
             secondSelect = document.getElementById('second-select');
-        function addOption(t1, t2, selectbox) {
-            for (var i = t1; i < t2; i++) {
-                var newOption = new Option(i, i);
-                selectbox.add(newOption, undefined);
+        function render(start, end, dom) {
+            var s = '';
+            for (var i = start; i < end; i++) {
+                s += '<option value="' + i + '">' + i + '</option>';
             }
+            dom.innerHTML = s;
         };
-        addOption(2003, 2033, yearSelect);
-        addOption(3, 13, monSelect);
-        addOption(3, 60, minSelect);
-        addOption(3, 24, hourSelect);
-        addOption(3, 60, secondSelect);
         function getOptionValue(selectBox) {
             for (var i = 0, len = selectBox.options.length; i < len; i++) {
                 var option = selectBox.options[i];
                 if (option.selected) {
-                    return option;
+                    return option.value;
                 }
             }
-        }
-        function addDayOption(yearSelect, monSelect, daySelect) {
-            var year = getOptionValue(yearSelect);
-            var month = getOptionValue(monSelect);
+        };
+        function addDayOption(y, m) {
+            var day30 = [4, 6, 9, 11],
+            day31=[1,3,5,7,8,10,12];
+            var year = Number(y),
+                month = Number(m);
             if (month == 2) {
                 if ((year % 100 != 0 && year % 4 == 0) || (year % 100 == 0 && year % 400 == 0)) {
-                    addOption(3, 30, daySelect);
+                    render(1, 30, daySelect);
                 } else {
-                    addOption(3, 29, daySelect);
+                    render(1, 29, daySelect);
                 }
-            } else if (month == 4 || 6 || 9 || 11) {
-                addOption(3, 31, daySelect);
+            } else if (day30.indexOf(month) >= 0) {
+                render(1, 31, daySelect);
             } else {
-                addOption(3, 32, daySelect);
+                render(1, 32, daySelect);
             }
+        };
+
+        render(2000, 2033, yearSelect);
+        render(1, 13, monSelect);
+        render(1,32,daySelect)    //此处应该可以改进；
+        render(0, 60, minSelect);
+        render(0, 24, hourSelect);
+        render(0, 60, secondSelect);
+        selectChange();
+
+        function selectChange() {
+            yearSelect.onchange = function () {
+                var y = getOptionValue(yearSelect),
+                    m = getOptionValue(monSelect);
+                addDayOption(y, m);
+                var res = computeResult(getTimeObj());
+            };
+            monSelect.onchange = function () {
+                var y = getOptionValue(yearSelect),
+                    m = getOptionValue(monSelect);
+                addDayOption(y,m);
+                var res = computeResult(getTimeObj());
+            };
+            daySelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+            };
+            hourSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+            };
+            minSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+            };
+            secondSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+            };
+
+        };
+
+        function getTimeObj(){
+            obj = {};
+            obj.year = getOptionValue(yearSelect);
+            obj.month = getOptionValue(monSelect);
+            obj.day = convert(getOptionValue(daySelect));
+            obj.hour = convert(getOptionValue(hourSelect));
+            obj.seconds = convert(getOptionValue(secondSelect));
+            obj.minutes = convert(getOptionValue(minSelect));
+            return obj;
+        };
+        function computeResult(obj){
+            var result={},
+            datestr,time,aday;
+            datestr = obj.year+'-'+obj.month+'-'+obj.day+'-'+obj.hour+':'+obj.minutes+':'+obj.seconds;
+            time = new Date(datestr).getTime()-new Date().getTime();
+            if(time >0){
+                result.future = true;
+            }else{
+                result.future = false;
+            }
+            time = Math.abs(time);
+            aday = 24*3600*1000;
+            result.day = Math.floor(time/aday);
+            result.hour = Math((time%aday)/(3600*1000));
+            result.min=Math.floor(((time%aday)%(3600*1000))/(60*1000));
+            result.sen = (((time%aday)%(3600*1000))%(60*1000));
+            return result;
         }
-        addDayOption(yearSelect, monSelect, daySelect);
+
     </script>
 </body>
 
