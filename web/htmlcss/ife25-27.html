@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utc-8">
+    <meta charset="utf-8">
 </head>
 
 <body>
@@ -103,6 +103,7 @@
             hourSelect = document.getElementById('hour-select'),
             minSelect = document.getElementById('minite-select'),
             secondSelect = document.getElementById('second-select');
+        var p2=document.getElementById('result-wrapper');
         function render(start, end, dom) {
             var s = '';
             for (var i = start; i < end; i++) {
@@ -136,13 +137,7 @@
             }
         };
 
-        render(2000, 2033, yearSelect);
-        render(1, 13, monSelect);
-        render(1,32,daySelect)    //此处应该可以改进；
-        render(0, 60, minSelect);
-        render(0, 24, hourSelect);
-        render(0, 60, secondSelect);
-        selectChange();
+        
 
         function selectChange() {
             yearSelect.onchange = function () {
@@ -150,24 +145,30 @@
                     m = getOptionValue(monSelect);
                 addDayOption(y, m);
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
             monSelect.onchange = function () {
                 var y = getOptionValue(yearSelect),
                     m = getOptionValue(monSelect);
                 addDayOption(y,m);
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
             daySelect.onchange=function(){
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
             hourSelect.onchange=function(){
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
             minSelect.onchange=function(){
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
             secondSelect.onchange=function(){
                 var res = computeResult(getTimeObj());
+                formatTime(res);
             };
 
         };
@@ -176,7 +177,7 @@
             obj = {};
             obj.year = getOptionValue(yearSelect);
             obj.month = getOptionValue(monSelect);
-            obj.day = convert(getOptionValue(daySelect));
+            obj.day = getOptionValue(daySelect);
             obj.hour = convert(getOptionValue(hourSelect));
             obj.seconds = convert(getOptionValue(secondSelect));
             obj.minutes = convert(getOptionValue(minSelect));
@@ -185,8 +186,8 @@
         function computeResult(obj){
             var result={},
             datestr,time,aday;
-            datestr = obj.year+'-'+obj.month+'-'+obj.day+'-'+obj.hour+':'+obj.minutes+':'+obj.seconds;
-            time = new Date(datestr).getTime()-new Date().getTime();
+            datestr = obj.year+'-'+obj.month+'-'+obj.day+' '+obj.hour+':'+obj.minutes+':'+obj.seconds;
+            time = new Date(datestr).getTime() - new Date().getTime();
             if(time >0){
                 result.future = true;
             }else{
@@ -195,11 +196,34 @@
             time = Math.abs(time);
             aday = 24*3600*1000;
             result.day = Math.floor(time/aday);
-            result.hour = Math((time%aday)/(3600*1000));
-            result.min=Math.floor(((time%aday)%(3600*1000))/(60*1000));
-            result.sen = (((time%aday)%(3600*1000))%(60*1000));
+            result.hour = Math.floor((time%aday)/(3600*1000));
+            result.min=Math.floor((time%aday)%(3600*1000)/(60*1000));
+            result.sen = Math.floor((time % aday) % (1000 * 60 * 60) % (1000 * 60) / 1000);
             return result;
-        }
+        };
+
+        function formatTime(result){
+            var str = '';
+            var selectTime = getTimeObj();
+            var datestr = obj.year+'-'+obj.month+'-'+obj.day+' '+obj.hour+':'+obj.minutes+':'+obj.seconds;
+            var w = new Date(datestr).getDay();
+            var wkd = getWeekday(w);
+            str ='现在距离'+ selectTime.year+'年'+selectTime.month+'月'+selectTime.day+'日'+ wkd + selectTime.hour+':'+selectTime.minutes+':'+selectTime.seconds;
+            var timestr = result.day + '天' + result.hour + '小时' + result.min + '分' + result.sen + '秒';
+            if(result.future){
+                str = str+'还有'+timestr;
+            }else{
+                str = str+'已经过去'+timestr;
+            }
+            p2.innerHTML = str;
+        };
+        render(2000, 2033, yearSelect);
+        render(1, 13, monSelect);
+        render(1,32,daySelect);    //此处应该可以改进；
+        render(0, 60, minSelect);
+        render(0, 24, hourSelect);
+        render(0, 60, secondSelect);
+        selectChange();
 
     </script>
 </body>
