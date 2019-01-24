@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ife 28-30 </title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>ife 28-30 </title>
+    <meta charset="utf-8">
+    <style>
+        input{
+            width:200px;
+        }
+        li:hover {
+            background-color: aqua;
+        }
+        ul li{
+            width:200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id='email-input' type='text'>
+    <ul id='email-sug-wrapper' class='email-sug'></ul>
+    <script>
+        var input = document.getElementById('email-input'),
+            ul = document.getElementById('email-sug-wrapper');
+        var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+        input.oninput = function (event) {
+            var val = input.value;
+            var value = getValue(val);
+            var str = getHint(value);
+            addToUl(str);
+            controlUl(value);
+        };
+        function getValue(val) {  //获取输入内容;
+            return val.trim();
+        };
+        function getHint(value) {
+            var s = '';
+            if (value.length > 0) {
+                if (value.indexOf('@') < 0) {
+                    for (var i = 0; i < postfixList.length; i++) {
+                        s += '<li>' + value + '@' + postfixList[i] + '</li>';
+                    }
+                } else if (value.indexOf('@') >= 0) {
+                    var val = value.split('@')[0],
+                        val2 = value.split('@')[1];
+                    len = val2.length;
+                    for (var i = 0; i < postfixList.length; i++) {
+                        if (val2 == postfixList[i].slice(0, len)) {
+                            s += '<li>' + val + '@' + postfixList[i] + '</li>';
+                        }
+                    }
+                    if(s==''){
+                        for(var i = 0; i < postfixList.length; i++){
+                            s +='<li>' + val + '@' + postfixList[i] + '</li>';
+                        }
+                    }
+                }
+            }
+            return s;
+        };
+        function addToUl(str) {
+            ul.innerHTML = str;
+            ul.style.listStyleType = 'none';
+            ul.style.padding = '0px';
+        };
+        function controlUl(val) {
+            if (!val) {
+                hidden();
+            } else {
+                show();
+            }
+        };
+        function hidden() {
+            ul.style.visibility = 'hidden';
+        };
+        function show() {
+            ul.style.visibility = 'visible';
+        };
+        document.onclick = function(event){
+            
+        }
+
+    </script>
+</body>
+
 </html>
