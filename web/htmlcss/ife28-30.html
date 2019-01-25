@@ -8,6 +8,9 @@
         input{
             width:200px;
         }
+        ul{
+            cursor: default;
+        }
         li:hover {
             background-color: aqua;
         }
@@ -34,8 +37,35 @@
         function getValue(val) {  //获取输入内容;
             return val.trim();
         };
-        function getHint(value) {
+        function encodeHtml(str){     //编码
+            var s='';
+            if(str.length == 0){
+                s='';
+            }else{
+                s = str.replace(/&/g,'&amp;');
+                s=s.replace(/</g,'&lt;');
+                s=s.replace(/>/g,'&gt;');
+                s = s.replace(/\'/g,"'");
+                s=s.replace(/\"/g,'"');
+            }
+            return s;
+        };
+        function decodeHtml(str){    //解码
+            var s='';
+            if(str.length == 0){
+                s='';
+            }else{
+                s = s.replace(/&amp;/g,'&');
+                s=s.replace(/&lt;/g,'<');
+                s=s.replace(/&gt;/g,'>');
+                s = s.replace(/'/g,"\'");
+                s=s.replace(/"/g,'\"');
+            }
+            return s;
+        };
+        function getHint(va) {
             var s = '';
+            var value = encodeHtml(va);
             if (value.length > 0) {
                 if (value.indexOf('@') < 0) {
                     for (var i = 0; i < postfixList.length; i++) {
@@ -78,7 +108,13 @@
             ul.style.visibility = 'visible';
         };
         document.onclick = function(event){
-            
+            var li = document.getElementsByTagName('li');
+            for(var i = 0,len = li.length;i<len;i++){
+                if(event.target==li[i]){
+                    input.value = decodeHtml(li[i].innerHTML);
+                    hidden();
+                }
+            }
         }
 
     </script>
