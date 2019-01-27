@@ -103,7 +103,11 @@
             hourSelect = document.getElementById('hour-select'),
             minSelect = document.getElementById('minite-select'),
             secondSelect = document.getElementById('second-select');
+<<<<<<< HEAD
         var p2=document.getElementById('result-wrapper');
+=======
+        var p2 = document.getElementById('result-wrapper');
+>>>>>>> update
         function render(start, end, dom) {
             var s = '';
             for (var i = start; i < end; i++) {
@@ -145,13 +149,18 @@
                     m = getOptionValue(monSelect);
                 addDayOption(y, m);
                 var res = computeResult(getTimeObj());
+<<<<<<< HEAD
                 formatTime(res);
+=======
+                formatResult(res);
+>>>>>>> update
             };
             monSelect.onchange = function () {
                 var y = getOptionValue(yearSelect),
                     m = getOptionValue(monSelect);
                 addDayOption(y,m);
                 var res = computeResult(getTimeObj());
+<<<<<<< HEAD
                 formatTime(res);
             };
             daySelect.onchange=function(){
@@ -169,6 +178,25 @@
             secondSelect.onchange=function(){
                 var res = computeResult(getTimeObj());
                 formatTime(res);
+=======
+                formatResult(res);
+            };
+            daySelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+                formatResult(res);
+            };
+            hourSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+                formatResult(res);
+            };
+            minSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+                formatResult(res);
+            };
+            secondSelect.onchange=function(){
+                var res = computeResult(getTimeObj());
+                formatResult(res);
+>>>>>>> update
             };
 
         };
@@ -186,8 +214,13 @@
         function computeResult(obj){
             var result={},
             datestr,time,aday;
+<<<<<<< HEAD
             datestr = obj.year+'-'+obj.month+'-'+obj.day+' '+obj.hour+':'+obj.minutes+':'+obj.seconds;
             time = new Date(datestr).getTime() - new Date().getTime();
+=======
+            datestr = `${obj.year}-${obj.month}-${obj.day} ${obj.hour}:${obj.minite}:${obj.second}`;
+            time = new Date(datestr).getTime()-new Date().getTime();
+>>>>>>> update
             if(time >0){
                 result.future = true;
             }else{
@@ -196,6 +229,7 @@
             time = Math.abs(time);
             aday = 24*3600*1000;
             result.day = Math.floor(time/aday);
+<<<<<<< HEAD
             result.hour = Math.floor((time%aday)/(3600*1000));
             result.min=Math.floor((time%aday)%(3600*1000)/(60*1000));
             result.sen = Math.floor((time % aday) % (1000 * 60 * 60) % (1000 * 60) / 1000);
@@ -224,6 +258,33 @@
         render(0, 24, hourSelect);
         render(0, 60, secondSelect);
         selectChange();
+=======
+            result.hour = Math((time%aday)/(3600*1000));
+            result.min=Math.floor(((time%aday)%(3600*1000))/(60*1000));
+            result.sen = (((time%aday)%(3600*1000))%(60*1000)/1000);
+            return result;
+        };
+        function formatResult(result){
+            var str = '';
+            var selectTime = getTimeObj();
+            var datestr = `${selectTime.year}-${selectTime.month}-${selectTime.day}`;
+            var date = new Date(datestr);
+            var w = date.getDay();
+            var wkd = getWeekday(w);
+            str =
+                `现在距离 ${selectTime.year}年${selectTime.month}月${selectTime.day}日星期${wkd} ${selectTime.hour}:${selectTime.minite}:${selectTime.second}`;
+            var timestr = obj.day + '天' + obj.hour + '小时' + obj.minite + '分' + obj.second + '秒';
+            if (obj.future) {
+                str = str + ' 还有' + timestr;
+            } else {
+                str = str + ' 已经过去' + timestr;
+            }
+
+           p2.innerHTML = str;
+
+        }
+>>>>>>> update
+
 
     </script>
 </body>
