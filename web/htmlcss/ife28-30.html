@@ -18,7 +18,7 @@
             width:200px;
         }
         #selected{
-            color:pink;
+            background-color:pink;
         }
     </style>
 </head>
@@ -30,39 +30,43 @@
         var input = document.getElementById('email-input'),
             ul = document.getElementById('email-sug-wrapper');
         var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
-        input.oninput = function (event) {
+        input.oninput = function (event) {        //输入
+            if (event.keyCode != 38 && event.keyCode != 40 && event.keyCode != 13) {
+                reset();
+            }
             var val = input.value;
             var value = getValue(val);
             var str = getHint(value);
             addToUl(str);
             controlUl(value);
         };
+
         function getValue(val) {  //获取输入内容;
             return val.trim();
         };
-        function encodeHtml(str){     //编码
-            var s='';
-            if(str.length == 0){
-                s='';
-            }else{
-                s = str.replace(/&/g,'&amp;');
-                s=s.replace(/</g,'&lt;');
-                s=s.replace(/>/g,'&gt;');
-                s = s.replace(/\'/g,"'");
-                s=s.replace(/\"/g,'"');
+        function encodeHtml(str) {     //编码
+            var s = '';
+            if (str.length == 0) {
+                s = '';
+            } else {
+                s = str.replace(/&/g, '&amp;');
+                s = s.replace(/</g, '&lt;');
+                s = s.replace(/>/g, '&gt;');
+                s = s.replace(/\'/g, "'");
+                s = s.replace(/\"/g, '"');
             }
             return s;
         };
-        function decodeHtml(str){    //解码
-            var s='';
-            if(str.length == 0){
-                s='';
-            }else{
-                s = str.replace(/&amp;/g,'&');
-                s=s.replace(/&lt;/g,'<');
-                s=s.replace(/&gt;/g,'>');
-                s = s.replace(/'/g,"\'");
-                s=s.replace(/"/g,'\"');
+        function decodeHtml(str) {    //解码
+            var s = '';
+            if (str.length == 0) {
+                s = '';
+            } else {
+                s = str.replace(/&amp;/g, '&');
+                s = s.replace(/&lt;/g, '<');
+                s = s.replace(/&gt;/g, '>');
+                s = s.replace(/'/g, "\'");
+                s = s.replace(/"/g, '\"');
             }
             return s;
         };
@@ -83,9 +87,9 @@
                             s += '<li>' + val + '@' + postfixList[i] + '</li>';
                         }
                     }
-                    if(s==''){
-                        for(var i = 0; i < postfixList.length; i++){
-                            s +='<li>' + val + '@' + postfixList[i] + '</li>';
+                    if (s == '') {
+                        for (var i = 0; i < postfixList.length; i++) {
+                            s += '<li>' + val + '@' + postfixList[i] + '</li>';
                         }
                     }
                 }
@@ -110,17 +114,25 @@
         function show() {                //ul显示
             ul.style.visibility = 'visible';
         };
-        document.onclick = function(event){    //点击
+        function reset() {                //重置
+            var li = document.getElementsByTagName('li')[0],
+                liSelected = document.getElementById('selected');
+            if (liSelected && li != liSelected) {
+                liSelected.removeAttribute('id');
+            }
+            li.style.backgroundColor='pink';
+        };
+        document.onclick = function (event) {    //点击
             var li = document.getElementsByTagName('li');
-            for(var i = 0,len = li.length;i<len;i++){
-                if(event.target==li[i]){
+            for (var i = 0, len = li.length; i < len; i++) {
+                if (event.target == li[i]) {
                     // console.log(li[i].innerHTML);  这里，加入输入的是&，结果就是&amp；
                     input.value = decodeHtml(li[i].innerHTML);
                     hidden();
                 }
             }
         };
-        
+
     </script>
 </body>
 
