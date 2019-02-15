@@ -114,6 +114,7 @@
             var li = document.getElementsByTagName('li');
             for(var i = 0,len = li.length;i<len;i++){
                 if(event.target==li[i]){
+                    // console.log(li[i].innerHTML);  这里，加入输入的是&，结果就是&amp；
                     input.value = decodeHtml(li[i].innerHTML);
                     hidden();
                 }
