@@ -68,7 +68,7 @@
         };
         function getHint(va) {            //增加列表条目
             var s = '';
-            var value = encodeHtml(va);
+            var value = encodeHtml(va);    //对输入的字符串进行编码
             if (value.length > 0) {
                 if (value.indexOf('@') < 0) {
                     for (var i = 0; i < postfixList.length; i++) {
@@ -120,9 +120,7 @@
                 }
             }
         };
-
         
-
     </script>
 </body>
 
