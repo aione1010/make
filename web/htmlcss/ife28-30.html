@@ -17,6 +17,9 @@
         ul li{
             width:200px;
         }
+        #selected{
+            color:pink;
+        }
     </style>
 </head>
 
@@ -55,7 +58,7 @@
             if(str.length == 0){
                 s='';
             }else{
-                s = s.replace(/&amp;/g,'&');
+                s = str.replace(/&amp;/g,'&');
                 s=s.replace(/&lt;/g,'<');
                 s=s.replace(/&gt;/g,'>');
                 s = s.replace(/'/g,"\'");
@@ -63,7 +66,7 @@
             }
             return s;
         };
-        function getHint(va) {
+        function getHint(va) {            //增加列表条目
             var s = '';
             var value = encodeHtml(va);
             if (value.length > 0) {
@@ -89,25 +92,25 @@
             }
             return s;
         };
-        function addToUl(str) {
+        function addToUl(str) {             //添加到ul之中
             ul.innerHTML = str;
             ul.style.listStyleType = 'none';
             ul.style.padding = '0px';
         };
-        function controlUl(val) {
+        function controlUl(val) {           //控制ul的显示与隐藏
             if (!val) {
                 hidden();
             } else {
                 show();
             }
         };
-        function hidden() {
+        function hidden() {               //ul隐藏
             ul.style.visibility = 'hidden';
         };
-        function show() {
+        function show() {                //ul显示
             ul.style.visibility = 'visible';
         };
-        document.onclick = function(event){
+        document.onclick = function(event){    //点击
             var li = document.getElementsByTagName('li');
             for(var i = 0,len = li.length;i<len;i++){
                 if(event.target==li[i]){
@@ -115,7 +118,9 @@
                     hidden();
                 }
             }
-        }
+        };
+
+        
 
     </script>
 </body>
