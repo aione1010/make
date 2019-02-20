@@ -12,25 +12,22 @@
             cursor: default;
         }
         li:hover {
-            background-color: aqua;
+            background-color: aqua !important;
         }
         ul li{
             width:200px;
-        }
-        #selected{
-            background-color: darksalmon;
-        }
-        
+        }        
     </style>
 </head>
 
 <body>
-    <input id='email-input' type='text'>
+    <input id='email-input' type='text' autofocus='autofocus'>
     <ul id='email-sug-wrapper' class='email-sug'></ul>
     <script>
         var input = document.getElementById('email-input'),
             ul = document.getElementById('email-sug-wrapper');
         var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+
         input.oninput = function (event) {        //输入
             var val = input.value;
             var value = getValue(val);
@@ -118,15 +115,15 @@
         };
         function reset() {                //重置
             var li = document.getElementsByTagName('li')[0];
-            
-            set_css(li);     
+            set_css(li);
+            li_index = 0;                //不加的话容易引起错乱；     
         };
         function set_css(ele){
-            ele.id='selected';
+            ele.style.backgroundColor = 'darksalmon';
 
         };
         function clear_css(ele){
-            ele.removeAttribute('id');
+            ele.style.backgroundColor = 'white';
         }
         var li_index=0;
         input.onkeydown = function(event){
@@ -156,6 +153,8 @@
             }else if(event.keyCode == 13){                //回车键；
                 input.value = decodeHtml(li[li_index].innerHTML);
                 hidden();
+            }else if(event.keyCode == 27){
+                input.select();                       //选中文本
             }
             
         };
@@ -166,6 +165,7 @@
                     // console.log(li[i].innerHTML);  这里，加入输入的是&，结果就是&amp；
                     input.value = decodeHtml(li[i].innerHTML);
                     hidden();
+                    input.focus();              //焦点到选择框
                 }
             }
         };
