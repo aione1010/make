@@ -11,8 +11,9 @@ function renderTable(data) {
     table.appendChild(tr);
 
 
-    for (let i = 0; i < tableHead.length; i++) { //添加表头
-        var th = document.createElement("th");
+    //添加表头
+    for(let i=0;i<tableHead.length;i++){
+        th = document.createElement('th');
         th.innerHTML = tableHead[i];
         tr.appendChild(th);
     }

@@ -3,11 +3,11 @@ var sCN = document.getElementById(regionCheckboxObj[1].value);
 var nCN = document.getElementById(regionCheckboxObj[2].value);
 
 var phone = document.getElementById(productCheckboxObj[0].value);
-var notebook = document.getElementById(productCheckboxObj[1].value);
+var laptop = document.getElementById(productCheckboxObj[1].value);
 var googleHome = document.getElementById(productCheckboxObj[2].value);
 
 var regionArr = [eCN, sCN, nCN];
-var productArr = [phone, notebook, googleHome];
+var productArr = [phone, laptop, googleHome];
 
 function getCheckedItem(data) { //获取复选框被选中的个数
     var checkedArr = [];
@@ -20,7 +20,7 @@ function getCheckedItem(data) { //获取复选框被选中的个数
 }
 
 //获取表单选中的数据
-function getData(sourceData) {
+function getData(sourceData) {          //传入ife31data.js
     var newData = [];
     var regoinChecked = getCheckedItem(regionArr);
     var productChecked = getCheckedItem(productArr);
