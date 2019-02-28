@@ -12,34 +12,35 @@ function renderTable(data) {
 
 
     //添加表头
-    for(let i=0;i<tableHead.length;i++){
+    for (let i = 0; i < tableHead.length; i++) {
         th = document.createElement('th');
         th.innerHTML = tableHead[i];
         tr.appendChild(th);
     }
 
+    //添加表单内其他元素
     for (let i = 0; i < data.length; i++) {
         var tr = document.createElement("tr");
         table.appendChild(tr);
         for (x in data[i]) { //遍历对象的属性x
-            if (x == "product" || x == "region") {
-                var td = document.createElement("td");
-                td.innerHTML = data[i][x];
-                tr.appendChild(td);
-            } else {
-                for (let j = 0; j < data[i][x].length; j++) { //data[i]对象的的第三个属性sale是数组，对齐进行遍历填充
-                    var td = document.createElement("td"),
-                        inputData = document.createElement("input"),
-                        button = document.createElement("button");
-                    button.setAttribute("type", "button");
-                    button.innerHTML = "保存";
-                    // td.appendChild(button);
-
-                    inputData.setAttribute("value", data[i][x][j]);
-                    // td.appendChild(inputData);
-
-                    td.innerHTML = data[i][x][j];
+            if (data[i].hasOwnProperty(x)) {    //确保实例属性
+                if (x == "product" || x == "region") {          //{product: "手机",region: "华东",sale: [120, 100, 140, 160, 180, 185, 190, 210, 230, 245, 255, 270]}
+                    var td = document.createElement("td");
+                    td.innerHTML = data[i][x];
                     tr.appendChild(td);
+                } else {
+                    for (let j = 0; j < data[i][x].length; j++) { //data[i]对象的的第三个属性sale是数组，对齐进行遍历填充
+                        var td = document.createElement("td"),
+                            inputData = document.createElement("input"),
+                            button = document.createElement("button");
+                        button.setAttribute("type", "button");
+                        button.innerHTML = "保存";
+                        //td.appendChild(button);
+                        inputData.setAttribute("value", data[i][x][j]);
+                        //td.appendChild(inputData);
+                        td.innerHTML = data[i][x][j];
+                        tr.appendChild(td);
+                    }
                 }
             }
         }
@@ -49,43 +50,41 @@ function renderTable(data) {
 // 表格显示调整，合并单元格
 function tableDisplayOpt() {
     var table = document.getElementById("mytable");
-    var regoinCheckedNum = getCheckedItem(regionArr).length; //此函数在getData.js
+    var regoinCheckedNum = getCheckedItem(regionArr).length;
     var productCheckedNum = getCheckedItem(productArr).length;
 
     // 当商品选择了一个，地区选择了多个的时候，商品作为第一列，地区作为第二列，把商品列合并，留一个商品名称
-    if (regoinCheckedNum > 1 && productCheckedNum == 1) {
-        for (let i = 1; i <= regoinCheckedNum; i++) {
+    if (productCheckedNum == 1 && regoinCheckedNum > 1) {
+        for (let i = 1; i < regoinCheckedNum + 1; i++) {
             if (i == 1) {
-                table.rows[i].cells[0].setAttribute("rowspan", regoinCheckedNum);
+                table.rows[i].cells[0].setAttribute('rowspan', regoinCheckedNum);
             } else {
-                table.rows[i].cells[0].setAttribute("style", "display:none");
+                table.rows[i].cells[0].setAttribute('style', 'display:none');
             }
         }
     }
     //当地区选择了一个，商品选择了多个的时候，地区作为第一列，商品作为第二列，把地区列合并，留一个地区名称
-    if (regoinCheckedNum == 1 && productCheckedNum > 1) {
-        //交换第一列和第二列的数据
-        for (let i = 0; i < table.rows.length; i++) {
-            let temp;
-            temp = table.rows[i].cells[0].innerHTML;
-            table.rows[i].cells[0].innerHTML = table.rows[i].cells[1].innerHTML;
-            table.rows[i].cells[1].innerHTML = temp;
+    if (productCheckedNum > 1 && regoinCheckedNum == 1) {
+        for (let i = 0; i < productCheckedNum; i++) {
+            var tem = table.rows[i].cells[0];
+            table.rows[i].cells[0] = table.rows[i].cells[1];
+            table.rows[i].cells[1] = tem;
         }
-        for (let i = 1; i <= productCheckedNum; i++) {
+        for (let i = 1; i < productCheckedNum + 1; i++) {
             if (i == 1) {
-                table.rows[i].cells[0].setAttribute("rowspan", productCheckedNum);
-            } else {
-                table.rows[i].cells[0].setAttribute("style", "display:none");
+                table.rows[i].cells[0].setAttribute('rowspan',productCheckedNum);
+            }else{
+                table.rows[i].cells[0].setAttribute('style','display:none');
             }
         }
     }
     //当商品和地区都选择了多于一个，以商品为第一列，地区为第二列，商品列对同样的商品单元格进行合并
-    if (regoinCheckedNum > 1 && productCheckedNum > 1) {
-        for (let j = 0; j < table.rows.length; j++) {
-            if (j % regoinCheckedNum == 1) {
-                table.rows[j].cells[0].setAttribute("rowspan", regoinCheckedNum);
-            } else if (j != 0) { //表头不处理
-                table.rows[j].cells[0].setAttribute("style", "display:none");
+    if(productCheckedNum > 1 && regoinCheckedNum > 1){
+        for(let i = 0;i<table.rows.length;i++){
+            if(i % regoinCheckedNum ==1){
+                table.rows[i].cells[0].setAttribute('rowspan',regoinCheckedNum);
+            }else if(i!=0){
+                table.rows[i].cells[0].setAttribute('style','display:none');
             }
         }
     }

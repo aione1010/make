@@ -7,9 +7,9 @@ function drawAxis(maxValue) {
     canvas.setAttribute("height", "330");
     lineWrapper.appendChild(canvas);
 
-    if (canvas.getContext) {
+    if (canvas.getContext) {   //确定浏览器支持canvas
         var ctx = canvas.getContext("2d");
-        ctx.save();
+        ctx.save();//Canvas 状态是以堆(stack)的方式保存的，每一次调用 save 方法，当前的状态就会被推入堆中保存起来。可以调用任意多次 save 方法
         ctx.beginPath(); //添加ctx.beginPath();否则xy轴颜色会被覆盖
         ctx.moveTo(30.5, 60);
         ctx.lineTo(30.5, 270.5);
@@ -33,7 +33,7 @@ function drawAxis(maxValue) {
             ctx.fillText(valueY, 0, y + 5);
         }
         // x轴刻度
-        ctx.restore();
+        ctx.restore();//每一次调用 restore 方法，上一个保存的状态就从堆中弹出，所有设定都恢复
         for (let i = 0; i < 12; i++) {
             ctx.beginPath();
             let x = 30.5 + 50 * i;
