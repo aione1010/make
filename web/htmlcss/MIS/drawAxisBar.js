@@ -1,4 +1,5 @@
 // 画柱状图的坐标轴
+//svg的line标签用来创建线条；x1,y1起始坐标，x2,y2终点坐标
 function drawAxisBar(maxValue) {
     var xmlns = "http://www.w3.org/2000/svg";
     var barWrapper = document.getElementById("bar-wrapper");
