@@ -18,12 +18,12 @@ var graph = {
                     if (sourceData[i].region == tr.cells[1].innerHTML && sourceData[i].product == tr.cells[0].innerHTML) {
                         data.push(sourceData[i]);
                     }
-                    //根据表格一二列从数据文件中筛选数据，两种情况，上面是种商品在前地区在后。下面的是地区在前商品在后
+                    //根据表格一二列从数据文件中筛选数据，两种情况，上面是商品在前地区在后。下面的是地区在前商品在后
                     if (sourceData[i].region == tr.cells[0].innerHTML && sourceData[i].product == tr.cells[1].innerHTML) {
                         data.push(sourceData[i]);
                     }
                 }
-                console.log(data);
+                //console.log(data);
 
                 if (HtmlUtil.isNumber(tr.cells[2].innerHTML)) { //当前hover的表格行不含数字就不画图
                     barWrapper.innerHTML = ""; //重新画图

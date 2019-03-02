@@ -30,13 +30,13 @@ function renderTable(data) {
                     tr.appendChild(td);
                 } else {
                     for (let j = 0; j < data[i][x].length; j++) { //data[i]对象的的第三个属性sale是数组，对齐进行遍历填充
-                        var td = document.createElement("td"),
-                            inputData = document.createElement("input"),
-                            button = document.createElement("button");
-                        button.setAttribute("type", "button");
-                        button.innerHTML = "保存";
+                        var td = document.createElement("td");
+                        //var inputData = document.createElement("input"),
+                           //button = document.createElement("button");
+                        //button.setAttribute("type", "button");
+                        //button.innerHTML = "保存";
                         //td.appendChild(button);
-                        inputData.setAttribute("value", data[i][x][j]);
+                        //inputData.setAttribute("value", data[i][x][j]);
                         //td.appendChild(inputData);
                         td.innerHTML = data[i][x][j];
                         tr.appendChild(td);

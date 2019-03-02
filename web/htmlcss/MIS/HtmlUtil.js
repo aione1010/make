@@ -31,7 +31,7 @@ var HtmlUtil = {
         }
         return max;
     },
-    isNumber: function (n) {
+    isNumber: function (n) {  //判断是否是数字
         return !isNaN(Number(n));
     }
 };

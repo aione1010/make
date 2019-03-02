@@ -36,14 +36,14 @@ function drawAxisBar(maxValue) {
         scaleY.setAttribute("y2", y);
         scaleY.setAttribute("style", "stroke:#000;");
         svgDom.appendChild(scaleY);
-        var textY = document.createElementNS(xmlns, "text");
+        var textY = document.createElementNS(xmlns, "text");//定义输入文本的信息
         textY.setAttribute("x", 0);
         textY.setAttribute("y", y + 5);
         textY.setAttribute("style", "font-size:13;font-family:微软雅黑")
         textY.innerHTML = valueY;
         svgDom.appendChild(textY);
     }
-
+    //x轴坐标以及范围
     var lineX = document.createElementNS(xmlns, "line")
     lineX.setAttribute("x1", "30");
     lineX.setAttribute("y1", "270.5");

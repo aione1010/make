@@ -14,18 +14,19 @@ function drawMultiLineGraph(data) {
     }
 
 
-    var maxY = HtmlUtil.maxValue(maxValueArr); //最大值中的最大值，就是几组数据中的最大值
+    var maxY = HtmlUtil.maxValue(maxValueArr); // 最大值中的最大值，就是几组数据中的最大值
     // console.log(maxY);
-    var maxValue = Math.floor(maxY * 1.2); //y轴最大范围
+    var maxValue = Math.floor(maxY * 1.2); // y轴最大范围
 
-    ctx = drawAxis(maxValue);
+    ctx = drawAxis(maxValue);              //根据最大值确定坐标轴值的范围
 
-    for (let j = 0; j < newData.length; j++) {
-        for (let i = 0; i < 12; i++) {
+    for (let j = 0; j < newData.length; j++) { //包含有多少个数据
+        for (let i = 0; i < 12; i++) {         //十二个月
             //当前点
             let heightData1 = newData[j][i] / maxValue * 210;
             //下一个点
             let heightData2 = newData[j][i + 1] / maxValue * 210;
+            //将两个点连接起来
             let x1 = 30.5 + 50 * i;
             let x2 = 30.5 + 50 * (i + 1);
             let y1 = 270.5 - heightData1;
