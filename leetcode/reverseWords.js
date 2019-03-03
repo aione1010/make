@@ -10,3 +10,7 @@ var reverseWords = function(str) {
         return arr.join(' ');
     }
 };
+
+var reverseWords = function(str) {
+    return str.trim().replace(/\s+/g,' ').split(' ').reverse().join(' ')
+};
