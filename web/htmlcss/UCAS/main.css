@@ -1,0 +1,10 @@
+body{
+    background: url(image/body-bg1024.png) repeat-y top rgb(255,255,255);
+    font-family:Verdana, Arial, sans-serif, Arial, Helvetica;
+}
+.top{
+    height:30px;
+    border-bottom-color: currentColor;
+    border-bottom-width:0px;
+    border-bottom-style:none;
+}

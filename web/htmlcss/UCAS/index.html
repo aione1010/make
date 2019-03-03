@@ -18,7 +18,18 @@
                 <p><a href='testee.html' target='_blank'>考生</a></p>
             </div>
             <div clas='top-e'>
-
+                <div class='eng'>
+                    <p><a href='englishversion.html' target="_blank">English Version</a></p>
+                </div>
+                <div class="sousuo">
+                    <form action='' method='post' target='_blank'>
+                        <strong>搜索</strong>
+                        <input type='text' class='input-mini' onblur="clearText(this)" id='q' name='q'>
+                        <input type='image' src='image/search.png' class='input-mina' onclick='doSearch(); return false;'>
+                        <!--因为<a>和<input>的onclick事件本身就包含了form.submit();,如果不加return false;那么实际上submit处理被调用了2次。
+                        而<botton>的onclick事件本身没有包含form.submit();,所以不需要追加return false;来控制2重调用!-->
+                    </form>
+                </div>
             </div>
             <div class='cls'></div>
         </div>
