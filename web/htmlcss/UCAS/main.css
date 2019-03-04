@@ -97,3 +97,17 @@ body{
     height:20px;
     padding:4px 4px 4px 0px;
 }
+.top_t{
+    text-align: center;
+    margin-top:0px;
+}
+.top_t_c{
+    background: rgb(255,255,255) url('image/header-bg.jpg') repeat-y left top;
+    width:1024px;
+    height:110px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:left;
+}
