@@ -1,10 +1,99 @@
+*{
+    margin:0px;
+    padding:0px;
+    word-break:break-all;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+html{
+    overflow-y: scroll;
+    height:101%;
+}
+
 body{
-    background: url(image/body-bg1024.png) repeat-y top rgb(255,255,255);
+    background: rgb(255,255,255) url(image/body-bg1024.png) repeat-y top;
     font-family:Verdana, Arial, sans-serif, Arial, Helvetica;
+    width:100%;
+    margin:0px auto;
+    overflow-x: hidden;
 }
 .top{
     height:30px;
-    border-bottom-color: currentColor;
-    border-bottom-width:0px;
-    border-bottom-style:none;
+    width:100%;
+}
+.top_q{
+    position: relative;
+    width:1025px;
+    height:30px;
+    background-color: rgb(10,59,149);
+    margin:0px auto;
+}
+.top_w{
+    font-family:"微软雅黑";
+    padding-top:5px;
+    padding-left:6px;
+    font-size: 16px;
+    float:left;
+    color:#666666;
+}
+.top_w p{
+    margin-right:106px;
+    float:left;
+}
+.top_w p a{
+    color:#fff;
+}
+.top_e{
+    float:right;
+}
+.eng{
+    float:left;
+    width:150px;
+    right:10px;
+    position:relative;
+    margin-top:5px;
+    margin-right:35px;
+}
+.eng p{
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color:#5a5a5a;
+}
+.eng p a{
+    color:#fff;
+}
+.sousuo{
+    position:relative;
+    float:left;
+    width:100px;
+    height:30px;
+}
+.sousuo form{
+    margin-top:2px;
+}
+.sousuo form strong{
+    left:-30px;
+    top:7px;
+    color:rgb(255,255,255);
+    font-size:14px;
+    font-weight:normal;
+    display: inline;
+    position:absolute;
+}
+.input-mini{
+    vertical-align: middle;
+    width:94px;
+    height:24px;
+    padding:6px;
+}
+.sousuo input[src] {
+    top: 2px;
+    right: 5px;
+    position: absolute;
+}
+.input-mina{
+    vertical-align:middle;
+    width:20px;
+    height:20px;
+    padding:4px 4px 4px 0px;
 }
