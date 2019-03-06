@@ -36,8 +36,8 @@ console.log(stack.size())
 
 //用栈进行二进制转换
 function devideBy2(x){
-    var remStack = new Stack(),
-        rem,
+    var remStack = new Stack(),           //余数栈
+        rem,                             //余数
         binaryString = '';
     while(x > 0){
         rem = Math.floor( x % 2 );
@@ -53,7 +53,7 @@ function devideBy2(x){
 console.log(devideBy2(100))
 
 //2,8,16进制
-function devided(x,base){
+function convert(x,base){
     var remStack = new Stack(),
         rem,
         baseString = '',
@@ -69,9 +69,9 @@ function devided(x,base){
     }
     return baseString;
 }
-console.log(devided(10027,2))
-console.log(devided(10027,8))
-console.log(devided(10027,16))
+console.log(convert(10027,2))
+console.log(convert(10027,8))
+console.log(convert(10027,16))
 
 
 
@@ -108,4 +108,3 @@ function parChecker(symbolString){
 console.log(parChecker('{{([][])}()}'));
 
 
-//打印机

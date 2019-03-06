@@ -1,0 +1,1 @@
+console.log(devided(10027,2))
