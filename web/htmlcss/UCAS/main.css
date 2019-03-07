@@ -6,10 +6,8 @@
     text-decoration: none;
 }
 html{
-    overflow-y: scroll;
     height:101%;
 }
-
 body{
     background: rgb(255,255,255) url(image/body-bg1024.png) repeat-y top;
     font-family:Verdana, Arial, sans-serif, Arial, Helvetica;
@@ -23,7 +21,7 @@ body{
 }
 .top_q{
     position: relative;
-    width:1025px;
+    width:1024px;
     height:30px;
     background-color: rgb(10,59,149);
     margin:0px auto;
@@ -118,7 +116,7 @@ body{
     
 }
 #menu_in{
-    width:1025px;
+    width:1024px;
     height:31px;
     margin:0px auto;
     background-color: #9f1214;
@@ -148,7 +146,7 @@ body{
     text-align: center;
     padding-top:3px;
 }
-.mainlevel a:hover{
+.mainlevel>a:hover{
     color:rgb(97, 97, 248);
     background: rgb(221, 221, 221);
 }
@@ -176,10 +174,10 @@ body{
     width:auto;
     height:auto;
     text-align:center;
+    font-size: 14px;
 }
-#sub_05 li a:hover{
+#sub_05 li>a:hover{
     color:rgb(97, 97, 248);
-
 }
 #slide{
     width:1025px;
