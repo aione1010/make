@@ -1,4 +1,5 @@
-$(document).ready(function(){                  //下拉菜单
+//下拉菜单
+$(document).ready(function(){                  
     $('.mainlevel').mouseenter(function(){
         $(this).find('ul').slideDown();
     });
@@ -8,16 +9,49 @@ $(document).ready(function(){                  //下拉菜单
 })
 
 //图片轮播
+var t = n = 0, count;
 $(document).ready(function(){
-    $('#slide').jdSlide({
-        width:1025,
-        height:356,
-        pics:[
-            {src:'image/spring.jpg',href:'http://news.ucas.ac.cn/index.php/gygk',alt:'',type:'img'},
-            {src:'image/175355_128385.11.jpg',href:'http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490416&catid=340&Itemid=176',alt:'',type:'img'},
-            {src:'image/210723_354360.12.jpg',href:'http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490379&catid=396&Itemid=310',alt:'',type:'img'},
-            {src:'image/163154_992032.jpg',href:'http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489942&catid=340&Itemid=176',alt:'',type:'img'},
-            {src:'image/135156_828418._20190104135048.jpg',href:'http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489741&catid=396&Itemid=310',alt:'',type:'img'},
-        ]
-    })
-})
+    var len=$('#slide ul li').length,
+    timer,
+    first=0;
+    //初始化
+    //隐藏图片，显示第一个
+    $('#slide').hide().eq(0).show();
+    $('#slide span').eq(0).addClass('cur');
+    $('#slide div span').hover(function(){
+        var x = $(this).index();
+        change(x);
+    });
+    $('.o-control').click(function(){   
+        var x=first;
+        if($(this).index()){
+            x++;
+            x %= len;
+        }else if($(this).index()){
+            x--;
+            if(x<0){
+                x=len-1;
+            }
+        }
+        change(x);
+    });
+    auto();
+    $('.boxx').hover(function(){
+        clearInterval(timer);
+    },auto);
+    function auto(){
+        timer = setInterval(function(){
+            var x = first;
+            x++;
+            x %= len;
+            change(x);
+        },2000)
+    }
+    function change(i){
+        $('#slide span').eq(first).removeClass('cur');
+        first = i;
+        va=first*(-1024)+'px'
+        $('#slide ul').animate({left:va},350);
+        $('#slide span').eq(first).addClass('cur');
+    }
+});

@@ -1,139 +1,167 @@
-<!doctype <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>首页-中国科学院大学</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src='jquery.js'></script>
-    
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #box{
+            width: 520px;
+            height: 280px;
+            border: 1px solid red;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #box .pic li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        /*#box .pic li.show{*/
+            /*display: block;*/
+        /*}*/
+        #box .tab{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 20px;
+            background: #18ffd5;
+            border-radius: 20px;
+        }
+        #box .tab li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 5px;
+            /*background: #b864ff;*/
+            float: left;
+            background: #eee;
+        }
+        #box .tab li:hover{
+            cursor: pointer;
+        }
+        #box .tab li.on{
+            background: red;
+        }
+        #box .btn li{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: #eee;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            color: #fff;
+            display: none;
+        }
+        #box:hover .btn li{
+            display: block;
+        }
+        #box .btn li:hover{
+            cursor: pointer;
+            background: #ddd;
+        }
+        #box .btn li.left{
+            left: -2px;
+            border-radius: 0 50% 50% 0;
+        }
+        #box .btn li.right{
+            right: -2px;
+            border-radius: 50% 0 0 50%;
+        }
+    </style>
 </head>
 <body>
-        <div id='menu_out'>
-                <div id='menu_in'>
-                    <div id='menu'>
-                        <ul id='nav'>
-                            <li class='mainlevel'>
-                                <a href='site/11' target='_blank'>学校概况</a>
-                                <ul id='sub_05'>
-                                    <li>
-                                        <a href='site/11' target='_blank'>学校简介</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/12' target='_blank'>管理体制</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/15' target='_blank'>现任领导</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/13' target='_blank'>学位评定委员会</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/14' target='_blank'>学术委员会</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/17' target='_blank'>管理支撑</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/96' target='_blank'>历史沿革</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/16' target='_blank'>历任领导</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/98' target='_blank'>校情统计</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/20' target='_blank'>校园导游</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/155' target='_blank'>国科大新视点</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id='mainlevel_03' class='mainlevel'>
-                                <a href='site/18' target='_blank'>组织机构</a>
-                                <ul id='sub_05'>
-                                    <li>
-                                        <a href='site/18' target='_blank'>院系中心</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/3' target='_blank'>培养单位</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/17' target='_blank'>管理支撑</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id='mainlevel_05' class='mainlevel'>
-                                <a href='site/74' target='_blank'>师资队伍</a>
-                                <ul id='sub_05'>
-                                    <li>
-                                        <a href='site/18' target='_blank'>两院院士</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/18' target='_blank'>杰出青年</a>
-                                    </li>
-                                    <li>
-                                        <a href='site/18' target='_blank'>研究生导师</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id='mainlevel_04' class='mainlevel'>
-                                <a href='site/79' target='_blank'>教育教学</a>
-                                <ul id='sub_05'>
-                                    <li><a href='site/79' target='_blank'>研究生教育</a></li>
-                                    <li><a href='site/243' target='_blank'>本科生教育</a></li>
-                                    <li><a href='site/90' target='_blank'>国际培养合作</a></li>
-                                    <li><a href='site/244' target='_blank'>留学生教育</a></li>
-                                    <li><a href='site/9' target='_blank'>继续教育</a></li>
-                                    <li><a href='site/10' target='_blank'>图书论文</a></li>
-                                </ul>
-                            </li>
-                            <li id='mainlevel_06' class='mainlevel'>
-                                <a href="/site/261" target="_blank" marked="1">科学研究</a>
-                                <ul id='sub_05'>
-                                    <li><a href="/site/261" target="_blank" marked="1">科研项目</a></li>
-                                    <li><a href="/site/262" target="_blank" marked="1">科研成果</a></li>
-                                    <li><a href="/site/263" target="_blank" marked="1">科研动态</a></li>
-                                    <li><a href="/site/264" target="_blank" marked="1">学术活动</a></li>
-                                    <li><a href="/site/265" target="_blank" marked="1">院所活动</a></li>
-                                    <li><a href="/site/38" target="_blank" marked="1">图书馆</a></li>
-                                    <li><a href="/site/39" target="_blank" marked="1">学术期刊</a></li>
-                                    <li><a href="http://ir.ucas.ac.cn/" target="_blank" marked="1">机构知识仓储</a></li>	
-                                </ul>
-                            </li>
-                            <li id='mainlevel_07' class='mainlevel'>
-                                <a href="/site/31" target="_blank" marked="1">招生就业</a>
-                                <ul id="sub_05">
-                                    <li><a href="/site/31" target="_blank" marked="1">研究生招生</a></li>
-                                    <li><a href="/site/32" target="_blank" marked="1">本科生招生</a></li>
-                                    <li><a href="/site/33" target="_blank" marked="1">留学生招生</a></li>
-                                    <li><a href="http://job.ucas.ac.cn/" target="_blank" marked="1">就业服务</a></li>
-                                </ul>
-                            </li>
-                            <li id='mainlevel_08' class='mainlevel'>
-                                <a href="/XXGK" target="_blank" marked="1">信息公开</a>
-                            </li>
-                            <li id='mainlevel_09' class='mainlevel'>
-                                    <a href="/site/302" target="_blank" marked="1">校园生活</a>
-                                    <ul id="sub_05">
-                                        <li><a href="http://duzhi.ucas.ac.cn/" target="_blank" marked="1">笃志网</a></li>
-                                        <li><a href="http://youth.ucas.ac.cn/index.php/zh-cn/" target="_blank" marked="1">共青团</a></li>
-                                        <li><a href="/site/301" target="_blank" marked="1">校园服务</a></li>
-                                        <li><a href="/site/302" target="_blank" marked="1">奖助学金</a></li>
-                                        <li><a href="http://bbs.ucas.ac.cn/" target="_blank" marked="1">科苑星空BBS</a></li>
-                                        <li><a href="http://alumni.ucas.ac.cn/" target="_blank" marked="1">校友会</a></li>
-                                        <li><a href="/site/87" target="_blank" marked="1">活动预告</a></li>
-                                        <li><a href="http://forum.ucas.ac.cn/" target="_blank" marked="1">科学与人文论坛</a></li>
-                                        <li><a href="http://science100.ucas.ac.cn/" target="_blank" marked="1">百人学者论坛</a></li>
-                                    </ul>
-                            </li>
-                            <div class='cls'></div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </body>
-        </html>
+    <div id="box">
+        <ul class="pic">
+            <li><img src='image/spring.jpg' alt=""></li>
+            <li><img src='image/175355_128385.11.jpg' alt=""></li>
+            <li><img src='image/210723_354360.12.jpg' alt=""></li>
+            <li><img src='image/163154_992032.jpg' alt=""></li>
+            <li><img src='image/135156_828418._20190104135048.jpg' alt=""></li>
+        </ul>
+        <ul class="tab">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="btn">
+            <li class="left"><</li>
+            <li class="right">></li>
+        </ul>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        (function () {
+            var $box = $("#box"),
+                $picLi = $("#box .pic li"),
+                $tabLi = $("#box .tab li"),
+                $btnLi = $("#box .btn li"),
+                len = $tabLi.length,
+                timer;
+                first = 0;
+            //初始化设置
+            $picLi.hide().eq(0).show();//隐藏$picLi 然后显示第一个
+            $tabLi.eq(0).addClass("on");
+            //tab区域
+            $tabLi.click(function () {
+                var x = $(this).index();//tabLi[i].index = i;
+                if(x != first){
+                     change(x);
+                }
+            });
+            //btn区域
+            $btnLi.click(function () {
+                var x = first;
+                if($(this).index()){ //这里的index()就0 1两个值
+                    x++;
+                    x %= len;
+                }else{
+                    x --;
+                    if(x<0)x = len-1;
+                }
+                change(x);
+            });
+ 
+            //自动轮播
+            auto();
+ 
+            $box.hover(function () {
+                clearInterval(timer);
+            },auto);
+ 
+            function auto() {
+               timer = setInterval(function () {
+                    var x = first;
+                    x++;
+                    x %= len;
+                    change(x);
+                },3000)
+            }
+            //变化函数
+            function change(i) {
+                $picLi.eq(first).fadeOut(2000);
+                $tabLi.eq(first).removeClass("on");
+                first = i;
+                $picLi.eq(first).fadeIn(2000);
+                $tabLi.eq(first).addClass("on");
+            }
+        })();
+    </script>
+</body>
+</html>

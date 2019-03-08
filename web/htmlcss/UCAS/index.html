@@ -1,5 +1,6 @@
 <!doctype <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,13 @@
     <script src='jquery.js'></script>
     <script src="main.js"></script>
 </head>
+
 <body>
     <div class='top'>
         <div class='top_q'>
             <div class='top_w'>
                 <p><a href='student.html' target='_blank'>学生</a></p>
-                <p><a href='staff.html' target = '_balnk'>教工</a></p>
+                <p><a href='staff.html' target='_balnk'>教工</a></p>
                 <p><a href='schoolfellow.html' target="_blank">校友</a></p>
                 <p><a href='testee.html' target='_blank'>考生</a></p>
             </div>
@@ -26,7 +28,8 @@
                     <form action='' method='post' target='_blank'>
                         <strong>搜索</strong>
                         <input type='text' class='input-mini' onblur="clearText(this)" id='q' name='q'>
-                        <input type='image' src='image/search.png' class='input-mina' onclick='doSearch(); return false;'>
+                        <input type='image' src='image/search.png' class='input-mina'
+                            onclick='doSearch(); return false;'>
                         <!--因为<a>和<input>的onclick事件本身就包含了form.submit();,如果不加return false;那么实际上submit处理被调用了2次。
                         而<botton>的onclick事件本身没有包含form.submit();,所以不需要追加return false;来控制2重调用!-->
                     </form>
@@ -40,9 +43,12 @@
             <!--usemap标签用于图像映射，将图像分成不同区域，不同区域单击时，转到不同链接-->
             <img src='image/lougou.png' usemap='#Map3'>
             <map name='Map3'>
-                <area shape="rect" coords='17,17,97,97' href='http://www.cas.cn' target='_blank' title='中国科学院' onfocus="this.blur()">
-                <area shape='rect' coords="113,83,447,98" href='http://english.ucas.ac.cn' target='_blank' title='click to enter  English web'  onfocus="this.blur()">
-                <area shape="rect" coords="112,19,439,68" href="http://www.ucas.ac.cn" target="_blank" title="中国科学院大学"  onfocus="this.blur()">
+                <area shape="rect" coords='17,17,97,97' href='http://www.cas.cn' target='_blank' title='中国科学院'
+                    onfocus="this.blur()">
+                <area shape='rect' coords="113,83,447,98" href='http://english.ucas.ac.cn' target='_blank'
+                    title='click to enter  English web' onfocus="this.blur()">
+                <area shape="rect" coords="112,19,439,68" href="http://www.ucas.ac.cn" target="_blank" title="中国科学院大学"
+                    onfocus="this.blur()">
             </map>
         </div>
     </div>
@@ -132,18 +138,18 @@
                         <ul id='sub_05' style='display:none;'>
                             <li><a href="/site/261" target="_blank" marked="1">科研项目</a></li>
                             <li><a href="/site/262" target="_blank" marked="1">科研成果</a></li>
-							<li><a href="/site/263" target="_blank" marked="1">科研动态</a></li>
-						    <li><a href="/site/264" target="_blank" marked="1">学术活动</a></li>
-							<li><a href="/site/265" target="_blank" marked="1">院所活动</a></li>
-							<li><a href="/site/38" target="_blank" marked="1">图书馆</a></li>
-							<li><a href="/site/39" target="_blank" marked="1">学术期刊</a></li>
-							<li><a href="http://ir.ucas.ac.cn/" target="_blank" marked="1">机构知识仓储</a></li>	
+                            <li><a href="/site/263" target="_blank" marked="1">科研动态</a></li>
+                            <li><a href="/site/264" target="_blank" marked="1">学术活动</a></li>
+                            <li><a href="/site/265" target="_blank" marked="1">院所活动</a></li>
+                            <li><a href="/site/38" target="_blank" marked="1">图书馆</a></li>
+                            <li><a href="/site/39" target="_blank" marked="1">学术期刊</a></li>
+                            <li><a href="http://ir.ucas.ac.cn/" target="_blank" marked="1">机构知识仓储</a></li>
                         </ul>
                     </li>
                     <li id='mainlevel_07' class='mainlevel'>
                         <a href="/site/31" target="_blank" marked="1">招生就业</a>
                         <ul id="sub_05" style="display: none;">
-				            <li><a href="/site/31" target="_blank" marked="1">研究生招生</a></li>
+                            <li><a href="/site/31" target="_blank" marked="1">研究生招生</a></li>
                             <li><a href="/site/32" target="_blank" marked="1">本科生招生</a></li>
                             <li><a href="/site/33" target="_blank" marked="1">留学生招生</a></li>
                             <li><a href="http://job.ucas.ac.cn/" target="_blank" marked="1">就业服务</a></li>
@@ -153,18 +159,19 @@
                         <a href="/XXGK" target="_blank" marked="1">信息公开</a>
                     </li>
                     <li id='mainlevel_09' class='mainlevel'>
-                            <a href="/site/302" target="_blank" marked="1">校园生活</a>
-							<ul id="sub_05" style='display:none'>
-						        <li><a href="http://duzhi.ucas.ac.cn/" target="_blank" marked="1">笃志网</a></li>
-						        <li><a href="http://youth.ucas.ac.cn/index.php/zh-cn/" target="_blank" marked="1">共青团</a></li>
-							    <li><a href="/site/301" target="_blank" marked="1">校园服务</a></li>
-							    <li><a href="/site/302" target="_blank" marked="1">奖助学金</a></li>
-							    <li><a href="http://bbs.ucas.ac.cn/" target="_blank" marked="1">科苑星空BBS</a></li>
-							    <li><a href="http://alumni.ucas.ac.cn/" target="_blank" marked="1">校友会</a></li>
-						        <li><a href="/site/87" target="_blank" marked="1">活动预告</a></li>
-						        <li><a href="http://forum.ucas.ac.cn/" target="_blank" marked="1">科学与人文论坛</a></li>
-							    <li><a href="http://science100.ucas.ac.cn/" target="_blank" marked="1">百人学者论坛</a></li>
-							</ul>
+                        <a href="/site/302" target="_blank" marked="1">校园生活</a>
+                        <ul id="sub_05" style='display:none'>
+                            <li><a href="http://duzhi.ucas.ac.cn/" target="_blank" marked="1">笃志网</a></li>
+                            <li><a href="http://youth.ucas.ac.cn/index.php/zh-cn/" target="_blank" marked="1">共青团</a>
+                            </li>
+                            <li><a href="/site/301" target="_blank" marked="1">校园服务</a></li>
+                            <li><a href="/site/302" target="_blank" marked="1">奖助学金</a></li>
+                            <li><a href="http://bbs.ucas.ac.cn/" target="_blank" marked="1">科苑星空BBS</a></li>
+                            <li><a href="http://alumni.ucas.ac.cn/" target="_blank" marked="1">校友会</a></li>
+                            <li><a href="/site/87" target="_blank" marked="1">活动预告</a></li>
+                            <li><a href="http://forum.ucas.ac.cn/" target="_blank" marked="1">科学与人文论坛</a></li>
+                            <li><a href="http://science100.ucas.ac.cn/" target="_blank" marked="1">百人学者论坛</a></li>
+                        </ul>
                     </li>
                     <div class='cls'></div>
                 </ul>
@@ -172,36 +179,58 @@
         </div>
     </div>
     <div class='boxx'>
-        <div id='slide' style='position:relative;' >
-            <ul style='position:absolute; top:0px; left:0px; width:5125px; height:356px;'>
+        <div id='slide' style='position:relative;'>
+            <ul class='pic' style='position:absolute; top:0px; left:0px; width:5125px; height:356px;'>
                 <li>
-                    <a href='http://news.ucas.ac.cn/index.php/gygk' target='_blank' >
-                        <img src='image/spring.jpg' width='1025' height='356'>
+                    <a href='http://news.ucas.ac.cn/index.php/gygk' target='_blank'>
+                        <img src='image/spring.jpg' width='1024' height='356'>
                     </a>
                 </li>
                 <li>
-                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490416&catid=340&Itemid=176' target='_blank' >
-                        <img src='image/175355_128385.11.jpg' width='1025' height='356'>
+                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490416&catid=340&Itemid=176'
+                        target='_blank'>
+                        <img src='image/175355_128385.11.jpg' width='1024' height='356'>
                     </a>
                 </li>
                 <li>
-                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490379&catid=396&Itemid=310' target='_blank' >
-                        <img src='image/210723_354360.12.jpg' width='1025' height='356'>
+                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=490379&catid=396&Itemid=310'
+                        target='_blank'>
+                        <img src='image/210723_354360.12.jpg' width='1024' height='356'>
                     </a>
                 </li>
                 <li>
-                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489942&catid=340&Itemid=176' target='_blank' >
-                        <img src='image/163154_992032.jpg' width='1025' height='356'>
+                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489942&catid=340&Itemid=176'
+                        target='_blank'>
+                        <img src='image/163154_992032.jpg' width='1024' height='356'>
                     </a>
                 </li>
                 <li>
-                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489741&catid=396&Itemid=310' target='_blank' >
-                        <img src='image/135156_828418._20190104135048.jpg' width='1025' height='356'>
+                    <a href='http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=489741&catid=396&Itemid=310'
+                        target='_blank'>
+                        <img src='image/135156_828418._20190104135048.jpg' width='1024' height='356'>
                     </a>
                 </li>
             </ul>
+            <div>
+                <span class=""><a href="http://news.ucas.ac.cn/index.php/gygk" target="_blank" marked="1">1</a></span>
+                <span class=""><a
+                        href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=490416&amp;catid=340&amp;Itemid=176"
+                        target="_blank" marked="1">2</a></span>
+                <span class=""><a
+                        href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=490379&amp;catid=396&amp;Itemid=310"
+                        target="_blank" marked="1">3</a></span>
+                <span class=""><a
+                        href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=489942&amp;catid=340&amp;Itemid=176"
+                        target="_blank" marked="1">4</a></span>
+                <span class=""><a
+                        href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=489741&amp;catid=396&amp;Itemid=310"
+                        target="_blank" marked="1">5</a></span>
+            </div>
+            <div id="goback" class="o-control"><a class="control" marked="1"></a></div>
+            <div id="forward" class="o-control"><a class="control" marked="1"></a></div>
         </div>
     </div>
-    
+
 </body>
+
 </html>

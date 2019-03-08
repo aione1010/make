@@ -180,14 +180,54 @@ body{
     color:rgb(97, 97, 248);
 }
 #slide{
-    width:1025px;
+    width:1024px;
     height:356px;
-    margin-bottom:20px;
+    margin:0 auto 20px auto;
+    overflow:hidden;
+    
 }
 #slide ul li{
     float:left;
-    width:1025px;
+    width:1024px;
     height:356px;
-    overflow: hidden;
+    list-style: none;
     position: relative;
+}
+#slide div{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+}
+#slide span a{
+    margin:0px 4px;
+    width:10px;
+    height:9px;
+    cursor:pointer;
+    float:left;
+    background:url('image/lunbo_q.png') no-repeat center;
+    font-size: 0px;
+}
+.cur, #slide span a:hover{ 
+    float:left;
+    margin:0 4px;
+    padding:0px;
+    width:10px;
+    height:9px;
+    background:white;
+}
+#slide #goback {
+    left: 5%;
+    position: absolute;
+}
+#slide .o-control{
+    top:136px;
+    width:51px;
+    height:74px;
+    cursor:pointer;
+}
+#slide .control {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 74px;
 }
