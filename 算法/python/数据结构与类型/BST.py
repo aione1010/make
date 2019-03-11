@@ -84,8 +84,7 @@ class BinarySearchTree():
             self._postOrderTraverseNode(node.right)
     #删除节点
     def delete(self,key):
-        root = self._removeNode(self.root,key)
-        return root
+        self.root = self._removeNode(self.root,key)
     def _findMinNode(self,node):
         if node:
             while node and node.left != None:
