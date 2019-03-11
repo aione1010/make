@@ -85,7 +85,13 @@ class BinarySearchTree():
     #删除节点
     def delete(self,key):
         root = self._removeNode(self.root,key)
-    def _removeNode(node,key):
+    def _findMinNode(self,node):
+        if node:
+            while node and node.left != None:
+                node = node.left
+            return node
+        return None
+    def _removeNode(self,node,key):
         if node == None:
             return None
         elif key < node.key:
@@ -105,4 +111,8 @@ class BinarySearchTree():
                 node = node.left
                 return node
             
-            
+            else:
+                minRight = self._findMinNode(node.right)
+                node.key = minRight.key
+                node.right = self._removeNode(node.right,minRight.key)
+                return node
