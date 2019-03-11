@@ -8,8 +8,8 @@ class BinarySearchTree():
     def __init__(self):
         self.root = None
     #插入节点
-    def insert(self,val):
-        newNode = Node(val)
+    def insert(self,key):
+        newNode = Node(key)
         if self.root == None:
             self.root = newNode
         else:
@@ -68,7 +68,7 @@ class BinarySearchTree():
     
     #前序遍历
     def preOrderTraverse(self):
-        self._preOrderTravereNode(self.root)
+        self._preOrderTraverseNode(self.root)
     def _preOrderTraverseNode(self,node):
         if node != None:
             print(node.key)
@@ -76,9 +76,33 @@ class BinarySearchTree():
             self._preOrderTraverseNode(node.right)
     #后序遍历
     def postOrderTraverse(self):
-        self._postOrderTravereNode(self.root)
+        self._postOrderTraverseNode(self.root)
     def _postOrderTraverseNode(self,node):
         if node != None:
             print(node.key)
             self._postOrderTraverseNode(node.left)
             self._postOrderTraverseNode(node.right)
+    #删除节点
+    def delete(self,key):
+        root = self._removeNode(self.root,key)
+    def _removeNode(node,key):
+        if node == None:
+            return None
+        elif key < node.key:
+            node.left = self._removeNode(node.left,key)
+            return node
+        elif key > node.key:
+            node.right = self._removeNode(node.right,key)
+            return node
+        else:
+            if node.left == None and node.right == None:
+                node = None
+                return node
+            elif node.left == None:
+                node = node.right
+                return node
+            elif node.right == None:
+                node = node.left
+                return node
+            
+            
