@@ -118,7 +118,7 @@ function Graph() {
     };
     this.addEdge = function (v, w) {
         adjList.get(v).push(w);
-        adjList.get(w).push(v);
+        
     };
     this.toString = function () {        //输出图
         var s = '';
