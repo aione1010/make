@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello world!</title>
+        <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+    </head>
+    <body>
+        <div id='app'>{{msg}}</div>
+        <script>
+            //var div = document.getElementById('app');
+            //div.innerHTML='hello world';
+            //setTimeout(function(){
+            //    div.innerHTML = 'bye world'
+            //},2000);
+            var app=new Vue({
+                el:'#app',
+                data:{
+                    msg:'hello world',
+                }
+            })
+            setTimeout(function(){
+                app.$data.msg='bye world'
+            },2000)
+        </script>
+    </body>
+</html>

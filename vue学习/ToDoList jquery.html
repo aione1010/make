@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ToDoList jQuery</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type='text' id='input'>
+        <input type='button' value='提交' id='btn'>
+        <ul id='list'></ul>
+    </div>
+    <script>
+        function Page() {
+
+        }
+        $.extend(Page.prototype, {
+            init: function () {
+                this.bindEvents();
+            },
+            bindEvents: function () {
+                var btn = $('#btn');
+                btn.on('click', $.proxy(this.handleBtnClick,//这里把handleBtnClic函数，绑定成page实例的引用
+                    this))//jQuery.proxy(),接受一个函数，
+                          //然后返回一个新函数，并且这个新函数始终保持了特定的上下文(context )语境。
+            },
+            handleBtnClick: function () {
+                var inputElem = $('#input');  //提高代码性能
+                var inputValue=inputElem.val();
+                var ulElem=$('#list');
+                ulElem.append('<li>'+inputValue+'</li>');
+                inputElem.val('');
+            }
+        })
+        var page = new Page();
+        page.bindEvents();
+    </script>
+</body>
+
+</html>
