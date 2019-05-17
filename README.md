@@ -34,5 +34,5 @@
 3. [lambda表达式，map函数，filter函数，reduce函数](https://github.com/mahsiaoko/make/issues/2#issue-400168434)
 4.[zip](https://github.com/mahsiaoko/make/issues/1#issuecomment-455087827)
 
-#Algorithm
+# Algorithm
 1. [按位异或](https://github.com/mahsiaoko/make/issues/11#issue-416402128)
