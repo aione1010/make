@@ -10,6 +10,6 @@
    (3)[响应式布局与设计](https://github.com/mahsiaoko/make/issues/26#issue-445373196)
    (4)[float](https://github.com/mahsiaoko/make/issues/24#issue-445296839)
    (5)[flex布局](https://github.com/mahsiaoko/make/issues/31#issue-445552653)
-   (6){flex 固定宽度问题](https://github.com/mahsiaoko/make/issues/23#issue-445047769)
+   (6)[flex 固定宽度问题](https://github.com/mahsiaoko/make/issues/23#issue-445047769)
 5.[纯css实现选项卡](https://github.com/mahsiaoko/make/issues/22#issue-444989545)
 6.[CheckBox的美化（利用纯css+html实现）](https://github.com/mahsiaoko/make/issues/20#issue-444980876)
