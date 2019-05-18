@@ -32,7 +32,7 @@
 1. [python类中一些易混易忘的知识点](https://github.com/mahsiaoko/make/issues/4#issue-401579367)
 2. [max函数和min函数](https://github.com/mahsiaoko/make/issues/3#issue-400188215)
 3. [lambda表达式，map函数，filter函数，reduce函数](https://github.com/mahsiaoko/make/issues/2#issue-400168434)
-4.[zip](https://github.com/mahsiaoko/make/issues/1#issuecomment-455087827)
+4. [zip](https://github.com/mahsiaoko/make/issues/1#issuecomment-455087827)
 
 # Algorithm
 1. [按位异或](https://github.com/mahsiaoko/make/issues/11#issue-416402128)
