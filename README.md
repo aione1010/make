@@ -36,3 +36,6 @@
 
 # Algorithm
 1. [按位异或](https://github.com/mahsiaoko/make/issues/11#issue-416402128)
+
+# Linux
+1. [rpm打包](https://github.com/mahsiaoko/make/issues/32#issue-449601722)
