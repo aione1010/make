@@ -42,3 +42,5 @@
 
 # Java
 1. [Java中数值的转换](https://github.com/mahsiaoko/make/issues/33#issue-449755762)
+2. [java数组的定义的方式](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
+3. [java中的字符串](https://github.com/mahsiaoko/make/issues/35#issue-449865759)
