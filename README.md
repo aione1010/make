@@ -26,6 +26,7 @@
 9. [JS对HTML字符的转义与反转义](https://github.com/mahsiaoko/make/issues/7#issue-410754142)
 10. [javascript 死区](https://github.com/mahsiaoko/make/issues/6#issue-409774749)
 11. [let,const与var](https://github.com/mahsiaoko/make/issues/5#issue-409760713)
+12. [JavaScript的String对象](https://github.com/mahsiaoko/make/issues/39#issue-450295277)
 
 
 # Python
@@ -44,4 +45,5 @@
 1. [Java中数值的转换](https://github.com/mahsiaoko/make/issues/33#issue-449755762)
 2. [java数组的定义的方式](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
 3. [java中的字符串](https://github.com/mahsiaoko/make/issues/35#issue-449865759)
+4. [String方法](https://github.com/mahsiaoko/make/issues/40#issue-450296494)
 4. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
