@@ -27,6 +27,7 @@
 10. [javascript 死区](https://github.com/mahsiaoko/make/issues/6#issue-409774749)
 11. [let,const与var](https://github.com/mahsiaoko/make/issues/5#issue-409760713)
 12. [JavaScript的String对象](https://github.com/mahsiaoko/make/issues/39#issue-450295277)
+13.[exec()与match()的区别与联系](https://github.com/mahsiaoko/make/issues/42#issue-450701884)
 
 
 # Python
