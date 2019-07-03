@@ -1,0 +1,17 @@
+<!--pages/managePictures/index.wxml-->
+<view class='container'>
+  <image src="./../../img1.PNG"></image>
+  <form>
+    <view style="text-align: center;background: rgb(245, 243, 243);width:14rem;">上传活动照片</view>
+    <view style='font-size:.9rem'>长按图片删除</view>
+    <view id='img'>
+      <image wx:for='{{imgUrl}}' wx:key="{{index}}" src='{{item}}' bindlongpress='deleteImg' data-index='{{index}}'></image>
+    </view>
+    <view style='text-align:center'>
+      <button bindtap='uploadImg' style='background:#007bff; color:#fff;margin-top:1rem;'>上传</button>
+    </view>
+    <view id='submit' style='text-align:center'>
+      <button bindtap='submitData' value='submit' type='primary' style='width:9rem;background:#007bff'>SUBMIT</button>
+    </view>
+  </form>
+</view>

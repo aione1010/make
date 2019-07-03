@@ -1,0 +1,50 @@
+/* pages/createNewActivityPage/index.wxss */
+image{
+  width:15rem;
+  height:15rem;
+  margin-top:-6rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 16rem;
+  margin: 0 auto;
+}
+view{
+  margin-top:1rem;
+}
+
+text {
+  display: inline-block;
+  width: 4rem;
+  text-align-last: justify;
+  vertical-align: middle;
+  padding-right:.5rem;
+}
+
+input{
+  width:10rem;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-left:.3rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+button{
+  line-height: 1.5rem;
+  font-size:1rem;
+}
+
+picker{
+  width:10rem;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-left:.3rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}

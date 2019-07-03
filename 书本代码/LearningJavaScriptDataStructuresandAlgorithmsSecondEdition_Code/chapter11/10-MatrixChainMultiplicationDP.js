@@ -44,8 +44,8 @@ function printOptimalParenthesis(s, i, j){
         console.log("A[" + i + "]");
     } else {
         console.log("(");
-        printOptimalParenthesis(s, i, s[i][j]);
-        printOptimalParenthesis(s, s[i][j] + 1, j);
+        printOptimalParenthesis(s, i, s[i][j]);   //i,k之间的分割点
+        printOptimalParenthesis(s, s[i][j] + 1, j);//k+1,j之间的分割点
         console.log(")");
     }
 }

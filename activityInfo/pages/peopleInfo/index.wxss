@@ -1,0 +1,31 @@
+/* pages/peopleInfo/index.wxss */
+image {
+  width: 15rem;
+  height: 15rem;
+  margin-top: -5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 17rem;
+  margin: 0 auto;
+}
+button{
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+#search{
+  background: #17a2b8;
+  color:white;
+  margin-left:0rem;
+  width:4rem;
+}
+textarea{
+  width:14rem;
+  border:1px solid gray;
+}
+view{
+  margin-bottom: 1rem;
+}

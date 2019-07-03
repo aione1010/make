@@ -1,0 +1,21 @@
+/* pages/activityInfo/index.wxss */
+page{
+  overflow-y:hidden;
+}
+image{
+  width:15rem;
+  height:15rem;
+  margin-top:-5rem;
+}
+form{
+  width:16rem;
+  margin:0 auto;
+}
+textarea{
+  border:1px solid gray;
+  width:16rem;
+}
+button{
+  line-height: 1.5rem;
+  font-size:1rem;
+}

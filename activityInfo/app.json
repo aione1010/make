@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/managePictures/index",
+    "pages/createActivity/index",
+    "pages/editInfo/index",
+    "pages/query/index",
+    "pages/peopleInfo/index",
+    "pages/logout/index",
+    "pages/chooseActivity/index",
+    "pages/activityInfo/index",
+    "pages/createNewActivityPage/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "活动管理",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

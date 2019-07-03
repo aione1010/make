@@ -1,0 +1,18 @@
+<!--pages/activityInfo/index.wxml-->
+<view class='container'>
+  <image src="./../../img1.PNG"></image>
+  <form action="#" method="GET">
+    <view style="text-align: center;background: rgb(245, 243, 243);">
+      上传活动纪要
+    </view>
+    <view>
+      <button bindtap='search' type='primary' size='mini' style='margin:.2rem 0;background:rgb(23, 162, 184);'>查询</button>
+      <view>
+        <textarea bindinput='inputText' placeholder="显示已提交活动纪要，请填写活动纪要，字数在1000以内。" value='{{ minutes}}'></textarea>
+      </view>
+    </view>
+    <view id='submit' style='text-align: center;margin-top:.2rem;'>
+      <button bindtap='submitPage' value='Submit' type='primary' id='btn' style='width:9rem'>SUBMIT</button>
+    </view>
+  </form>
+</view>
