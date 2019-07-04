@@ -42,6 +42,8 @@
 # Algorithm
 1. [按位异或](https://github.com/mahsiaoko/make/issues/11#issue-416402128)
 2. [原码，反码和补码与位运算](https://github.com/mahsiaoko/make/issues/36#issue-450103864)
+3. [判断素数和计算平方根](https://github.com/mahsiaoko/make/issues/46#issue-464094348)
+
 # Linux
 1. [rpm打包](https://github.com/mahsiaoko/make/issues/32#issue-449601722)
 
