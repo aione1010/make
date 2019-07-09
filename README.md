@@ -52,4 +52,5 @@
 2. [java数组的定义的方式](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
 3. [java中的字符串](https://github.com/mahsiaoko/make/issues/35#issue-449865759)
 4. [String方法](https://github.com/mahsiaoko/make/issues/40#issue-450296494)
-4. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
+5. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
+6. [java内存分析](https://github.com/mahsiaoko/make/issues/47#issue-465856339)
