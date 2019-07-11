@@ -54,3 +54,4 @@
 4. [String方法](https://github.com/mahsiaoko/make/issues/40#issue-450296494)
 5. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
 6. [java内存分析](https://github.com/mahsiaoko/make/issues/47#issue-465856339)
+7. [java引用分析](https://github.com/mahsiaoko/make/issues/49#issue-466895182)
