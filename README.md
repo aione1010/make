@@ -59,3 +59,4 @@
 9. [java构造方法与匿名对象](https://github.com/mahsiaoko/make/issues/52#issue-466977516)
 10. [java中的this](https://github.com/mahsiaoko/make/issues/53#issue-466983967)
 11. [java中的static](https://github.com/mahsiaoko/make/issues/55#issue-467495801)
+12. [Java中的可变参数](https://github.com/mahsiaoko/make/issues/57#issue-467838704)
