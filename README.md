@@ -29,6 +29,7 @@
 11. [let,const与var](https://github.com/mahsiaoko/make/issues/5#issue-409760713)
 12. [JavaScript的String对象](https://github.com/mahsiaoko/make/issues/39#issue-450295277)
 13. [exec()与match()的区别与联系](https://github.com/mahsiaoko/make/issues/42#issue-450701884)
+14. [箭头函数与this](https://github.com/mahsiaoko/make/issues/45#issue-463721360)
 
 
 # Python
@@ -41,12 +42,21 @@
 # Algorithm
 1. [按位异或](https://github.com/mahsiaoko/make/issues/11#issue-416402128)
 2. [原码，反码和补码与位运算](https://github.com/mahsiaoko/make/issues/36#issue-450103864)
+3. [判断素数和计算平方根](https://github.com/mahsiaoko/make/issues/46#issue-464094348)
+
 # Linux
 1. [rpm打包](https://github.com/mahsiaoko/make/issues/32#issue-449601722)
 
 # Java
 1. [Java中数值的转换](https://github.com/mahsiaoko/make/issues/33#issue-449755762)
-2. [java数组的定义的方式](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
+2. [java数组](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
 3. [java中的字符串](https://github.com/mahsiaoko/make/issues/35#issue-449865759)
 4. [String方法](https://github.com/mahsiaoko/make/issues/40#issue-450296494)
-4. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
+5. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
+6. [java内存分析](https://github.com/mahsiaoko/make/issues/47#issue-465856339)
+7. [java引用分析](https://github.com/mahsiaoko/make/issues/49#issue-466895182)
+8. [java中成员属性封装](https://github.com/mahsiaoko/make/issues/51#issue-466947689)
+9. [java构造方法与匿名对象](https://github.com/mahsiaoko/make/issues/52#issue-466977516)
+10. [java中的this](https://github.com/mahsiaoko/make/issues/53#issue-466983967)
+11. [java中的static](https://github.com/mahsiaoko/make/issues/55#issue-467495801)
+12. [Java中的可变参数](https://github.com/mahsiaoko/make/issues/57#issue-467838704)
