@@ -1,0 +1,15 @@
+==> 2019-07-16 21:22:17 <==
+# cmd: C:\Users\make\Anaconda3\Scripts\conda-script.py create --prefix=C:\Users\make\Desktop\django\myenv python=3.7
+# conda version: 4.7.5
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::ca-certificates-2019.5.15-0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::certifi-2019.6.16-py37_0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::openssl-1.1.1c-he774522_1
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::pip-19.1.1-py37_0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::python-3.7.3-h8c8aaf0_1
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::setuptools-41.0.1-py37_0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::sqlite-3.28.0-he774522_0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::vc-14.1-h0510ff6_4
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::vs2015_runtime-14.15.26706-h3a45250_4
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::wheel-0.33.4-py37_0
++https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main::wincertstore-0.2-py37_0
+# update specs: ['python=3.7']
