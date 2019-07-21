@@ -60,3 +60,4 @@
 10. [java中的this](https://github.com/mahsiaoko/make/issues/53#issue-466983967)
 11. [java中的static](https://github.com/mahsiaoko/make/issues/55#issue-467495801)
 12. [Java中的可变参数](https://github.com/mahsiaoko/make/issues/57#issue-467838704)
+13. [char与String](https://github.com/mahsiaoko/make/issues/58#issue-470768341)
