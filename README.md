@@ -62,3 +62,4 @@
 12. [Java中的可变参数](https://github.com/mahsiaoko/make/issues/57#issue-467838704)
 13. [char与String](https://github.com/mahsiaoko/make/issues/58#issue-470768341)
 14. [字符串的方法](https://github.com/mahsiaoko/make/issues/59#issue-470788214)
+15. [java继承](https://github.com/mahsiaoko/make/issues/60#issue-470798902)
