@@ -52,7 +52,7 @@
 2. [java数组](https://github.com/mahsiaoko/make/issues/34#issue-449859727)
 3. [java中的字符串](https://github.com/mahsiaoko/make/issues/35#issue-449865759)
 4. [String方法](https://github.com/mahsiaoko/make/issues/40#issue-450296494)
-5. [基本数据类型+的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
+5. [基本数据类型相加(+)的规则（数值类型的转换）](https://github.com/mahsiaoko/make/issues/38#issue-450235179)
 6. [java内存分析](https://github.com/mahsiaoko/make/issues/47#issue-465856339)
 7. [java引用分析](https://github.com/mahsiaoko/make/issues/49#issue-466895182)
 8. [java中成员属性封装](https://github.com/mahsiaoko/make/issues/51#issue-466947689)
@@ -67,3 +67,4 @@
 17. [java中的Annotation](https://github.com/mahsiaoko/make/issues/62#issue-471722904)
 18. [java中的多态性](https://github.com/mahsiaoko/make/issues/63#issue-471753997)
 19. [Object类](https://github.com/mahsiaoko/make/issues/64#issue-477349648)
+20. [泛型](https://github.com/mahsiaoko/make/issues/65#issue-477454235)
