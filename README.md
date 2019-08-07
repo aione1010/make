@@ -68,3 +68,4 @@
 18. [java中的多态性](https://github.com/mahsiaoko/make/issues/63#issue-471753997)
 19. [Object类](https://github.com/mahsiaoko/make/issues/64#issue-477349648)
 20. [泛型](https://github.com/mahsiaoko/make/issues/65#issue-477454235)
+21. [抽象类](https://github.com/mahsiaoko/make/issues/66#issue-477900031)
