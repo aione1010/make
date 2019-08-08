@@ -70,3 +70,4 @@
 20. [泛型](https://github.com/mahsiaoko/make/issues/65#issue-477454235)
 21. [抽象类](https://github.com/mahsiaoko/make/issues/66#issue-477900031)
 22. [包装类](https://github.com/mahsiaoko/make/issues/68#issue-478479516)
+23. [接口](https://github.com/mahsiaoko/make/issues/69#issue-478519108)
