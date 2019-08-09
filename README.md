@@ -71,3 +71,4 @@
 21. [抽象类](https://github.com/mahsiaoko/make/issues/66#issue-477900031)
 22. [包装类](https://github.com/mahsiaoko/make/issues/68#issue-478479516)
 23. [接口](https://github.com/mahsiaoko/make/issues/69#issue-478519108)
+24. [工厂设计模式和代理设计模式](https://github.com/mahsiaoko/make/issues/70#issue-479088021)
