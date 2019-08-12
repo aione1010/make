@@ -74,3 +74,4 @@
 24. [工厂设计模式和代理设计模式](https://github.com/mahsiaoko/make/issues/70#issue-479088021)
 25. [抽象类与接口的区别](https://github.com/mahsiaoko/make/issues/71#issue-479260328)
 26. [泛型问题](https://github.com/mahsiaoko/make/issues/72#issue-479336687)
+27. [访问权限](https://github.com/mahsiaoko/make/issues/73#issue-479666173)
