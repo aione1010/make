@@ -76,3 +76,4 @@
 26. [泛型问题](https://github.com/mahsiaoko/make/issues/72#issue-479336687)
 27. [访问权限](https://github.com/mahsiaoko/make/issues/73#issue-479666173)
 28. [类图](https://github.com/mahsiaoko/make/issues/74#issue-480157651)
+29. [单例设计](https://github.com/mahsiaoko/make/issues/76#issue-480683233)
