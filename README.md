@@ -79,3 +79,4 @@
 29. [单例设计](https://github.com/mahsiaoko/make/issues/76#issue-480683233)
 30. [枚举](https://github.com/mahsiaoko/make/issues/77#issue-480705419)
 31. [异常与处理](https://github.com/mahsiaoko/make/issues/79#issue-482842773)
+32. [内部类](https://github.com/mahsiaoko/make/issues/80#issue-484006875)
