@@ -80,3 +80,4 @@
 30. [枚举](https://github.com/mahsiaoko/make/issues/77#issue-480705419)
 31. [异常与处理](https://github.com/mahsiaoko/make/issues/79#issue-482842773)
 32. [内部类](https://github.com/mahsiaoko/make/issues/80#issue-484006875)
+33. [函数式编程](https://github.com/mahsiaoko/make/issues/81#issue-484339918)
