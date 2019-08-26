@@ -81,3 +81,4 @@
 31. [异常与处理](https://github.com/mahsiaoko/make/issues/79#issue-482842773)
 32. [内部类](https://github.com/mahsiaoko/make/issues/80#issue-484006875)
 33. [函数式编程](https://github.com/mahsiaoko/make/issues/81#issue-484339918)
+34. [多线程](https://github.com/mahsiaoko/make/issues/82#issue-485224291)
