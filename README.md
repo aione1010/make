@@ -46,6 +46,7 @@
 
 # Linux
 1. [rpm打包](https://github.com/mahsiaoko/make/issues/32#issue-449601722)
+2. [常用命令已经设置](https://github.com/mahsiaoko/make/issues/83#issue-490893840)
 
 # Java
 1. [Java中数值的转换](https://github.com/mahsiaoko/make/issues/33#issue-449755762)
