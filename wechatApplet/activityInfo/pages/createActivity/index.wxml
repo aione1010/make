@@ -1,0 +1,14 @@
+<!--pages/createActivity/index.wxml-->
+<view class='container'>
+  <image src='./../../img1.png'></image>
+  <form action="#" method="GET">
+    <view id='user' style='margin:5rem auto'>
+      <text>是否需要创建新活动？</text>
+      <navigator url='./../query/index' style='text-decoration:underline'>不清楚？点击这里查询</navigator>
+    </view>
+    <view id='submit'>
+      <button  value='yes' type='primary' bindtap='yes' >YES</button>
+      <button  value='no' type='primary' bindtap='no'>NO</button>
+    </view>
+  </form>
+</view>

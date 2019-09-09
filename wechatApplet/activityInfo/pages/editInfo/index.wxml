@@ -1,0 +1,30 @@
+<!--pages/editInfo/index.wxml-->
+<view class='container'>
+  <image src="./../../img1.PNG"></image>
+  <form>
+    <view style="text-align: center;background: rgb(245, 243, 243);">
+      活动机构信息
+    </view>
+    <view>
+     
+      <view id='area'>
+        <view class='textarea'>
+          <view wx:for='{{institution}}' wx:key="{{index}}">
+            <!--尝试改变字体颜色的方法来标记-->
+            <checkbox bindtap='clickItem' id="{{index}}" checked='{{check}}' >{{item}}</checkbox>
+          </view>
+        </view>
+        <button style='margin-left:.2rem;background:rgb(23, 162, 184);' bindtap='deleteIns'>删除</button>
+      </view>
+    </view>
+    <view id='activity_name' style='text-align:center;margin-top:1rem'>
+      <picker mode='selector' value="{{index}}" range="{{institutionList}}" bindchange='listChoose'>
+        {{institutionList[index]}}
+      </picker>
+      <button bindtap='addItem' style='background:rgb(23, 162, 184);margin-left:.2rem;'>添加</button>
+    </view>
+    <view id='submit' style='text-align: center;margin-top:.5rem;'>
+      <button bindtap='nextPage' value='Next' type='primary'  style='width:9rem'>NEXT</button>
+    </view>
+  </form>
+</view>
