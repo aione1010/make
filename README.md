@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # css
 1. [css中的动画](https://github.com/mahsiaoko/make/issues/30#issue-445538588)
 2. [box-shadow](https://github.com/mahsiaoko/make/issues/29#issue-445473747)
@@ -163,5 +162,5 @@
 32. [内部类](https://github.com/mahsiaoko/make/issues/80#issue-484006875)
 33. [函数式编程](https://github.com/mahsiaoko/make/issues/81#issue-484339918)
 34. [多线程](https://github.com/mahsiaoko/make/issues/82#issue-485224291)
-
+35. [多线程常用分析方法](https://github.com/mahsiaoko/make/issues/85#issue-492331409)
 
