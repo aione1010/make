@@ -30,7 +30,7 @@
 12. [JavaScript的String对象](https://github.com/mahsiaoko/make/issues/39#issue-450295277)
 13. [exec()与match()的区别与联系](https://github.com/mahsiaoko/make/issues/42#issue-450701884)
 14. [箭头函数与this](https://github.com/mahsiaoko/make/issues/45#issue-463721360)
-15.[javascript的基本类型和引用类型的值](https://github.com/mahsiaoko/make/issues/90#issue-498642520)
+15. [javascript的基本类型和引用类型的值](https://github.com/mahsiaoko/make/issues/90#issue-498642520)
 
 
 # Python
