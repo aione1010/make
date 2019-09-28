@@ -91,3 +91,4 @@
 38. [多线程深入](https://github.com/mahsiaoko/make/issues/88#issue-493756213)
 39. [StringBuffer类](https://github.com/mahsiaoko/make/issues/89#issue-495211225)
 40. [ CharSequence接口](https://github.com/mahsiaoko/make/issues/91#issue-499755793)
+41. [AutoCloseable接口](https://github.com/mahsiaoko/make/issues/92#issue-499763329)
