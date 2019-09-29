@@ -93,3 +93,4 @@
 40. [ CharSequence接口](https://github.com/mahsiaoko/make/issues/91#issue-499755793)
 41. [AutoCloseable接口](https://github.com/mahsiaoko/make/issues/92#issue-499763329)
 42. [常用Java类库](https://github.com/mahsiaoko/make/issues/93#issue-499768990)
+43. [Math类](https://github.com/mahsiaoko/make/issues/94#issue-499924077)
