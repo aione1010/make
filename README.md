@@ -96,3 +96,4 @@
 43. [Math类](https://github.com/mahsiaoko/make/issues/94#issue-499924077)
 44. [Date日期处理类](https://github.com/mahsiaoko/make/issues/95#issue-500348944)
 45. [正则表达式](https://github.com/mahsiaoko/make/issues/96#issue-500359403)
+46. [国际化的程序实现](https://github.com/mahsiaoko/make/issues/97#issue-503492521)
