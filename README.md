@@ -98,3 +98,4 @@
 45. [正则表达式](https://github.com/mahsiaoko/make/issues/96#issue-500359403)
 46. [国际化的程序实现](https://github.com/mahsiaoko/make/issues/97#issue-503492521)
 47. [开发支持类库](https://github.com/mahsiaoko/make/issues/98#issue-510691288)
+48. [比较器](https://github.com/mahsiaoko/make/issues/99#issue-512606549)
