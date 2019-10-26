@@ -100,3 +100,4 @@
 47. [开发支持类库](https://github.com/mahsiaoko/make/issues/98#issue-510691288)
 48. [比较器](https://github.com/mahsiaoko/make/issues/99#issue-512606549)
 49. [链表](https://github.com/mahsiaoko/make/issues/100#issue-512815319)
+50. [二叉树](https://github.com/mahsiaoko/make/issues/101#issue-512845122)
