@@ -101,3 +101,4 @@
 48. [比较器](https://github.com/mahsiaoko/make/issues/99#issue-512606549)
 49. [链表](https://github.com/mahsiaoko/make/issues/100#issue-512815319)
 50. [二叉树](https://github.com/mahsiaoko/make/issues/101#issue-512845122)
+51. [File类](https://github.com/mahsiaoko/make/issues/102#issue-514786262)
