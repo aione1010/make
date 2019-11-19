@@ -104,5 +104,6 @@
 51. [File类](https://github.com/mahsiaoko/make/issues/102#issue-514786262)
 52. [字节流与字符流](https://github.com/mahsiaoko/make/issues/103#issue-517137561)
 53. [IO操作的深入](https://github.com/mahsiaoko/make/issues/106#issue-522960070)
+54. [输入与输出支持](https://github.com/mahsiaoko/make/issues/107#issue-525081965)
 # C++、C
 1. [gcc -I -L -l区别](https://github.com/mahsiaoko/make/issues/105#issue-522697771)
