@@ -105,5 +105,6 @@
 52. [字节流与字符流](https://github.com/mahsiaoko/make/issues/103#issue-517137561)
 53. [IO操作的深入](https://github.com/mahsiaoko/make/issues/106#issue-522960070)
 54. [输入与输出支持](https://github.com/mahsiaoko/make/issues/107#issue-525081965)
+55. [Java中的变量](https://github.com/mahsiaoko/make/issues/108#issue-526392298)
 # C++、C
 1. [gcc -I -L -l区别](https://github.com/mahsiaoko/make/issues/105#issue-522697771)
