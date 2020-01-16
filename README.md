@@ -120,3 +120,4 @@
 65. [Java数据库编程](https://github.com/mahsiaoko/make/issues/118#issue-541300055)
 # C++、C
 1. [gcc -I -L -l区别](https://github.com/mahsiaoko/make/issues/105#issue-522697771)
+2. [sprintf、fprintf和printf](https://github.com/mahsiaoko/make/issues/121#issue-550674851)
