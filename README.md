@@ -121,3 +121,6 @@
 # C++、C
 1. [gcc -I -L -l区别](https://github.com/mahsiaoko/make/issues/105#issue-522697771)
 2. [sprintf、fprintf和printf](https://github.com/mahsiaoko/make/issues/121#issue-550674851)
+
+# 数据库
+1. [数据库概述](https://github.com/mahsiaoko/make/issues/122#issue-582989528)
