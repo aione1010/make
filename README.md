@@ -124,3 +124,5 @@
 
 # 数据库
 1. [数据库概述](https://github.com/mahsiaoko/make/issues/122#issue-582989528)
+2. [mysql](https://github.com/mahsiaoko/make/issues/123#issue-583070192)
+3. [DDL](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
