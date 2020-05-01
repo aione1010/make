@@ -125,5 +125,5 @@
 # 数据库
 1. [数据库概述](https://github.com/mahsiaoko/make/issues/122#issue-582989528)
 2. [mysql](https://github.com/mahsiaoko/make/issues/123#issue-583070192)
-3. [DDL](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
+3. [DDL数据定义语言](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
 4. [mysql数据类型](https://github.com/mahsiaoko/make/issues/125#issue-610647052)
