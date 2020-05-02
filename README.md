@@ -128,3 +128,4 @@
 3. [DDL数据定义语言](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
 4. [mysql数据类型](https://github.com/mahsiaoko/make/issues/125#issue-610647052)
 5. [DML数据操作语言](https://github.com/mahsiaoko/make/issues/126#issue-610697388)
+6. [DCL(数据控制语言)](https://github.com/mahsiaoko/make/issues/127#issue-611134856)
