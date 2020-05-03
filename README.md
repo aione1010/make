@@ -119,9 +119,9 @@
 # MYSQL
 1. [数据库概述](https://github.com/mahsiaoko/make/issues/122#issue-582989528)
 2. [mysql](https://github.com/mahsiaoko/make/issues/123#issue-583070192)
-3. [DDL数据定义语言](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
+3. [DDL(数据定义语言)](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
 4. [mysql数据类型](https://github.com/mahsiaoko/make/issues/125#issue-610647052)
-5. [DML数据操作语言](https://github.com/mahsiaoko/make/issues/126#issue-610697388)
+5. [DML(数据操作语言)](https://github.com/mahsiaoko/make/issues/126#issue-610697388)
 6. [DCL(数据控制语言)](https://github.com/mahsiaoko/make/issues/127#issue-611134856)
 7. [DQL（数据查询语言）](https://github.com/mahsiaoko/make/issues/128#issue-6111452370)
 8. [查询练习](https://github.com/mahsiaoko/make/issues/129#issue-611376768)
