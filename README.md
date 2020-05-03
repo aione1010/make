@@ -125,3 +125,4 @@
 6. [DCL(数据控制语言)](https://github.com/mahsiaoko/make/issues/127#issue-611134856)
 7. [DQL（数据查询语言）](https://github.com/mahsiaoko/make/issues/128#issue-6111452370)
 8. [查询练习](https://github.com/mahsiaoko/make/issues/129#issue-611376768)
+9. [mysql编码问题](https://github.com/mahsiaoko/make/issues/130#issue-611382173)
