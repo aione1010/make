@@ -116,7 +116,7 @@
 # SQL
 1. [修改记录](https://github.com/mahsiaoko/make/issues/119#issue-546676900)
 2. [SQL查询语句中的 limit 与 offset 的区别](https://github.com/mahsiaoko/make/issues/120#issue-547214948)
-# MYSQL
+# MySQL
 1. [数据库概述](https://github.com/mahsiaoko/make/issues/122#issue-582989528)
 2. [mysql](https://github.com/mahsiaoko/make/issues/123#issue-583070192)
 3. [DDL(数据定义语言)](https://github.com/mahsiaoko/make/issues/124#issue-583113577)
