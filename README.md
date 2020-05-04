@@ -127,3 +127,4 @@
 8. [查询练习](https://github.com/mahsiaoko/make/issues/129#issue-611376768)
 9. [mysql编码与备份](https://github.com/mahsiaoko/make/issues/130#issue-611382173)
 10. [约束与自增长](https://github.com/mahsiaoko/make/issues/131#issue-611452652)
+11. [模型](https://github.com/mahsiaoko/make/issues/132#issue-611924143)
