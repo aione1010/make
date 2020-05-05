@@ -129,3 +129,4 @@
 10. [约束与自增长](https://github.com/mahsiaoko/make/issues/131#issue-611452652)
 11. [模型](https://github.com/mahsiaoko/make/issues/132#issue-611924143)
 12. [多表查询](https://github.com/mahsiaoko/make/issues/133#issue-612396661)
+13. [多表查询练习](https://github.com/mahsiaoko/make/issues/134#issue-612581312)
