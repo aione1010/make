@@ -83,6 +83,7 @@
 13. [exec()与match()的区别与联系](https://github.com/mahsiaoko/make/issues/42#issue-450701884)
 14. [箭头函数与this](https://github.com/mahsiaoko/make/issues/45#issue-463721360)
 15. [javascript的基本类型和引用类型的值](https://github.com/mahsiaoko/make/issues/90#issue-498642520)
+16. [Javascript引用类型继承的最理想范式示例](https://github.com/mahsiaoko/make/issues/135#issue-621596205)
 # Python
 1. [python类中一些易混易忘的知识点](https://github.com/mahsiaoko/make/issues/4#issue-401579367)
 2. [max函数和min函数](https://github.com/mahsiaoko/make/issues/3#issue-400188215)
